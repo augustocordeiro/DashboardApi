@@ -20,7 +20,7 @@ namespace DashboardClienteApi
             }
 
             conteudo = LimparConteudo(conteudo);
-            
+
             byte[] chaveSecretaBytes = Encoding.UTF8.GetBytes(chaveSecreta);
             byte[] conteudoBytes = Encoding.UTF8.GetBytes(conteudo);
 

@@ -1,4 +1,4 @@
-﻿namespace DashboardConsoleClienteApi
+﻿namespace DashboardClienteApi
 {
     public class ConfiguracaoApi
     {

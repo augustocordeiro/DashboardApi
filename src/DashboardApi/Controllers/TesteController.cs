@@ -20,34 +20,34 @@ namespace DashboardApi.Controllers
             _configuration = configuration;
             _logger = logger;
         }
-        
+
         [HttpPost]
-        public IActionResult Post([FromBody]object conteudo)
+        public IActionResult Post([FromBody] object conteudo)
         {
             try
             {
                 ConfiguracaoApi configuracao = ObterConfiguracao();
-                
+
                 if (Criptografia.ConteudoEvalido(conteudo, Request.GetHeader(configuracao.ParametroAssinatura), configuracao.ChaveSecreta))
                 {
                     return Ok();
                 }
 
                 const string mensagem = "Assinatura inválida";
-                
+
                 _logger.LogError(mensagem);
                 return BadRequest(mensagem);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 const string mensagem = "Ocorreu um erro inesperado.";
 
-                _logger.LogError(e,mensagem);
+                _logger.LogError(e, mensagem);
                 return BadRequest(mensagem);
             }
         }
 
-        private  ConfiguracaoApi ObterConfiguracao()
+        private ConfiguracaoApi ObterConfiguracao()
         {
             ConfiguracaoApi configuracao = new ConfiguracaoApi();
 
