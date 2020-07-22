@@ -36,6 +36,8 @@ namespace DashboardClienteApi
 
             IRestResponse response = client.Execute(request);
             Console.WriteLine(response.StatusCode);
+
+            Console.ReadLine();
         }
 
         private static ConfiguracaoApi ObterConfiguracao()
