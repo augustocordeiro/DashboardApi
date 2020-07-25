@@ -133,7 +133,7 @@ $(document).ready(function() {
     /* Morris.js Charts */
     // Sales chart
 
-    var url = "/Dashboard/DataHoraAtual";
+    var url = "/Dashboard/CarregarDados";
 
     var dados = null;
 

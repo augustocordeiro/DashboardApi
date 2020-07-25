@@ -11,7 +11,7 @@ namespace DashboardWeb.Controllers
             return View();
         }
 
-        public ActionResult DataHoraAtual()
+        public ActionResult CarregarDados()
         {
             JsonResult resultado = Json((new List<Datum>
                                          {
@@ -79,31 +79,5 @@ namespace DashboardWeb.Controllers
 
             return resultado;
         }
-    }
-
-    public class Datum
-    {
-        public string y { get; set; }
-        public int item1 { get; set; }
-        public int item2 { get; set; }
-
-    }
-
-    public class Root
-    {
-        public string element { get; set; }
-        public bool resize { get; set; }
-        public List<Datum> data { get; set; }
-        public string xkey { get; set; }
-        public List<string> ykeys { get; set; }
-        public List<string> labels { get; set; }
-        public List<string> lineColors { get; set; }
-        public string hideHover { get; set; }
-
-        public Root()
-        {
-            data = new List<Datum>();
-        }
-
     }
 }
