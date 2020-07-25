@@ -141,9 +141,7 @@ $(document).ready(function() {
         function(data) {
 
             if (data.length) {
-
-                console.log(data);
-
+                
                 var area =
                     new Morris.Area({
                         element: "revenue-chart",
