@@ -486,8 +486,8 @@ module.exports = content.locals || {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\augus\source\repos\Dashboard\src\WebApp\node_modules\@progress\kendo-theme-material\dist\all.css */"./node_modules/@progress/kendo-theme-material/dist/all.css");
-module.exports = __webpack_require__(/*! C:\Users\augus\source\repos\Dashboard\src\WebApp\src\styles.scss */"./src/styles.scss");
+__webpack_require__(/*! C:\Users\jacques.zetune\source\repos\DashboardApi\src\WebApp\node_modules\@progress\kendo-theme-material\dist\all.css */"./node_modules/@progress/kendo-theme-material/dist/all.css");
+module.exports = __webpack_require__(/*! C:\Users\jacques.zetune\source\repos\DashboardApi\src\WebApp\src\styles.scss */"./src/styles.scss");
 
 
 /***/ })
