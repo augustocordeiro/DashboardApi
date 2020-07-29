@@ -22,7 +22,6 @@ import { LayoutModule } from '@progress/kendo-angular-layout';
 import { RippleModule } from '@progress/kendo-angular-ripple';
 
 // Components
-import { MainMenuComponent } from './main-menu/main-menu.component';
 import { SigninComponent } from './signin/signin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -49,7 +48,6 @@ export function createTranslateLoader(http: HttpClient) {
     declarations: [
         LabelClass,
         AppComponent,
-        MainMenuComponent,
         SigninComponent,
         DashboardComponent,
         ProfileComponent,

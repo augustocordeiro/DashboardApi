@@ -22,8 +22,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/manifest.json",
-              "web.config"
+              "src/manifest.json"
             ],
             "styles": [
               {
@@ -99,8 +98,7 @@
             "scripts": [],
             "assets": [
               "favicon.ico",
-              "assets",
-              "web.config"
+              "assets"
             ]
           }
         },
