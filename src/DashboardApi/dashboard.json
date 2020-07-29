@@ -1,5 +1,5 @@
 ﻿{
-  "DataObservacao": "2020-07-14T00:00:00-03:00",
+  "DataObservacao": "2020-07-23T00:00:00-03:00",
   "Recursos": [
     {
       "Local": "MG",
@@ -12,23 +12,23 @@
         {
           "DiasPrevisao": 30,
           "EspacoTotalBytes": 43980465111040,
-          "EspacoLivreBytes": 18509767887128,
-          "EspacoLivrePerc": 0.42,
+          "EspacoLivreBytes": 20654030309656,
+          "EspacoLivrePerc": 0.47,
           "EspacoLivreImagens": null,
           "EspacoLivreDias": null
         },
         {
           "DiasPrevisao": 60,
           "EspacoTotalBytes": 43980465111040,
-          "EspacoLivreBytes": 28241090038040,
-          "EspacoLivrePerc": 0.64,
+          "EspacoLivreBytes": 32135551633688,
+          "EspacoLivrePerc": 0.73,
           "EspacoLivreImagens": null,
           "EspacoLivreDias": null
         },
         {
           "DiasPrevisao": 90,
           "EspacoTotalBytes": 43980465111040,
-          "EspacoLivreBytes": 38558675224856,
+          "EspacoLivreBytes": 38571560126744,
           "EspacoLivrePerc": 0.88,
           "EspacoLivreImagens": null,
           "EspacoLivreDias": null
@@ -46,26 +46,26 @@
         {
           "DiasPrevisao": 30,
           "EspacoTotalBytes": 152826074300416,
-          "EspacoLivreBytes": 89284916884174,
-          "EspacoLivrePerc": 0.58,
-          "EspacoLivreImagens": 88574,
-          "EspacoLivreDias": 295
+          "EspacoLivreBytes": 93204241879212,
+          "EspacoLivrePerc": 0.61,
+          "EspacoLivreImagens": 92462,
+          "EspacoLivreDias": 308
         },
         {
           "DiasPrevisao": 60,
           "EspacoTotalBytes": 152826074300416,
-          "EspacoLivreBytes": 109281502795524,
-          "EspacoLivrePerc": 0.72,
-          "EspacoLivreImagens": 108412,
-          "EspacoLivreDias": 361
+          "EspacoLivreBytes": 119094978586544,
+          "EspacoLivrePerc": 0.78,
+          "EspacoLivreImagens": 118147,
+          "EspacoLivreDias": 393
         },
         {
           "DiasPrevisao": 90,
           "EspacoTotalBytes": 152826074300416,
-          "EspacoLivreBytes": 141561501246412,
-          "EspacoLivrePerc": 0.93,
-          "EspacoLivreImagens": 140435,
-          "EspacoLivreDias": 468
+          "EspacoLivreBytes": 146114019427256,
+          "EspacoLivrePerc": 0.96,
+          "EspacoLivreImagens": 144951,
+          "EspacoLivreDias": 483
         }
       ]
     }
@@ -74,144 +74,59 @@
     {
       "Scanner": "SS12025",
       "Local": "MG",
-      "DigitalizadasQtde": 438,
-      "IntegradasQtde": 373,
+      "DigitalizadasQtde": 617,
+      "IntegradasQtde": 367,
       "IntegradasPerc": 0.0,
       "ErroCodigoBarrasQtde": 0,
       "ErroCodigoBarrasPerc": 0.00,
-      "ErroQualidadeImagemQtde": 57,
-      "ErroQualidadeImagemPerc": 0.13
+      "ErroQualidadeImagemQtde": 54,
+      "ErroQualidadeImagemPerc": 0.09
     },
     {
       "Scanner": "SS12026",
       "Local": "SP",
-      "DigitalizadasQtde": 397,
-      "IntegradasQtde": 366,
+      "DigitalizadasQtde": 320,
+      "IntegradasQtde": 67,
       "IntegradasPerc": 0.0,
       "ErroCodigoBarrasQtde": 0,
       "ErroCodigoBarrasPerc": 0.00,
-      "ErroQualidadeImagemQtde": 4,
-      "ErroQualidadeImagemPerc": 0.01
+      "ErroQualidadeImagemQtde": 183,
+      "ErroQualidadeImagemPerc": 0.57
     },
     {
       "Scanner": "SS12027",
       "Local": "SP",
-      "DigitalizadasQtde": 456,
-      "IntegradasQtde": 379,
+      "DigitalizadasQtde": 321,
+      "IntegradasQtde": 153,
       "IntegradasPerc": 0.0,
-      "ErroCodigoBarrasQtde": 5,
-      "ErroCodigoBarrasPerc": 0.01,
-      "ErroQualidadeImagemQtde": 2,
-      "ErroQualidadeImagemPerc": 0.00
+      "ErroCodigoBarrasQtde": 1,
+      "ErroCodigoBarrasPerc": 0.00,
+      "ErroQualidadeImagemQtde": 5,
+      "ErroQualidadeImagemPerc": 0.02
     }
   ],
-  "Utilizacoes": [
-    {
-      "CodPatologista": "1115",
-      "NomPatologista": "Esther Vanessa C Oliveira",
-      "DistribuidasQtde": 32,
-      "VisualizadasQtde": 0,
-      "VisualizadasPerc": 0.00
-    },
-    {
-      "CodPatologista": "1171",
-      "NomPatologista": "Fábio Joao Travizan Vieira",
-      "DistribuidasQtde": 78,
-      "VisualizadasQtde": 0,
-      "VisualizadasPerc": 0.00
-    },
-    {
-      "CodPatologista": "1180",
-      "NomPatologista": "Sheila Lordelo Wludarski",
-      "DistribuidasQtde": 3,
-      "VisualizadasQtde": 0,
-      "VisualizadasPerc": 0.00
-    },
-    {
-      "CodPatologista": "1181",
-      "NomPatologista": "Lisandro Ferreira Lopes",
-      "DistribuidasQtde": 24,
-      "VisualizadasQtde": 0,
-      "VisualizadasPerc": 0.00
-    },
-    {
-      "CodPatologista": "1261",
-      "NomPatologista": "Adriano de Almeida",
-      "DistribuidasQtde": 23,
-      "VisualizadasQtde": 0,
-      "VisualizadasPerc": 0.00
-    },
-    {
-      "CodPatologista": "501",
-      "NomPatologista": "Julizia Foloni May",
-      "DistribuidasQtde": 101,
-      "VisualizadasQtde": 0,
-      "VisualizadasPerc": 0.00
-    },
-    {
-      "CodPatologista": "528",
-      "NomPatologista": "Juliana Pignatari Micelli",
-      "DistribuidasQtde": 207,
-      "VisualizadasQtde": 0,
-      "VisualizadasPerc": 0.00
-    },
-    {
-      "CodPatologista": "6234",
-      "NomPatologista": "Juliana Amaral",
-      "DistribuidasQtde": 112,
-      "VisualizadasQtde": 0,
-      "VisualizadasPerc": 0.00
-    },
-    {
-      "CodPatologista": "6242",
-      "NomPatologista": "Maria Luiza Anhaia de Arruda Botelho",
-      "DistribuidasQtde": 57,
-      "VisualizadasQtde": 0,
-      "VisualizadasPerc": 0.00
-    },
-    {
-      "CodPatologista": "694",
-      "NomPatologista": "Lucas Mendes de Oliveira",
-      "DistribuidasQtde": 151,
-      "VisualizadasQtde": 0,
-      "VisualizadasPerc": 0.00
-    },
-    {
-      "CodPatologista": "714",
-      "NomPatologista": "Denise M. A. C. Malheiros",
-      "DistribuidasQtde": 12,
-      "VisualizadasQtde": 0,
-      "VisualizadasPerc": 0.00
-    },
-    {
-      "CodPatologista": "783",
-      "NomPatologista": "Daniel Chang",
-      "DistribuidasQtde": 16,
-      "VisualizadasQtde": 0,
-      "VisualizadasPerc": 0.00
-    }
-  ],
+  "Utilizacoes": [],
   "Indicadores": [
     {
       "Scanner": "SS12025",
       "Local": "MG",
-      "TempoDigitalizacaoValorMedio": 24075,
-      "TempoDigitalizacaoValorMaximo": 284860,
-      "TempoDigitalizacaoValorMinimo": 24075,
-      "LaminasPorHoraValorMedio": 37,
-      "LaminasPorHoraValorMaximo": 149,
-      "LaminasPorHoraValorMinimo": 12,
+      "TempoDigitalizacaoValorMedio": 26728,
+      "TempoDigitalizacaoValorMaximo": 346484,
+      "TempoDigitalizacaoValorMinimo": 26728,
+      "LaminasPorHoraValorMedio": 40,
+      "LaminasPorHoraValorMaximo": 134,
+      "LaminasPorHoraValorMinimo": 10,
       "TempoDigitalizacaoMelhorHistorico": 20392,
       "LaminasPorHoraMelhorHistorico": 176
     },
     {
       "Scanner": "SS12026",
       "Local": "SP",
-      "TempoDigitalizacaoValorMedio": 20201,
-      "TempoDigitalizacaoValorMaximo": 282636,
-      "TempoDigitalizacaoValorMinimo": 20201,
-      "LaminasPorHoraValorMedio": 39,
-      "LaminasPorHoraValorMaximo": 178,
+      "TempoDigitalizacaoValorMedio": 26061,
+      "TempoDigitalizacaoValorMaximo": 296829,
+      "TempoDigitalizacaoValorMinimo": 26061,
+      "LaminasPorHoraValorMedio": 33,
+      "LaminasPorHoraValorMaximo": 138,
       "LaminasPorHoraValorMinimo": 12,
       "TempoDigitalizacaoMelhorHistorico": 18026,
       "LaminasPorHoraMelhorHistorico": 199
@@ -219,14 +134,64 @@
     {
       "Scanner": "SS12027",
       "Local": "SP",
-      "TempoDigitalizacaoValorMedio": 23423,
-      "TempoDigitalizacaoValorMaximo": 278646,
-      "TempoDigitalizacaoValorMinimo": 23423,
-      "LaminasPorHoraValorMedio": 35,
-      "LaminasPorHoraValorMaximo": 153,
-      "LaminasPorHoraValorMinimo": 12,
+      "TempoDigitalizacaoValorMedio": 24888,
+      "TempoDigitalizacaoValorMaximo": 353080,
+      "TempoDigitalizacaoValorMinimo": 24888,
+      "LaminasPorHoraValorMedio": 39,
+      "LaminasPorHoraValorMaximo": 144,
+      "LaminasPorHoraValorMinimo": 10,
       "TempoDigitalizacaoMelhorHistorico": 17962,
       "LaminasPorHoraMelhorHistorico": 200
     }
-  ]
+  ],
+  "EngajamentoPatologistas": {
+    "Tipo": "line",
+    "Series": [
+      {
+        "Nome": "MG",
+        "Dados": [
+          20.0,
+          25.6,
+          31.2,
+          45.2,
+          62.3,
+          45.8
+        ],
+        "Categorias": [
+          "fev",
+          "mar",
+          "abr",
+          "mai",
+          "jun",
+          "jul"
+        ]
+      },
+      {
+        "Nome": "SP",
+        "Dados": [
+          13.0,
+          12.8,
+          15.0,
+          21.0,
+          29.8,
+          32.5
+        ],
+        "Categorias": [
+          "fev",
+          "mar",
+          "abr",
+          "mai",
+          "jun",
+          "jul"
+        ]
+      }
+    ],
+    "Titulo": "Histórico de engajamento dos patologistas",
+    "DataInicial": "2020-06-01T00:00:00",
+    "DataFinal": "2020-07-31T00:00:00",
+    "Descricao": "Todos locais, todos patologistas"
+  },
+  "ProducaoScanners": null,
+  "PerformanceScanners": null,
+  "EspacoLivre": null
 }
