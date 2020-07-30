@@ -1,5 +1,5 @@
 ﻿{
-  "DataObservacao": "2020-07-23T00:00:00-03:00",
+  "DataObservacao": "2020-07-23T00:00:00",
   "Recursos": [
     {
       "Local": "MG",
@@ -105,64 +105,7 @@
       "ErroQualidadeImagemPerc": 0.02
     }
   ],
-  "Utilizacoes": [
-    {
-      "CodPatologista": "5045",
-      "NomPatologista": "Vânia da Fonseca Amaral",
-      "DistribuidasQtde": 84,
-      "VisualizadasQtde": 0,
-      "VisualizadasPerc": 0.00
-    },
-    {
-      "CodPatologista": "5048",
-      "NomPatologista": "Eduardo Alves Bambirra",
-      "DistribuidasQtde": 55,
-      "VisualizadasQtde": 2,
-      "VisualizadasPerc": 0.04
-    },
-    {
-      "CodPatologista": "5052",
-      "NomPatologista": "Mario Félix Richard de Lima",
-      "DistribuidasQtde": 32,
-      "VisualizadasQtde": 0,
-      "VisualizadasPerc": 0.00
-    },
-    {
-      "CodPatologista": "5053",
-      "NomPatologista": "Soraya Kumaira Vilchez",
-      "DistribuidasQtde": 2,
-      "VisualizadasQtde": 0,
-      "VisualizadasPerc": 0.00
-    },
-    {
-      "CodPatologista": "5132",
-      "NomPatologista": "Taismara Simas de Oliveira",
-      "DistribuidasQtde": 41,
-      "VisualizadasQtde": 0,
-      "VisualizadasPerc": 0.00
-    },
-    {
-      "CodPatologista": "6086",
-      "NomPatologista": "Camila Campos",
-      "DistribuidasQtde": 61,
-      "VisualizadasQtde": 9,
-      "VisualizadasPerc": 0.15
-    },
-    {
-      "CodPatologista": "6094",
-      "NomPatologista": "Pedro Lobo Alcântara Neves",
-      "DistribuidasQtde": 137,
-      "VisualizadasQtde": 12,
-      "VisualizadasPerc": 0.09
-    },
-    {
-      "CodPatologista": "714",
-      "NomPatologista": "Denise M. A. C. Malheiros",
-      "DistribuidasQtde": 3,
-      "VisualizadasQtde": 2,
-      "VisualizadasPerc": 0.67
-    }
-  ],
+  "Utilizacoes": [],
   "Indicadores": [
     {
       "Scanner": "SS12025",
@@ -201,54 +144,164 @@
       "LaminasPorHoraMelhorHistorico": 200
     }
   ],
-  "EngajamentoPatologistas": {
-    "Tipo": "line",
+  "EspacoLivre": {
+    "Tipo": "column",
     "Series": [
       {
         "Nome": "MG",
         "Dados": [
-          20.0,
-          25.6,
-          31.2,
-          45.2,
-          62.3,
-          45.8
+          0.0,
+          0.3762929262593388557434082031,
+          0.3762929262593388557434082031
         ],
         "Categorias": [
-          "fev",
-          "mar",
-          "abr",
-          "mai",
-          "jun",
-          "jul"
+          "2020-27",
+          "2020-28",
+          "2020-29"
         ]
       },
       {
         "Nome": "SP",
         "Dados": [
-          13.0,
-          12.8,
-          15.0,
-          21.0,
-          29.8,
-          32.5
+          0.0,
+          0.5520625291542828172212745135,
+          0.5520625291542828172212745135
         ],
         "Categorias": [
-          "fev",
-          "mar",
-          "abr",
-          "mai",
-          "jun",
-          "jul"
+          "2020-27",
+          "2020-28",
+          "2020-29"
         ]
       }
     ],
-    "Titulo": "Histórico de engajamento dos patologistas",
-    "DataInicial": "2020-06-01T00:00:00",
-    "DataFinal": "2020-07-31T00:00:00",
-    "Descricao": "Todos locais, todos patologistas"
+    "Titulo": "Histórico de Recursos Disponíveis",
+    "DataInicial": "2020-07-11T00:00:00",
+    "DataFinal": "2020-07-23T00:00:00",
+    "Descricao": "Mostra o espaço livre em disco (%) por local"
   },
-  "ProducaoScanners": null,
-  "PerformanceScanners": null,
-  "EspacoLivre": null
+  "ProducaoScanners": {
+    "Tipo": "area",
+    "Series": [
+      {
+        "Nome": "SS12025",
+        "Dados": [
+          0.0,
+          0.0,
+          1890.0
+        ],
+        "Categorias": [
+          "2020-27",
+          "2020-28",
+          "2020-29"
+        ]
+      },
+      {
+        "Nome": "SS12026",
+        "Dados": [
+          0.0,
+          460.0,
+          2167.0
+        ],
+        "Categorias": [
+          "2020-27",
+          "2020-28",
+          "2020-29"
+        ]
+      },
+      {
+        "Nome": "SS12027",
+        "Dados": [
+          0.0,
+          600.0,
+          3171.0
+        ],
+        "Categorias": [
+          "2020-27",
+          "2020-28",
+          "2020-29"
+        ]
+      }
+    ],
+    "Titulo": "Histórico de Produçao dos Scanners",
+    "DataInicial": "2020-07-11T00:00:00",
+    "DataFinal": "2020-07-23T00:00:00",
+    "Descricao": "Mostra a produçao por scanner em quantidade de lâminas digitalizadas"
+  },
+  "EngajamentoPatologistas": {
+    "Tipo": "line",
+    "Series": [
+      {
+        "Nome": "SP",
+        "Dados": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Categorias": [
+          "2020-27",
+          "2020-28",
+          "2020-29"
+        ]
+      },
+      {
+        "Nome": "MG",
+        "Dados": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Categorias": [
+          "2020-27",
+          "2020-28",
+          "2020-29"
+        ]
+      }
+    ],
+    "Titulo": "Histórico de Engajamento dos Patologistas",
+    "DataInicial": "2020-07-11T00:00:00",
+    "DataFinal": "2020-07-20T00:00:00",
+    "Descricao": "Mostra o percentual de visualizaçao de lâminas em relaçao ao total distribuído pela Telepatologia"
+  },
+  "PerformanceScanners": {
+    "Tipo": "line",
+    "Series": [
+      {
+        "Nome": "SS12025",
+        "Dados": [
+          0.0,
+          38.5
+        ],
+        "Categorias": [
+          "2020-28",
+          "2020-29"
+        ]
+      },
+      {
+        "Nome": "SS12026",
+        "Dados": [
+          0.0,
+          37.833333333333333333333333333
+        ],
+        "Categorias": [
+          "2020-28",
+          "2020-29"
+        ]
+      },
+      {
+        "Nome": "SS12027",
+        "Dados": [
+          0.0,
+          38.666666666666666666666666667
+        ],
+        "Categorias": [
+          "2020-28",
+          "2020-29"
+        ]
+      }
+    ],
+    "Titulo": "Histórico de Performance dos Scanners",
+    "DataInicial": "2020-07-13T00:00:00",
+    "DataFinal": "2020-07-23T00:00:00",
+    "Descricao": "Mostra a performance por scanner em quantidade de lâminas digitalizadas/hora"
+  }
 }
