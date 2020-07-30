@@ -3,6 +3,8 @@
   "Recursos": [
     {
       "Local": "MG",
+      "EspacoTotal": "43.813GB",
+      "EspacoLivre": "13.720GB",
       "EspacoTotalBytes": 43980465111040,
       "EspacoLivreBytes": 16549537914880,
       "EspacoLivrePerc": 0.38,
@@ -37,6 +39,8 @@
     },
     {
       "Local": "SP",
+      "EspacoTotal": "120.014GB",
+      "EspacoLivre": "78.045GB",
       "EspacoTotalBytes": 152826074300416,
       "EspacoLivreBytes": 84369549099008,
       "EspacoLivrePerc": 0.55,
