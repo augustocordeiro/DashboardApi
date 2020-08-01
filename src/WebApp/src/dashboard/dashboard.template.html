@@ -14,7 +14,38 @@
     </div>
 </div>
 
+<kendo-chart>
+    <kendo-chart-category-axis>
+      <kendo-chart-category-axis-item [categories]="espacoLivreMGCategorias">
+      </kendo-chart-category-axis-item>
+      
+    </kendo-chart-category-axis>
+    <kendo-chart-series>
+      <kendo-chart-series-item [data]="espacoLivreMGSeries">
+      </kendo-chart-series-item>
+      <kendo-chart-series-item [data]="espacoLivreSPSeries">
+    </kendo-chart-series-item>
+    </kendo-chart-series>
+  </kendo-chart>
+
+  <kendo-chart>
+    <kendo-chart-category-axis>
+        <kendo-chart-category-axis-item
+            [categories]="['Jan', 'Feb', 'Mar', 'Apr']">
+        </kendo-chart-category-axis-item>
+    </kendo-chart-category-axis>
+    <kendo-chart-series>
+      <kendo-chart-series-item type="verticalArea" [data]="[ 1, 2, 3, 5 ]">
+      </kendo-chart-series-item>
+      <kendo-chart-series-item type="verticalArea" [data]="[ -1, -2, -3, -5 ]">
+      </kendo-chart-series-item>
+    </kendo-chart-series>
+  </kendo-chart>
+
 <div id="statistics">
+
+   
+
   <kendo-tabstrip (select)="onTabSelect($event)">
       <kendo-tabstrip-tab [title]="'All Issues'" [selected]="true">
           <ng-template kendoTabContent>
