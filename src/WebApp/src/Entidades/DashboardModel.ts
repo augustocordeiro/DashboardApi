@@ -8,8 +8,8 @@ export interface DashboardModel {
     producoes: Producao[];
     utilizacoes: any[];
     indicadores: Indicador[];
-    espacoLivre: Grafico;
-    producaoScanners: Grafico;
-    engajamentoPatologistas: Grafico;
-    performanceScanners: Grafico;
+    graficoEspacoLivre: Grafico;
+    graficoProducaoScanners: Grafico;
+    graficoEngajamentoPatologistas: Grafico;
+    graficoPerformanceScanners: Grafico;
 }

@@ -8,6 +8,9 @@ import 'hammerjs';
 import { Subscription, of, merge } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { DashboardModel } from "src/Entidades/DashboardModel";
+import { Serie } from 'src/Entidades/Serie';
+import { Producao } from 'src/Entidades/Producao';
+import { Grafico } from 'src/Entidades/Grafico';
 
 
 @Component({
@@ -29,17 +32,25 @@ export class DashboardComponent implements OnDestroy {
     public dashboard: DashboardModel;
     
 
+
+
     @HostBinding('attr.id') get get_id() { return 'dashboard'; }
     @HostBinding('class') get get_class() { return 'container-fluid'; }
 
-    public espacoLivreSPSeries: number[]; 
-    public espacoLivreSPCategorias: string[];
-    public espacoLivreMGSeries: number[] ; 
-    public espacoLivreMGCategorias: string[];
+    public espacoLivreTitulo: string;
+    public espacoLivreSeries: Serie[];
+    public espacoLivreCategorias: string[];
+    public espacoLivreDescricaoEixoX: string;
 
-    public producaoScannersSeries: number[] ; 
+    public producaoScannersSeries: Serie[];
     public producaoScannersCategorias: string[];
+    public producaoScanners: Producao[];
+    public tituloProducaoScanners: string = "Produção ";
 
+    public engajamentoPatologistasSeries: Serie[];
+    public engajamentoPatologistasCategorias: string[];
+    public engajamentoPatologistasTitulo: string;
+    public engajamentoPatologistasDescricaoEixoX: string;
 
     constructor(public githubService: GithubService, public issuesProcessor: IssuesProcessor, public dashboardService: DashboardService) {
         this.rangeStart = this.issuesProcessor.getMonthsRange(this.months);
@@ -59,31 +70,44 @@ export class DashboardComponent implements OnDestroy {
                     this.issues = data;
                 });
 
-       
+
 
     }
 
     ngOnInit() {
-       
+
         this.dashboardService
-        .obterDados()
-        .subscribe(dados => {
+            .obterDados()
+            .subscribe(dados => {
 
-            this.dashboard = dados;
+                this.dashboard = dados;
 
-this.espacoLivreMGSeries = dados.espacoLivre.series[0].dados;
-this.espacoLivreMGCategorias = dados.espacoLivre.series[0].categorias;
-this.espacoLivreSPSeries = dados.espacoLivre.series[1].dados;
-this.espacoLivreSPCategorias = dados.espacoLivre.series[1].categorias;
+                  this.espacoLivreSeries = dados.graficoEspacoLivre.series;
+                  this.espacoLivreCategorias = dados.graficoEspacoLivre.categorias;
+                  this.espacoLivreTitulo = dados.graficoEspacoLivre.titulo;
+                  this.espacoLivreDescricaoEixoX = dados.graficoEspacoLivre.descricaoEixoX;
 
-this.producaoScannersSeries = dados.producaoScanners.series[0].dados;
-this.producaoScannersCategorias = dados.producaoScanners.series[0].categorias;
+                  
 
+                  console.log(dados.graficoEspacoLivre);
 
-        }, (err) => this.isLoading = false);
+                this.producaoScannersSeries = dados.graficoProducaoScanners.series;
+                this.producaoScannersCategorias = dados.graficoProducaoScanners.categorias;
+
+                this.engajamentoPatologistasSeries = dados.graficoEngajamentoPatologistas.series;
+                this.engajamentoPatologistasCategorias = dados.graficoEngajamentoPatologistas.categorias;
+                this.engajamentoPatologistasTitulo = dados.graficoEngajamentoPatologistas.titulo;
+                this.engajamentoPatologistasDescricaoEixoX = dados.graficoEngajamentoPatologistas.descricaoEixoX;
+
+                
+
+                this.producaoScanners = dados.producoes;
+
+            }, (err) => this.isLoading = false);
 
     }
-    
+
+
 
     onFilterClick(months) {
         if (this.months !== months) {
