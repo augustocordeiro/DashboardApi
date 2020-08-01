@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation, HostBinding, OnDestroy } from '@angular/core';
 import { GithubService } from './../shared/github.service';
+import { DashboardService } from './../shared/dashboard.service';
 import { IssuesProcessor } from './../shared/issues-processor.service';
 import { IssuesModel } from './../shared/issues.model';
 
@@ -9,7 +10,7 @@ import { map } from 'rxjs/operators';
 
 @Component({
     selector: 'app-dashboard',
-    providers: [GithubService, IssuesProcessor],
+    providers: [DashboardService, GithubService, IssuesProcessor],
     encapsulation: ViewEncapsulation.None,
     templateUrl: './dashboard.template.html'
 })
@@ -26,7 +27,7 @@ export class DashboardComponent implements OnDestroy {
     @HostBinding('attr.id') get get_id() { return 'dashboard'; }
     @HostBinding('class') get get_class() { return 'container-fluid'; }
 
-    constructor(public githubService: GithubService, public issuesProcessor: IssuesProcessor) {
+    constructor(public githubService: GithubService, public issuesProcessor: IssuesProcessor, public dashboardService: DashboardService) {
         this.rangeStart = this.issuesProcessor.getMonthsRange(this.months);
 
         this.subscription =

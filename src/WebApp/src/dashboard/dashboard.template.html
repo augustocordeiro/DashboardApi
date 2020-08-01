@@ -1,13 +1,15 @@
 <div id="header" class="row">
     <div class="col-sm">
-        <h4>Estatísticas - Hermes Pardini</h4>
+        <h4>Dashboard Telepatologia - Diagnóstika - Hermes Pardini</h4>
         <p class="h2">{{ rangeStart | date }} - {{ today | date }}</p>
     </div>
+
     <div class="col-sm text-sm-right p-0 p-sm-3">
         <kendo-buttongroup [selection]="'single'">
-            <button kendoRippleContainer kendoButton [togglable]="true" (click)="onFilterClick(3)" [selected]="true">3 Months</button>
-            <button kendoRippleContainer kendoButton [togglable]="true" (click)="onFilterClick(6)">6 Months</button>
-            <button kendoRippleContainer kendoButton [togglable]="true" (click)="onFilterClick(12)">1 Year</button>
+            <button kendoRippleContainer kendoButton [togglable]="true" (click)="onFilterClick(3)" [selected]="true">Dia</button>
+            <button kendoRippleContainer kendoButton [togglable]="true" (click)="onFilterClick(6)">Semana</button>
+            <button kendoRippleContainer kendoButton [togglable]="true" (click)="onFilterClick(12)">Mes</button>
+            <button kendoRippleContainer kendoButton [togglable]="true" (click)="onFilterClick(12)">Ano</button>
         </kendo-buttongroup>
     </div>
 </div>

@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Net;
 using DashboardApi.Entidades;
-using DashboardApi.Util;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
-using System.IO;
 
 namespace DashboardApi.Controllers
 {
@@ -23,8 +21,8 @@ namespace DashboardApi.Controllers
             _logger = logger;
         }
 
-        [HttpPost("obterdashboard")]
-        public IActionResult ObterDashboard([FromBody] Parametros parametros)
+        [HttpGet]
+        public IActionResult Get()
         {
             try
             {
