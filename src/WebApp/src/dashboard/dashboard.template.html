@@ -14,64 +14,30 @@
         </kendo-buttongroup>
     </div>
 </div>
-<div class="k-card-deck">
-    <div class="k-card" style="width: 300px;">
-        <div class="k-card-body">
-            <h5 class="k-card-title">Card Title</h5>
-            <h6 class="k-card-subtitle">Card Subtitle</h6>
-            <p>Some quick example text to build on the card title and make up the bulk of the card content.</p>
-        </div>
-        <div class="k-card-actions">
-            <span class="k-button k-flat k-primary">Action 1</span>
-            <span class="k-button k-flat k-primary">Action 2</span>
-        </div>
-    </div>
-    <div class="k-card" style="width: 300px;">
-        <div class="k-card-body">
-            <h5 class="k-card-title">Card Title</h5>
-            <h6 class="k-card-subtitle">Card Subtitle</h6>
-            <p>Some quick example text to build on the card title and make up the bulk of the card content.</p>
-        </div>
-        <div class="k-card-actions">
-            <span class="k-button k-flat k-primary">Action 1</span>
-            <span class="k-button k-flat k-primary">Action 2</span>
-        </div>
-    </div>
-    <div class="k-card" style="width: 300px;">
-        <div class="k-card-body">
-            <h5 class="k-card-title">Card Title</h5>
-            <h6 class="k-card-subtitle">Card Subtitle</h6>
-            <p>Some quick example text to build on the card title and make up the bulk of the card content.</p>
-        </div>
-        <div class="k-card-actions">
-            <span class="k-button k-flat k-primary">Action 1</span>
-            <span class="k-button k-flat k-primary">Action 2</span>
-        </div>
-    </div>
-</div>
 
 <div class="k-card-deck">
 
-    <div class="k-card">
+    <div class="k-card" style="width: 300px;">
         <div class="k-card-body">
-            
-                <span class="comp-label">
-                    <div class="issues-count">{{ espacoLivrePercentual | percent:'2.0-0' }}</div>
-                    <div class="issues-label">Espaço Livre</div>
-                </span>
-                <p class="m-0 small text-uppercase text-muted">
-                    Espaço Total:
-                    {{espacoTotal}}
-                </p>
-                <p class="m-0 small text-uppercase text-muted">
-                    Espaço Livre:
-                    {{espacoLivre}}
-                </p>
-            
+
+            <span class="comp-label">
+                <div class="issues-count">{{ espacoLivrePercentual | percent:'2.0-0' }}</div>
+                <div class="issues-label">Espaço Livre</div>
+            </span>
+            <p class="m-0 small text-uppercase text-muted">
+                Espaço Total:
+                {{espacoTotal}}
+            </p>
+            <p class="m-0 small text-uppercase text-muted">
+                Espaço Livre:
+                {{espacoLivre}}
+            </p>
+
         </div>
-        <div class="k-card">
-        <div class="k-card-body">
-            
+    </div>
+    <div class="k-card" style="width: 300px;">
+            <div class="k-card-body">
+
                 <span class="comp-label">
                     <div class="issues-count">{{ percentualIntegracao | percent:'2.0-0' }}</div>
                     <div class="issues-label">Integração</div>
@@ -86,9 +52,9 @@
                 </p>
             </div>
         </div>
-        <div class="k-card">
-        <div class="k-card-body">
-            
+        <div class="k-card" style="width: 300px;">
+            <div class="k-card-body">
+
                 <span class="comp-label">
                     <div class="issues-count">{{ percentualVisualizacao | percent:'2.0-0' }}</div>
                     <div class="issues-label">Visualização</div>
@@ -101,29 +67,40 @@
                     Distribuídas:
                     {{quantidadeDistribuida | number}}
                 </p>
-            
+
+            </div>
         </div>
     </div>
+        <div class="k-card" style="width: 600px;">
+            <div class="k-card-body">
+
+                <app-grafico-barras [serie]="espacoLivreSeries" [titulo]="espacoLivreTitulo"
+                    [categorias]="espacoLivreCategorias" [descricaoEixoX]="espacoLivreDescricaoEixoX" tipo="column">
+                </app-grafico-barras>
+            </div>
+        </div>
+
+        <div class="k-card" style="width: 600px;">
+            <div class="k-card-body">
+                <app-grafico-area [serie]="producaoScannersSeries" [titulo]="producaoScannersTitulo"
+                    [categorias]="producaoScannersCategorias" [descricaoEixoX]="producaoScannersDescricaoEixoX">
+                </app-grafico-area>
+            </div>
+        </div>
+
+        <div class="k-card" style="width: 600px;">
+            <div class="k-card-body">
+                <app-grafico-barras [serie]="engajamentoPatologistasSeries" [titulo]="engajamentoPatologistasTitulo"
+                    [categorias]="engajamentoPatologistasCategorias"
+                    [descricaoEixoX]="engajamentoPatologistasDescricaoEixoX" tipo="line"></app-grafico-barras>
+            </div>
+        </div>
+
+
+
+
     
-
-
-    <app-grafico-barras [serie]="espacoLivreSeries" [titulo]="espacoLivreTitulo" [categorias]="espacoLivreCategorias"
-        [descricaoEixoX]="espacoLivreDescricaoEixoX" tipo="column"></app-grafico-barras>
-
-
-    <app-grafico-area [serie]="producaoScannersSeries" [titulo]="producaoScannersTitulo"
-        [categorias]="producaoScannersCategorias" [descricaoEixoX]="producaoScannersDescricaoEixoX"></app-grafico-area>
-
-
-    <app-grafico-barras [serie]="engajamentoPatologistasSeries" [titulo]="engajamentoPatologistasTitulo"
-        [categorias]="engajamentoPatologistasCategorias" [descricaoEixoX]="engajamentoPatologistasDescricaoEixoX"
-        tipo="line"></app-grafico-barras>
-
-
-
-
-</div>
-<div id="statistics">
+    <!-- <div id="statistics">
 
     <kendo-tabstrip (select)="onTabSelect($event)">
         <kendo-tabstrip-tab [title]="'All Issues'" [selected]="true">
@@ -146,4 +123,4 @@
             </ng-template>
         </kendo-tabstrip-tab>
     </kendo-tabstrip>
-</div>
+</div> -->
