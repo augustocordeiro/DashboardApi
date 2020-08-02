@@ -34,6 +34,9 @@ import { IssueTypesComponent } from './charts/issue-types.component';
 import { StatisticsComponent } from './charts/statistics.component';
 import { LoadingComponent } from './shared/spinner.component';
 
+import { GraficoBarrasComponent } from './charts/graficoBarras.component';
+import { GraficoAreaComponent } from './charts/graficoArea.component';
+
 // environment
 import { environment } from '../environments/environment';
 
@@ -56,8 +59,11 @@ export function createTranslateLoader(http: HttpClient) {
         ActiveIssuesComponent,
         TypesDistributionComponent,
         IssueTypesComponent,
-        StatisticsComponent,
-        LoadingComponent
+        StatisticsComponent,        
+        LoadingComponent,
+
+        GraficoBarrasComponent,
+        GraficoAreaComponent
     ],
     imports: [
         AppRoutingModule,

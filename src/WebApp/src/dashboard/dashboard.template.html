@@ -1,121 +1,149 @@
 <div id="header" class="row">
-    <div class="col-sm">
-        <h4>Dashboard Telepatologia - Diagnóstika - Hermes Pardini</h4>
-        <p class="h2">{{ rangeStart | date }} - {{ today | date }}</p>
+
+    <div class="col-sm text-sm-left p-0 p-sm-3">
+        <p class="h2">Dashboard Telepatologia - Diagnóstika - Hermes Pardini</p>
     </div>
 
     <div class="col-sm text-sm-right p-0 p-sm-3">
         <kendo-buttongroup [selection]="'single'">
-            <button kendoRippleContainer kendoButton [togglable]="true" (click)="onFilterClick(3)" [selected]="true">Dia</button>
+            <button kendoRippleContainer kendoButton [togglable]="true" (click)="onFilterClick(3)"
+                [selected]="true">Dia</button>
             <button kendoRippleContainer kendoButton [togglable]="true" (click)="onFilterClick(6)">Semana</button>
             <button kendoRippleContainer kendoButton [togglable]="true" (click)="onFilterClick(12)">Mes</button>
             <button kendoRippleContainer kendoButton [togglable]="true" (click)="onFilterClick(12)">Ano</button>
         </kendo-buttongroup>
     </div>
 </div>
+<div class="k-card-deck">
+    <div class="k-card" style="width: 300px;">
+        <div class="k-card-body">
+            <h5 class="k-card-title">Card Title</h5>
+            <h6 class="k-card-subtitle">Card Subtitle</h6>
+            <p>Some quick example text to build on the card title and make up the bulk of the card content.</p>
+        </div>
+        <div class="k-card-actions">
+            <span class="k-button k-flat k-primary">Action 1</span>
+            <span class="k-button k-flat k-primary">Action 2</span>
+        </div>
+    </div>
+    <div class="k-card" style="width: 300px;">
+        <div class="k-card-body">
+            <h5 class="k-card-title">Card Title</h5>
+            <h6 class="k-card-subtitle">Card Subtitle</h6>
+            <p>Some quick example text to build on the card title and make up the bulk of the card content.</p>
+        </div>
+        <div class="k-card-actions">
+            <span class="k-button k-flat k-primary">Action 1</span>
+            <span class="k-button k-flat k-primary">Action 2</span>
+        </div>
+    </div>
+    <div class="k-card" style="width: 300px;">
+        <div class="k-card-body">
+            <h5 class="k-card-title">Card Title</h5>
+            <h6 class="k-card-subtitle">Card Subtitle</h6>
+            <p>Some quick example text to build on the card title and make up the bulk of the card content.</p>
+        </div>
+        <div class="k-card-actions">
+            <span class="k-button k-flat k-primary">Action 1</span>
+            <span class="k-button k-flat k-primary">Action 2</span>
+        </div>
+    </div>
+</div>
 
-<kendo-chart [title]="{text: espacoLivreTitulo}">
-    <kendo-chart-axis-defaults>
-        <kendo-chart-axis-defaults-labels format="p0">
-        </kendo-chart-axis-defaults-labels>
-    </kendo-chart-axis-defaults>
-    <kendo-chart-value-axis>
-        <kendo-chart-value-axis-item max="1">
-        </kendo-chart-value-axis-item>
-    </kendo-chart-value-axis>
-    <kendo-chart-category-axis>
-        <kendo-chart-category-axis-item [categories]="espacoLivreCategorias"
-            [title]="{ text: espacoLivreDescricaoEixoX }">
-        </kendo-chart-category-axis-item>
-    </kendo-chart-category-axis>
-    <kendo-chart-series>
-        <kendo-chart-series-item *ngFor="let item of espacoLivreSeries" [data]="item.dados" [name]="item.nome"
-            field="valor" categoryField="categoria" [color]="item.cor" type="column">
-            <kendo-chart-series-item-tooltip format="{0:p0}">
-            </kendo-chart-series-item-tooltip>
-        </kendo-chart-series-item>
-    </kendo-chart-series>
-</kendo-chart>
-<!-- 
-  <kendo-chart>
-    <kendo-chart-category-axis>
-      <kendo-chart-category-axis-item [categories]="producaoScannersCategorias">
-      </kendo-chart-category-axis-item>
-      
-    </kendo-chart-category-axis>
-    <kendo-chart-series>
-      <kendo-chart-series-item
-      *ngFor="let item of producaoScannersSeries" 
-      [stack]="true"
-      [data]="item.dados" [name]="item.nome"
-      field="valor" categoryField="categoria"
-      type="area">
-    </kendo-chart-series-item>
-    </kendo-chart-series>
-  </kendo-chart>
-  
-  <kendo-chart>
-    <kendo-chart-axis-defaults>
-        <kendo-chart-axis-defaults-labels format="p0">
-        </kendo-chart-axis-defaults-labels>
-      </kendo-chart-axis-defaults>
-   
-      <kendo-chart-category-axis>
-      <kendo-chart-category-axis-item
-       [categories]="engajamentoPatologistasCategorias"
-       [title]="{ text: engajamentoPatologistasDescricaoEixoX }"
-       >
-      </kendo-chart-category-axis-item>
-      
-    </kendo-chart-category-axis>
-    <kendo-chart-series>
-      <kendo-chart-series-item
-      *ngFor="let item of engajamentoPatologistasSeries" 
-      
-      [data]="item.dados" [name]="item.nome"
-      field="valor" categoryField="categoria"
-      type="line">
-    </kendo-chart-series-item>
-    </kendo-chart-series>
-  </kendo-chart>
+<div class="k-card-deck">
 
-  <kendo-chart [title]="chartTitle">
-    <kendo-chart-series>
-      <kendo-chart-series-item
-        [autoFit]="true"
-          type="pie" [data]="producaoScanners"
-          field="digitalizadasQtde"
-          categoryField="scanner">
-        <kendo-chart-series-item-labels
-          position="outsideEnd"
-          color="#000"          >
-        </kendo-chart-series-item-labels>
-      </kendo-chart-series-item>
-    </kendo-chart-series>
-    <kendo-chart-legend [visible]="true"></kendo-chart-legend>
-  </kendo-chart> -->
+    <div class="k-card">
+        <div class="k-card-body">
+            
+                <span class="comp-label">
+                    <div class="issues-count">{{ espacoLivrePercentual | percent:'2.0-0' }}</div>
+                    <div class="issues-label">Espaço Livre</div>
+                </span>
+                <p class="m-0 small text-uppercase text-muted">
+                    Espaço Total:
+                    {{espacoTotal}}
+                </p>
+                <p class="m-0 small text-uppercase text-muted">
+                    Espaço Livre:
+                    {{espacoLivre}}
+                </p>
+            
+        </div>
+        <div class="k-card">
+        <div class="k-card-body">
+            
+                <span class="comp-label">
+                    <div class="issues-count">{{ percentualIntegracao | percent:'2.0-0' }}</div>
+                    <div class="issues-label">Integração</div>
+                </span>
+                <p class="m-0 small text-uppercase text-muted">
+                    Digitalizadas:
+                    {{quantidadeDigitalizas | number}}
+                </p>
+                <p class="m-0 small text-uppercase text-muted">
+                    Integradas:
+                    {{quantidadeIntegradas | number}}
+                </p>
+            </div>
+        </div>
+        <div class="k-card">
+        <div class="k-card-body">
+            
+                <span class="comp-label">
+                    <div class="issues-count">{{ percentualVisualizacao | percent:'2.0-0' }}</div>
+                    <div class="issues-label">Visualização</div>
+                </span>
+                <p class="m-0 small text-uppercase text-muted">
+                    Visualizadas:
+                    {{quantidadeVisualizada | number}}
+                </p>
+                <p class="m-0 small text-uppercase text-muted">
+                    Distribuídas:
+                    {{quantidadeDistribuida | number}}
+                </p>
+            
+        </div>
+    </div>
+    
 
+
+    <app-grafico-barras [serie]="espacoLivreSeries" [titulo]="espacoLivreTitulo" [categorias]="espacoLivreCategorias"
+        [descricaoEixoX]="espacoLivreDescricaoEixoX" tipo="column"></app-grafico-barras>
+
+
+    <app-grafico-area [serie]="producaoScannersSeries" [titulo]="producaoScannersTitulo"
+        [categorias]="producaoScannersCategorias" [descricaoEixoX]="producaoScannersDescricaoEixoX"></app-grafico-area>
+
+
+    <app-grafico-barras [serie]="engajamentoPatologistasSeries" [titulo]="engajamentoPatologistasTitulo"
+        [categorias]="engajamentoPatologistasCategorias" [descricaoEixoX]="engajamentoPatologistasDescricaoEixoX"
+        tipo="line"></app-grafico-barras>
+
+
+
+
+</div>
 <div id="statistics">
 
-   
+    <kendo-tabstrip (select)="onTabSelect($event)">
+        <kendo-tabstrip-tab [title]="'All Issues'" [selected]="true">
+            <ng-template kendoTabContent>
+                <app-statistics [loading]="isLoading" [issues]="issues" [months]="months"></app-statistics>
+            </ng-template>
+        </kendo-tabstrip-tab>
 
-  <kendo-tabstrip (select)="onTabSelect($event)">
-      <kendo-tabstrip-tab [title]="'All Issues'" [selected]="true">
-          <ng-template kendoTabContent>
-              <app-statistics [loading]="isLoading" [issues]="issues" [months]="months"></app-statistics>
-          </ng-template>
-      </kendo-tabstrip-tab>
 
-      <kendo-tabstrip-tab [title]="'Assigned to Me'">
-          <ng-template kendoTabContent>
-              <app-statistics [loading]="isLoading" [issues]="issues" [months]="months"></app-statistics>
-          </ng-template>
-      </kendo-tabstrip-tab>
 
-      <kendo-tabstrip-tab [title]="'Created by Me'">
-          <ng-template kendoTabContent>
-              <app-statistics [loading]="isLoading" [issues]="issues" [months]="months"></app-statistics>
-          </ng-template>
-      </kendo-tabstrip-tab>
-  </kendo-tabstrip>
+        <kendo-tabstrip-tab [title]="'Assigned to Me'">
+            <ng-template kendoTabContent>
+                <app-statistics [loading]="isLoading" [issues]="issues" [months]="months"></app-statistics>
+            </ng-template>
+        </kendo-tabstrip-tab>
+
+        <kendo-tabstrip-tab [title]="'Created by Me'">
+            <ng-template kendoTabContent>
+                <app-statistics [loading]="isLoading" [issues]="issues" [months]="months"></app-statistics>
+            </ng-template>
+        </kendo-tabstrip-tab>
+    </kendo-tabstrip>
 </div>

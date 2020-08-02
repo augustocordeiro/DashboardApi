@@ -30,7 +30,7 @@ export class DashboardComponent implements OnDestroy {
     private selectedIndex = 0;
 
     public dashboard: DashboardModel;
-    
+
 
 
 
@@ -42,15 +42,27 @@ export class DashboardComponent implements OnDestroy {
     public espacoLivreCategorias: string[];
     public espacoLivreDescricaoEixoX: string;
 
+    public producaoScannersTitulo: string;
     public producaoScannersSeries: Serie[];
     public producaoScannersCategorias: string[];
-    public producaoScanners: Producao[];
-    public tituloProducaoScanners: string = "Produção ";
+    public producaoScannersDescricaoEixoX: string;
 
-    public engajamentoPatologistasSeries: Serie[];
-    public engajamentoPatologistasCategorias: string[];
     public engajamentoPatologistasTitulo: string;
+    public engajamentoPatologistasSeries: Serie[];
+    public engajamentoPatologistasCategorias: string[];    
     public engajamentoPatologistasDescricaoEixoX: string;
+
+    public espacoTotal: string;
+    public espacoLivre: string;
+    public espacoLivrePercentual: number;
+
+    public quantidadeDigitalizas: number;
+    public quantidadeIntegradas: number;
+    public percentualIntegracao: number;
+
+    public quantidadeDistribuida: number;
+    public quantidadeVisualizada: number;
+    public percentualVisualizacao: number;
 
     constructor(public githubService: GithubService, public issuesProcessor: IssuesProcessor, public dashboardService: DashboardService) {
         this.rangeStart = this.issuesProcessor.getMonthsRange(this.months);
@@ -69,9 +81,6 @@ export class DashboardComponent implements OnDestroy {
                 .subscribe((data: IssuesModel) => {
                     this.issues = data;
                 });
-
-
-
     }
 
     ngOnInit() {
@@ -82,26 +91,32 @@ export class DashboardComponent implements OnDestroy {
 
                 this.dashboard = dados;
 
-                  this.espacoLivreSeries = dados.graficoEspacoLivre.series;
-                  this.espacoLivreCategorias = dados.graficoEspacoLivre.categorias;
-                  this.espacoLivreTitulo = dados.graficoEspacoLivre.titulo;
-                  this.espacoLivreDescricaoEixoX = dados.graficoEspacoLivre.descricaoEixoX;
+                this.espacoTotal = dados.recursosTotais.espacoTotal;
+                this.espacoLivre = dados.recursosTotais.espacoLivre;
+                this.espacoLivrePercentual = dados.recursosTotais.espacoLivrePerc;
 
-                  
+                this.quantidadeDigitalizas = dados.producaoTotais.digitalizadasQtde;
+                this.quantidadeIntegradas = dados.producaoTotais.integradasQtde;
+                this.percentualIntegracao = dados.producaoTotais.integradasPerc;
 
-                  console.log(dados.graficoEspacoLivre);
+                this.quantidadeDistribuida = dados.utilizacaoTotais.distribuidasQtde;
+                this.quantidadeVisualizada = dados.utilizacaoTotais.visualizadasQtde;
+                this.percentualVisualizacao = dados.utilizacaoTotais.visualizadasPerc;
 
+                this.espacoLivreTitulo = dados.graficoEspacoLivre.titulo;
+                this.espacoLivreSeries = dados.graficoEspacoLivre.series;
+                this.espacoLivreCategorias = dados.graficoEspacoLivre.categorias;
+                this.espacoLivreDescricaoEixoX = dados.graficoEspacoLivre.descricaoEixoX;
+
+                this.producaoScannersTitulo = dados.graficoProducaoScanners.titulo;
                 this.producaoScannersSeries = dados.graficoProducaoScanners.series;
                 this.producaoScannersCategorias = dados.graficoProducaoScanners.categorias;
-
+                this.producaoScannersDescricaoEixoX = "";
+                
                 this.engajamentoPatologistasSeries = dados.graficoEngajamentoPatologistas.series;
                 this.engajamentoPatologistasCategorias = dados.graficoEngajamentoPatologistas.categorias;
                 this.engajamentoPatologistasTitulo = dados.graficoEngajamentoPatologistas.titulo;
                 this.engajamentoPatologistasDescricaoEixoX = dados.graficoEngajamentoPatologistas.descricaoEixoX;
-
-                
-
-                this.producaoScanners = dados.producoes;
 
             }, (err) => this.isLoading = false);
 
