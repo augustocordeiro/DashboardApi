@@ -124,8 +124,6 @@ export class DashboardComponent implements OnDestroy {
                 this.indicadoresTempoDigitalizacaoValorMedio = dados.indicadoresTotais.tempoDigitalizacaoValorMedio;
                 this.indicadoresLaminasPorHoraValorMedio = dados.indicadoresTotais.laminasPorHoraValorMedio;
 
-
-
             }, (err) => this.isLoading = false);
 
     }
