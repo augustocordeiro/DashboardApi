@@ -6,20 +6,44 @@
 
     <div class="col-sm text-sm-right p-0 p-sm-3">
         <kendo-buttongroup [selection]="'single'">
-            <button kendoRippleContainer kendoButton [togglable]="true" (click)="onFilterClick(3)"
-                [selected]="true">Dia</button>
-            <button kendoRippleContainer kendoButton [togglable]="true" (click)="onFilterClick(6)">Semana</button>
-            <button kendoRippleContainer kendoButton [togglable]="true" (click)="onFilterClick(12)">Mes</button>
-            <button kendoRippleContainer kendoButton [togglable]="true" (click)="onFilterClick(12)">Ano</button>
+            <button
+                kendoRippleContainer="kendoRippleContainer"
+                kendoButton="kendoButton"
+                [togglable]="true"
+                (click)="onFilterClick(3)"
+                [selected]="true">
+                Dia
+            </button>
+            <button
+                kendoRippleContainer="kendoRippleContainer"
+                kendoButton="kendoButton"
+                [togglable]="true"
+                (click)="onFilterClick(6)">Semana</button>
+            <button
+                kendoRippleContainer="kendoRippleContainer"
+                kendoButton="kendoButton"
+                [togglable]="true"
+                (click)="onFilterClick(12)">Mes</button>
+            <button
+                kendoRippleContainer="kendoRippleContainer"
+                kendoButton="kendoButton"
+                [togglable]="true"
+                (click)="onFilterClick(12)">12 meses</button>
+            <button
+                kendoRippleContainer="kendoRippleContainer"
+                kendoButton="kendoButton"
+                [togglable]="true"
+                (click)="onFilterClick(12)">Ano</button>
         </kendo-buttongroup>
     </div>
 </div>
 
-<div class="k-card-deck">
+<div
+    class="k-card-deck"
+    style="display: flex; flex-wrap: wrap; justify-content: space-around;">
 
-    <div class="k-card" style="width: 300px;">
+    <div class="k-card" style="min-height: 200px; width: 300px;">
         <div class="k-card-body">
-
             <span class="comp-label">
                 <div class="issues-count">{{ espacoLivrePercentual | percent:'2.0-0' }}</div>
                 <div class="issues-label">Espaço Livre</div>
@@ -32,95 +56,106 @@
                 Espaço Livre:
                 {{espacoLivre}}
             </p>
+        </div>
+    </div>
+
+    <div class="k-card" style="min-height: 200px; width: 300px;">
+        <div class="k-card-body">
+
+            <span class="comp-label">
+                <div class="issues-count">{{ percentualIntegracao | percent:'2.0-0' }}</div>
+                <div class="issues-label">Integração</div>
+            </span>
+            <p class="m-0 small text-uppercase text-muted">
+                Digitalizadas:
+                {{quantidadeDigitalizas | number}}
+            </p>
+            <p class="m-0 small text-uppercase text-muted">
+                Integradas:
+                {{quantidadeIntegradas | number}}
+            </p>
+        </div>
+    </div>
+    <div class="k-card" style="min-height: 200px; width: 300px;">
+        <div class="k-card-body">
+
+            <span class="comp-label">
+                <div class="issues-count">{{ percentualVisualizacao | percent:'2.0-0' }}</div>
+                <div class="issues-label">Visualização</div>
+            </span>
+            <p class="m-0 small text-uppercase text-muted">
+                Visualizadas:
+                {{quantidadeVisualizada | number}}
+            </p>
+            <p class="m-0 small text-uppercase text-muted">
+                Distribuídas:
+                {{quantidadeDistribuida | number}}
+            </p>
 
         </div>
     </div>
-    <div class="k-card" style="width: 300px;">
-            <div class="k-card-body">
 
-                <span class="comp-label">
-                    <div class="issues-count">{{ percentualIntegracao | percent:'2.0-0' }}</div>
-                    <div class="issues-label">Integração</div>
-                </span>
-                <p class="m-0 small text-uppercase text-muted">
-                    Digitalizadas:
-                    {{quantidadeDigitalizas | number}}
-                </p>
-                <p class="m-0 small text-uppercase text-muted">
-                    Integradas:
-                    {{quantidadeIntegradas | number}}
-                </p>
-            </div>
+    <div class="k-card" style="min-height: 200px; width: 300px;">
+        <div class="k-card-body">
+            <span class="comp-label">
+                <div class="issues-count">{{ indicadoresLaminasPorHoraValorMedio | number }}</div>
+                <div class="issues-label">Lâminas/hr</div>
+            </span>
+            <p class="m-0 small text-uppercase text-muted">
+                Tempo de digitalização:
+                {{indicadoresTempoDigitalizacaoValorMedio}} s
+            </p>            
         </div>
-        <div class="k-card" style="width: 300px;">
-            <div class="k-card-body">
+    </div>  
 
-                <span class="comp-label">
-                    <div class="issues-count">{{ percentualVisualizacao | percent:'2.0-0' }}</div>
-                    <div class="issues-label">Visualização</div>
-                </span>
-                <p class="m-0 small text-uppercase text-muted">
-                    Visualizadas:
-                    {{quantidadeVisualizada | number}}
-                </p>
-                <p class="m-0 small text-uppercase text-muted">
-                    Distribuídas:
-                    {{quantidadeDistribuida | number}}
-                </p>
+</div>
 
-            </div>
+<div
+    class="k-card-deck"
+    style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+    <div class="k-card" style="width: 600px;">
+        <div class="k-card-body">
+
+            <app-grafico-percentual
+                [serie]="espacoLivreSeries"
+                [titulo]="espacoLivreTitulo"
+                [categorias]="espacoLivreCategorias"
+                [descricaoEixoX]="espacoLivreDescricaoEixoX"
+                tipo="column"></app-grafico-percentual>
         </div>
     </div>
-        <div class="k-card" style="width: 600px;">
-            <div class="k-card-body">
 
-                <app-grafico-barras [serie]="espacoLivreSeries" [titulo]="espacoLivreTitulo"
-                    [categorias]="espacoLivreCategorias" [descricaoEixoX]="espacoLivreDescricaoEixoX" tipo="column">
-                </app-grafico-barras>
-            </div>
+    <div class="k-card" style="width: 600px;">
+        <div class="k-card-body">
+            <app-grafico-area
+                [serie]="producaoScannersSeries"
+                [titulo]="producaoScannersTitulo"
+                [categorias]="producaoScannersCategorias"
+                [descricaoEixoX]="producaoScannersDescricaoEixoX"></app-grafico-area>
         </div>
+    </div>
 
-        <div class="k-card" style="width: 600px;">
-            <div class="k-card-body">
-                <app-grafico-area [serie]="producaoScannersSeries" [titulo]="producaoScannersTitulo"
-                    [categorias]="producaoScannersCategorias" [descricaoEixoX]="producaoScannersDescricaoEixoX">
-                </app-grafico-area>
-            </div>
+    <div class="k-card" style="width: 600px;">
+        <div class="k-card-body">
+            <app-grafico-percentual
+                [serie]="engajamentoPatologistasSeries"
+                [titulo]="engajamentoPatologistasTitulo"
+                [categorias]="engajamentoPatologistasCategorias"
+                [descricaoEixoX]="engajamentoPatologistasDescricaoEixoX"
+                tipo="line"></app-grafico-percentual>
         </div>
+    </div>
 
-        <div class="k-card" style="width: 600px;">
-            <div class="k-card-body">
-                <app-grafico-barras [serie]="engajamentoPatologistasSeries" [titulo]="engajamentoPatologistasTitulo"
-                    [categorias]="engajamentoPatologistasCategorias"
-                    [descricaoEixoX]="engajamentoPatologistasDescricaoEixoX" tipo="line"></app-grafico-barras>
-            </div>
-        </div>
+</div>
 
-
-
-
-    
-    <!-- <div id="statistics">
-
-    <kendo-tabstrip (select)="onTabSelect($event)">
-        <kendo-tabstrip-tab [title]="'All Issues'" [selected]="true">
-            <ng-template kendoTabContent>
-                <app-statistics [loading]="isLoading" [issues]="issues" [months]="months"></app-statistics>
-            </ng-template>
-        </kendo-tabstrip-tab>
-
-
-
-        <kendo-tabstrip-tab [title]="'Assigned to Me'">
-            <ng-template kendoTabContent>
-                <app-statistics [loading]="isLoading" [issues]="issues" [months]="months"></app-statistics>
-            </ng-template>
-        </kendo-tabstrip-tab>
-
-        <kendo-tabstrip-tab [title]="'Created by Me'">
-            <ng-template kendoTabContent>
-                <app-statistics [loading]="isLoading" [issues]="issues" [months]="months"></app-statistics>
-            </ng-template>
-        </kendo-tabstrip-tab>
-    </kendo-tabstrip>
-</div> -->
+<!-- <div id="statistics"> <kendo-tabstrip (select)="onTabSelect($event)">
+<kendo-tabstrip-tab [title]="'All Issues'" [selected]="true"> <ng-template
+kendoTabContent="kendoTabContent"> <app-statistics [loading]="isLoading"
+[issues]="issues" [months]="months"></app-statistics> </ng-template>
+</kendo-tabstrip-tab> <kendo-tabstrip-tab [title]="'Assigned to Me'">
+<ng-template kendoTabContent="kendoTabContent"> <app-statistics
+[loading]="isLoading" [issues]="issues" [months]="months"></app-statistics>
+</ng-template> </kendo-tabstrip-tab> <kendo-tabstrip-tab [title]="'Created by
+Me'"> <ng-template kendoTabContent="kendoTabContent"> <app-statistics
+[loading]="isLoading" [issues]="issues" [months]="months"></app-statistics>
+</ng-template> </kendo-tabstrip-tab> </kendo-tabstrip> </div> -->

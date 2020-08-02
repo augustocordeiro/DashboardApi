@@ -34,8 +34,9 @@ import { IssueTypesComponent } from './charts/issue-types.component';
 import { StatisticsComponent } from './charts/statistics.component';
 import { LoadingComponent } from './shared/spinner.component';
 
-import { GraficoBarrasComponent } from './charts/graficoBarras.component';
-import { GraficoAreaComponent } from './charts/graficoArea.component';
+import { GraficoPercentualComponent } from './charts/grafico-percentual.component';
+import { GraficoAreaComponent } from './charts/grafico-area.component';
+import { AmountConverterPipe } from './charts/pipe-teste'
 
 // environment
 import { environment } from '../environments/environment';
@@ -62,8 +63,10 @@ export function createTranslateLoader(http: HttpClient) {
         StatisticsComponent,        
         LoadingComponent,
 
-        GraficoBarrasComponent,
-        GraficoAreaComponent
+        GraficoPercentualComponent,
+        GraficoAreaComponent,
+
+        AmountConverterPipe
     ],
     imports: [
         AppRoutingModule,

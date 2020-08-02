@@ -49,7 +49,7 @@ export class DashboardComponent implements OnDestroy {
 
     public engajamentoPatologistasTitulo: string;
     public engajamentoPatologistasSeries: Serie[];
-    public engajamentoPatologistasCategorias: string[];    
+    public engajamentoPatologistasCategorias: string[];
     public engajamentoPatologistasDescricaoEixoX: string;
 
     public espacoTotal: string;
@@ -63,6 +63,9 @@ export class DashboardComponent implements OnDestroy {
     public quantidadeDistribuida: number;
     public quantidadeVisualizada: number;
     public percentualVisualizacao: number;
+
+    public indicadoresTempoDigitalizacaoValorMedio: number;
+    public indicadoresLaminasPorHoraValorMedio: number;
 
     constructor(public githubService: GithubService, public issuesProcessor: IssuesProcessor, public dashboardService: DashboardService) {
         this.rangeStart = this.issuesProcessor.getMonthsRange(this.months);
@@ -112,11 +115,16 @@ export class DashboardComponent implements OnDestroy {
                 this.producaoScannersSeries = dados.graficoProducaoScanners.series;
                 this.producaoScannersCategorias = dados.graficoProducaoScanners.categorias;
                 this.producaoScannersDescricaoEixoX = "";
-                
+
                 this.engajamentoPatologistasSeries = dados.graficoEngajamentoPatologistas.series;
                 this.engajamentoPatologistasCategorias = dados.graficoEngajamentoPatologistas.categorias;
                 this.engajamentoPatologistasTitulo = dados.graficoEngajamentoPatologistas.titulo;
                 this.engajamentoPatologistasDescricaoEixoX = dados.graficoEngajamentoPatologistas.descricaoEixoX;
+
+                this.indicadoresTempoDigitalizacaoValorMedio = dados.indicadoresTotais.tempoDigitalizacaoValorMedio;
+                this.indicadoresLaminasPorHoraValorMedio = dados.indicadoresTotais.laminasPorHoraValorMedio;
+
+
 
             }, (err) => this.isLoading = false);
 
