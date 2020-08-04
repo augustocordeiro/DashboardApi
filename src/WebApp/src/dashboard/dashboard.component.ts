@@ -9,9 +9,6 @@ import { Subscription, of, merge } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { DashboardModel } from "src/Entidades/DashboardModel";
 import { Serie } from 'src/Entidades/Serie';
-import { Producao } from 'src/Entidades/Producao';
-import { Grafico } from 'src/Entidades/Grafico';
-
 
 @Component({
     selector: 'app-dashboard',
@@ -19,6 +16,7 @@ import { Grafico } from 'src/Entidades/Grafico';
     encapsulation: ViewEncapsulation.None,
     templateUrl: './dashboard.template.html'
 })
+
 export class DashboardComponent implements OnDestroy {
     public isLoading = true;
     public today: Date = new Date();
@@ -30,9 +28,6 @@ export class DashboardComponent implements OnDestroy {
     private selectedIndex = 0;
 
     public dashboard: DashboardModel;
-
-
-
 
     @HostBinding('attr.id') get get_id() { return 'dashboard'; }
     @HostBinding('class') get get_class() { return 'container-fluid'; }
@@ -123,8 +118,6 @@ export class DashboardComponent implements OnDestroy {
 
                 this.indicadoresTempoDigitalizacaoValorMedio = dados.indicadoresTotais.tempoDigitalizacaoValorMedio;
                 this.indicadoresLaminasPorHoraValorMedio = dados.indicadoresTotais.laminasPorHoraValorMedio;
-
-
 
             }, (err) => this.isLoading = false);
 
