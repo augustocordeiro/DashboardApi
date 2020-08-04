@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DashboardApi.Entidades
 {
     public class Recurso
     {
         public string Local { get; set; }
+        public DateTime DataObservacao { get; set; }
         public string EspacoTotal { get; set; }
         public string EspacoLivre { get; set; }
         public long EspacoTotalBytes { get; set; }
