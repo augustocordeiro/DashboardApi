@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using DashboardApi.Consulta;
 using DashboardApi.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -28,7 +29,7 @@ namespace DashboardApi.Controllers
             {
                 string conteudoDashoboard = System.IO.File.ReadAllText("dashboard.json");
 
-                Dashboard dashboard = JsonConvert.DeserializeObject<Dashboard>(conteudoDashoboard);
+                DashboardConsulta dashboard = JsonConvert.DeserializeObject<DashboardConsulta>(conteudoDashoboard);
 
                 return dashboard != null ?
                     CriarResposta(HttpStatusCode.OK, dashboard) :
