@@ -1,7 +1,8 @@
 <div id="header" class="row">
 
     <div class="col-sm text-sm-left p-0 p-sm-3">
-        <p class="h2">Dashboard Telepatologia - Diagnóstika - Hermes Pardini</p>
+        <p class="h1">{{titulo}}</p>
+        <p class="h4">{{subtitulo}}</p>
     </div>
 
     <div class="col-sm text-sm-right p-0 p-sm-3">
@@ -103,10 +104,10 @@
             </span>
             <p class="m-0 small text-uppercase text-muted">
                 Tempo de digitalização:
-                {{indicadoresTempoDigitalizacaoValorMedio}} s
-            </p>            
+                {{indicadoresTempoDigitalizacaoValorMedio}}s
+            </p>
         </div>
-    </div>  
+    </div>
 
 </div>
 
@@ -146,16 +147,52 @@
         </div>
     </div>
 
+    <div class="k-card" style="width: 600px;">
+        <div class="k-card-body">
+            <app-grafico-percentual
+                [serie]="performanceScannersSeries"
+                [titulo]="performanceScannersTitulo"
+                [categorias]="performanceScannersCategorias"
+                [descricaoEixoX]="performanceScannersDescricaoEixoX"
+                tipo="line"></app-grafico-percentual>
+        </div>
+    </div>
+
+    <div class="k-card" style="width: 600px; max-height: 200px;">
+    <kendo-grid        
+    
+    [data]="ultilizacoes">
+
+    <kendo-grid-column class="price-col" field="nomPatologista" title="Patologista" [width]="200"></kendo-grid-column>
+    <!-- <kendo-grid-column class="price-col" field="distribuidasQtde" title="Distribuídas" [width]="80"></kendo-grid-column>
+    <kendo-grid-column class="price-col" field="visualizadasQtde" title="Visualizadas" [width]="80"></kendo-grid-column> -->   
+  
+    
+    
+    <kendo-grid-column class="price-col" field="visualizadasPerc" title="%" [width]="80">
+
+    <ng-template kendoGridCellTemplate let-dataItem>
+        
+        <strong>{{dataItem.visualizadasPerc | percent}}</strong>
+    </ng-template>
+
+    </kendo-grid-column>
+</kendo-grid>
 </div>
 
-<!-- <div id="statistics"> <kendo-tabstrip (select)="onTabSelect($event)">
-<kendo-tabstrip-tab [title]="'All Issues'" [selected]="true"> <ng-template
-kendoTabContent="kendoTabContent"> <app-statistics [loading]="isLoading"
-[issues]="issues" [months]="months"></app-statistics> </ng-template>
-</kendo-tabstrip-tab> <kendo-tabstrip-tab [title]="'Assigned to Me'">
-<ng-template kendoTabContent="kendoTabContent"> <app-statistics
-[loading]="isLoading" [issues]="issues" [months]="months"></app-statistics>
-</ng-template> </kendo-tabstrip-tab> <kendo-tabstrip-tab [title]="'Created by
-Me'"> <ng-template kendoTabContent="kendoTabContent"> <app-statistics
-[loading]="isLoading" [issues]="issues" [months]="months"></app-statistics>
-</ng-template> </kendo-tabstrip-tab> </kendo-tabstrip> </div> -->
+</div>
+
+
+    
+
+    <!-- <div id="statistics"> <kendo-tabstrip (select)="onTabSelect($event)">
+    <kendo-tabstrip-tab [title]="'All Issues'" [selected]="true"> <ng-template
+    kendoTabContent="kendoTabContent"> <app-statistics [loading]="isLoading"
+    [issues]="issues" [months]="months"></app-statistics> </ng-template>
+    </kendo-tabstrip-tab> <kendo-tabstrip-tab [title]="'Assigned to Me'">
+    <ng-template kendoTabContent="kendoTabContent"> <app-statistics
+    [loading]="isLoading" [issues]="issues" [months]="months"></app-statistics>
+    </ng-template> </kendo-tabstrip-tab> <kendo-tabstrip-tab [title]="'Created by
+    Me'"> <ng-template kendoTabContent="kendoTabContent"> <app-statistics
+    [loading]="isLoading" [issues]="issues" [months]="months"></app-statistics>
+    </ng-template> </kendo-tabstrip-tab> </kendo-tabstrip> </div> -->

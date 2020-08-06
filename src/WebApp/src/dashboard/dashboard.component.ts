@@ -9,6 +9,7 @@ import { Subscription, of, merge } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { DashboardModel } from "src/Entidades/DashboardModel";
 import { Serie } from 'src/Entidades/Serie';
+import { Utilizacao } from 'src/Entidades/Utilizacao';
 
 @Component({
     selector: 'app-dashboard',
@@ -27,15 +28,22 @@ export class DashboardComponent implements OnDestroy {
     private subscription: Subscription;
     private selectedIndex = 0;
 
-    public dashboard: DashboardModel;
-
     @HostBinding('attr.id') get get_id() { return 'dashboard'; }
     @HostBinding('class') get get_class() { return 'container-fluid'; }
+
+    public performanceScannersTitulo: string;
+    public performanceScannersSeries: Serie[];
+    public performanceScannersCategorias: string[];
+    public performanceScannersDescricaoEixoX: string;
+    public titulo: string;
+    public subtitulo: string;
 
     public espacoLivreTitulo: string;
     public espacoLivreSeries: Serie[];
     public espacoLivreCategorias: string[];
     public espacoLivreDescricaoEixoX: string;
+
+    public ultilizacoes: Utilizacao[];
 
     public producaoScannersTitulo: string;
     public producaoScannersSeries: Serie[];
@@ -87,7 +95,10 @@ export class DashboardComponent implements OnDestroy {
             .obterDados()
             .subscribe(dados => {
 
-                this.dashboard = dados;
+                this.ultilizacoes = dados.utilizacoes.sort((a, b) => { return a.visualizadasPerc > b.visualizadasPerc ? -1 : 1 });
+
+                this.titulo = dados.titulo;
+                this.subtitulo = dados.subtitulo;
 
                 this.espacoTotal = dados.recursosTotais.espacoTotal;
                 this.espacoLivre = dados.recursosTotais.espacoLivre;
@@ -109,7 +120,12 @@ export class DashboardComponent implements OnDestroy {
                 this.producaoScannersTitulo = dados.graficoProducaoScanners.titulo;
                 this.producaoScannersSeries = dados.graficoProducaoScanners.series;
                 this.producaoScannersCategorias = dados.graficoProducaoScanners.categorias;
-                this.producaoScannersDescricaoEixoX = "";
+                this.producaoScannersDescricaoEixoX = dados.graficoProducaoScanners.descricaoEixoX;
+
+                this.performanceScannersTitulo = dados.graficoPerformanceScanners.titulo;
+                this.performanceScannersSeries = dados.graficoPerformanceScanners.series;
+                this.performanceScannersCategorias = dados.graficoPerformanceScanners.categorias;
+                this.performanceScannersDescricaoEixoX = dados.graficoPerformanceScanners.descricaoEixoX;
 
                 this.engajamentoPatologistasSeries = dados.graficoEngajamentoPatologistas.series;
                 this.engajamentoPatologistasCategorias = dados.graficoEngajamentoPatologistas.categorias;
@@ -120,11 +136,8 @@ export class DashboardComponent implements OnDestroy {
                 this.indicadoresLaminasPorHoraValorMedio = dados.indicadoresTotais.laminasPorHoraValorMedio;
 
             }, (err) => this.isLoading = false);
-
     }
-
-
-
+    
     onFilterClick(months) {
         if (this.months !== months) {
             this.months = months;
@@ -149,14 +162,18 @@ export class DashboardComponent implements OnDestroy {
                 this.selectedIndex = 0;
                 break;
             case 1:
-                const assigned = this.issuesProcessor.flatten(this.data)
+                const assigned = this.issuesProcessor
+                    .flatten(this.data)
                     .filter(item => item.assignee ? item.assignee.login === 'ggkrustev' : false);
                 this.issues = this.issuesProcessor.process(assigned, this.months);
                 this.selectedIndex = 1;
                 break;
             case 2:
-                const created = this.issuesProcessor.flatten(this.data).filter(item => item.user.login === 'ggkrustev');
-                this.issues = this.issuesProcessor.process(created, this.months);
+                const created = this.issuesProcessor
+                .flatten(this.data)
+                .filter(item => item.user.login === 'ggkrustev');
+                this.issues = this.issuesProcessor
+                .process(created, this.months);
                 this.selectedIndex = 2;
                 break;
             default: this.issues = this.issuesProcessor.process(this.data, this.months);
