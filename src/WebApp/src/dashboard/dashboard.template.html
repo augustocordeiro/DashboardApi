@@ -1,198 +1,166 @@
 <div id="header" class="row">
 
     <div class="col-sm text-sm-left p-0 p-sm-3">
-        <p class="h1">{{titulo}}</p>
+        <p class="h1" style="color:seagreen; font-size: 25px;">{{titulo}}</p>
         <p class="h4">{{subtitulo}}</p>
     </div>
 
     <div class="col-sm text-sm-right p-0 p-sm-3">
         <kendo-buttongroup [selection]="'single'">
-            <button
-                kendoRippleContainer="kendoRippleContainer"
-                kendoButton="kendoButton"
-                [togglable]="true"
-                (click)="onFilterClick(3)"
-                [selected]="true">
+            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
+                (click)="carregarDados(1)" [selected]="true">
                 Dia
             </button>
-            <button
-                kendoRippleContainer="kendoRippleContainer"
-                kendoButton="kendoButton"
-                [togglable]="true"
-                (click)="onFilterClick(6)">Semana</button>
-            <button
-                kendoRippleContainer="kendoRippleContainer"
-                kendoButton="kendoButton"
-                [togglable]="true"
-                (click)="onFilterClick(12)">Mes</button>
-            <button
-                kendoRippleContainer="kendoRippleContainer"
-                kendoButton="kendoButton"
-                [togglable]="true"
-                (click)="onFilterClick(12)">12 meses</button>
-            <button
-                kendoRippleContainer="kendoRippleContainer"
-                kendoButton="kendoButton"
-                [togglable]="true"
-                (click)="onFilterClick(12)">Ano</button>
+            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
+                (click)="carregarDados(2)">
+                Semana</button>
+            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
+                (click)="carregarDados(3)">Mês</button>
+
+            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
+                (click)="carregarDados(4)">Ano</button>
+
+            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
+                (click)="carregarDados(5)">12 meses</button>
         </kendo-buttongroup>
     </div>
 </div>
 
-<div
-    class="k-card-deck"
-    style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+<div class="k-card-deck" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
 
-    <div class="k-card" style="min-height: 200px; width: 300px;">
+    <div class="k-card" style="min-height: 200px; width: 300px; color: orangered;">
         <div class="k-card-body">
             <span class="comp-label">
-                <div class="issues-count">{{ espacoLivrePercentual | percent:'2.0-0' }}</div>
-                <div class="issues-label">Espaço Livre</div>
+                <div class="issues-count" style="font-size: 80px;">{{ espacoLivrePercentual | percent:'2.0-0' }}</div>
+                <div class="issues-label" style="font-size: 18px;">Espaço Livre</div>
             </span>
-            <p class="m-0 small text-uppercase text-muted">
+            <p class="m-0 medium  text-muted">
                 Espaço Total:
                 {{espacoTotal}}
             </p>
-            <p class="m-0 small text-uppercase text-muted">
+            <p class="m-0 medium  text-muted">
                 Espaço Livre:
                 {{espacoLivre}}
             </p>
         </div>
     </div>
 
-    <div class="k-card" style="min-height: 200px; width: 300px;">
+    <div class="k-card" style="min-height: 200px; width: 300px; color: darkgreen">
         <div class="k-card-body">
 
             <span class="comp-label">
-                <div class="issues-count">{{ percentualIntegracao | percent:'2.0-0' }}</div>
-                <div class="issues-label">Integração</div>
+                <div class="issues-count" style="font-size: 80px;">{{ percentualIntegracao | percent:'2.0-0' }}</div>
+                <div class="issues-label" style="font-size: 18px;">Integração</div>
             </span>
-            <p class="m-0 small text-uppercase text-muted">
+            <p class="m-0 medium  text-muted">
                 Digitalizadas:
                 {{quantidadeDigitalizas | number}}
             </p>
-            <p class="m-0 small text-uppercase text-muted">
+            <p class="m-0 medium text-muted">
                 Integradas:
                 {{quantidadeIntegradas | number}}
             </p>
         </div>
     </div>
-    <div class="k-card" style="min-height: 200px; width: 300px;">
+    <div class="k-card" style="min-height: 200px; width: 300px; color: saddlebrown;">
         <div class="k-card-body">
 
             <span class="comp-label">
-                <div class="issues-count">{{ percentualVisualizacao | percent:'2.0-0' }}</div>
-                <div class="issues-label">Visualização</div>
+                <div class="issues-count" style="font-size: 80px;">{{ percentualVisualizacao | percent:'2.0-0' }}</div>
+                <div class="issues-label" style="font-size: 18px;">Visualização</div>
             </span>
-            <p class="m-0 small text-uppercase text-muted">
-                Visualizadas:
-                {{quantidadeVisualizada | number}}
-            </p>
-            <p class="m-0 small text-uppercase text-muted">
+            <p class="m-0 medium text-muted">
                 Distribuídas:
                 {{quantidadeDistribuida | number}}
             </p>
+            <p class="m-0 medium text-muted">
+                Visualizadas:
+                {{quantidadeVisualizada | number}}
+            </p>
+
 
         </div>
     </div>
 
-    <div class="k-card" style="min-height: 200px; width: 300px;">
+    <div class="k-card" style="min-height: 200px; width: 300px; color: midnightblue;">
         <div class="k-card-body">
             <span class="comp-label">
-                <div class="issues-count">{{ indicadoresLaminasPorHoraValorMedio | number }}</div>
-                <div class="issues-label">Lâminas/hr</div>
+                <div class="issues-count" style="font-size: 80px;">{{ indicadoresLaminasPorHoraValorMedio | number }}
+                </div>
+                <div class="issues-label" style="font-size: 18px;">Lâminas/hr</div>
             </span>
-            <p class="m-0 small text-uppercase text-muted">
+            <p class="m-0 medium text-muted">
                 Tempo de digitalização:
-                {{indicadoresTempoDigitalizacaoValorMedio}}s
+                {{indicadoresTempoDigitalizacaoValorMedio}} segundos
             </p>
         </div>
     </div>
 
 </div>
 
-<div
-    class="k-card-deck"
-    style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+<div class="k-card-deck" style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
     <div class="k-card" style="width: 600px;">
         <div class="k-card-body">
 
-            <app-grafico-percentual
-                [serie]="espacoLivreSeries"
-                [titulo]="espacoLivreTitulo"
-                [categorias]="espacoLivreCategorias"
-                [descricaoEixoX]="espacoLivreDescricaoEixoX"
-                tipo="column"></app-grafico-percentual>
+            <app-grafico-percentual [serie]="espacoLivreSeries" [titulo]="espacoLivreTitulo"
+                [categorias]="espacoLivreCategorias" [descricaoEixoX]="espacoLivreDescricaoEixoX" tipo="column">
+            </app-grafico-percentual>
         </div>
     </div>
 
     <div class="k-card" style="width: 600px;">
         <div class="k-card-body">
-            <app-grafico-area
-                [serie]="producaoScannersSeries"
-                [titulo]="producaoScannersTitulo"
-                [categorias]="producaoScannersCategorias"
-                [descricaoEixoX]="producaoScannersDescricaoEixoX"></app-grafico-area>
+            <app-grafico-area [serie]="producaoScannersSeries" [titulo]="producaoScannersTitulo"
+                [categorias]="producaoScannersCategorias" [descricaoEixoX]="producaoScannersDescricaoEixoX">
+            </app-grafico-area>
         </div>
     </div>
 
     <div class="k-card" style="width: 600px;">
         <div class="k-card-body">
-            <app-grafico-percentual
-                [serie]="engajamentoPatologistasSeries"
-                [titulo]="engajamentoPatologistasTitulo"
+            <app-grafico-percentual [serie]="engajamentoPatologistasSeries" [titulo]="engajamentoPatologistasTitulo"
                 [categorias]="engajamentoPatologistasCategorias"
-                [descricaoEixoX]="engajamentoPatologistasDescricaoEixoX"
-                tipo="line"></app-grafico-percentual>
+                [descricaoEixoX]="engajamentoPatologistasDescricaoEixoX" tipo="line"></app-grafico-percentual>
         </div>
     </div>
 
-    <div class="k-card" style="width: 600px;">
+    <!-- <div class="k-card" style="width: 600px;">
         <div class="k-card-body">
             <app-grafico-percentual
                 [serie]="performanceScannersSeries"
                 [titulo]="performanceScannersTitulo"
                 [categorias]="performanceScannersCategorias"
                 [descricaoEixoX]="performanceScannersDescricaoEixoX"
-                tipo="line"></app-grafico-percentual>
+                tipo="line"
+                unidade="number"
+                ></app-grafico-percentual>
+        </div>
+    </div> -->
+    <div class="k-card" style="width: 600px;">
+        <div class="k-card-body">
+
+            <kendo-chart [title]="{text: performanceScannersTitulo}">
+                <kendo-chart-axis-defaults>
+                    <kendo-chart-axis-defaults-labels format="N0"></kendo-chart-axis-defaults-labels>
+                </kendo-chart-axis-defaults>
+
+                <kendo-chart-category-axis>
+                    <kendo-chart-category-axis-item [categories]="performanceScannersCategorias"
+                        [title]="{ text: performanceScannersDescricaoEixoX }"></kendo-chart-category-axis-item>
+                </kendo-chart-category-axis>
+                <kendo-chart-series>
+                    <kendo-chart-series-item *ngFor="let item of performanceScannersSeries" [data]="item.dados"
+                        [name]="item.nome" field="valor" categoryField="categoria" [color]="item.cor" type="line">
+                        <kendo-chart-series-item-tooltip>
+                            <ng-template let-dataItem="dataItem">
+                                {{item.nome}}
+                                |
+                                {{dataItem.valor | number}}
+                            </ng-template>
+                        </kendo-chart-series-item-tooltip>
+                    </kendo-chart-series-item>
+                </kendo-chart-series>
+            </kendo-chart>
         </div>
     </div>
-
-    <div class="k-card" style="width: 600px; max-height: 200px;">
-    <kendo-grid        
-    
-    [data]="ultilizacoes">
-
-    <kendo-grid-column class="price-col" field="nomPatologista" title="Patologista" [width]="200"></kendo-grid-column>
-    <!-- <kendo-grid-column class="price-col" field="distribuidasQtde" title="Distribuídas" [width]="80"></kendo-grid-column>
-    <kendo-grid-column class="price-col" field="visualizadasQtde" title="Visualizadas" [width]="80"></kendo-grid-column> -->   
-  
-    
-    
-    <kendo-grid-column class="price-col" field="visualizadasPerc" title="%" [width]="80">
-
-    <ng-template kendoGridCellTemplate let-dataItem>
-        
-        <strong>{{dataItem.visualizadasPerc | percent}}</strong>
-    </ng-template>
-
-    </kendo-grid-column>
-</kendo-grid>
 </div>
-
-</div>
-
-
-    
-
-    <!-- <div id="statistics"> <kendo-tabstrip (select)="onTabSelect($event)">
-    <kendo-tabstrip-tab [title]="'All Issues'" [selected]="true"> <ng-template
-    kendoTabContent="kendoTabContent"> <app-statistics [loading]="isLoading"
-    [issues]="issues" [months]="months"></app-statistics> </ng-template>
-    </kendo-tabstrip-tab> <kendo-tabstrip-tab [title]="'Assigned to Me'">
-    <ng-template kendoTabContent="kendoTabContent"> <app-statistics
-    [loading]="isLoading" [issues]="issues" [months]="months"></app-statistics>
-    </ng-template> </kendo-tabstrip-tab> <kendo-tabstrip-tab [title]="'Created by
-    Me'"> <ng-template kendoTabContent="kendoTabContent"> <app-statistics
-    [loading]="isLoading" [issues]="issues" [months]="months"></app-statistics>
-    </ng-template> </kendo-tabstrip-tab> </kendo-tabstrip> </div> -->

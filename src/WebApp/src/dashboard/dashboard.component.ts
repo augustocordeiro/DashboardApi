@@ -43,7 +43,7 @@ export class DashboardComponent implements OnDestroy {
     public espacoLivreCategorias: string[];
     public espacoLivreDescricaoEixoX: string;
 
-    public ultilizacoes: Utilizacao[];
+    public utilizacoes: Utilizacao[];
 
     public producaoScannersTitulo: string;
     public producaoScannersSeries: Serie[];
@@ -91,53 +91,65 @@ export class DashboardComponent implements OnDestroy {
 
     ngOnInit() {
 
-        this.dashboardService
-            .obterDados()
-            .subscribe(dados => {
-
-                this.ultilizacoes = dados.utilizacoes.sort((a, b) => { return a.visualizadasPerc > b.visualizadasPerc ? -1 : 1 });
-
-                this.titulo = dados.titulo;
-                this.subtitulo = dados.subtitulo;
-
-                this.espacoTotal = dados.recursosTotais.espacoTotal;
-                this.espacoLivre = dados.recursosTotais.espacoLivre;
-                this.espacoLivrePercentual = dados.recursosTotais.espacoLivrePerc;
-
-                this.quantidadeDigitalizas = dados.producaoTotais.digitalizadasQtde;
-                this.quantidadeIntegradas = dados.producaoTotais.integradasQtde;
-                this.percentualIntegracao = dados.producaoTotais.integradasPerc;
-
-                this.quantidadeDistribuida = dados.utilizacaoTotais.distribuidasQtde;
-                this.quantidadeVisualizada = dados.utilizacaoTotais.visualizadasQtde;
-                this.percentualVisualizacao = dados.utilizacaoTotais.visualizadasPerc;
-
-                this.espacoLivreTitulo = dados.graficoEspacoLivre.titulo;
-                this.espacoLivreSeries = dados.graficoEspacoLivre.series;
-                this.espacoLivreCategorias = dados.graficoEspacoLivre.categorias;
-                this.espacoLivreDescricaoEixoX = dados.graficoEspacoLivre.descricaoEixoX;
-
-                this.producaoScannersTitulo = dados.graficoProducaoScanners.titulo;
-                this.producaoScannersSeries = dados.graficoProducaoScanners.series;
-                this.producaoScannersCategorias = dados.graficoProducaoScanners.categorias;
-                this.producaoScannersDescricaoEixoX = dados.graficoProducaoScanners.descricaoEixoX;
-
-                this.performanceScannersTitulo = dados.graficoPerformanceScanners.titulo;
-                this.performanceScannersSeries = dados.graficoPerformanceScanners.series;
-                this.performanceScannersCategorias = dados.graficoPerformanceScanners.categorias;
-                this.performanceScannersDescricaoEixoX = dados.graficoPerformanceScanners.descricaoEixoX;
-
-                this.engajamentoPatologistasSeries = dados.graficoEngajamentoPatologistas.series;
-                this.engajamentoPatologistasCategorias = dados.graficoEngajamentoPatologistas.categorias;
-                this.engajamentoPatologistasTitulo = dados.graficoEngajamentoPatologistas.titulo;
-                this.engajamentoPatologistasDescricaoEixoX = dados.graficoEngajamentoPatologistas.descricaoEixoX;
-
-                this.indicadoresTempoDigitalizacaoValorMedio = dados.indicadoresTotais.tempoDigitalizacaoValorMedio;
-                this.indicadoresLaminasPorHoraValorMedio = dados.indicadoresTotais.laminasPorHoraValorMedio;
-
-            }, (err) => this.isLoading = false);
+       this.carregarDados(1);
     }
     
+carregarDados(tipoConsulta:number){
+    this.dashboardService
+    .obterDados(tipoConsulta)
+    .subscribe(dados => {
+
+        this.utilizacoes = dados.utilizacoes.sort((a, b) => { return a.visualizadasPerc > b.visualizadasPerc ? -1 : 1 });
+
+        this.titulo = dados.titulo;
+        this.subtitulo = dados.subtitulo;
+
+        this.espacoTotal = dados.recursosTotais.espacoTotal;
+        this.espacoLivre = dados.recursosTotais.espacoLivre;
+        this.espacoLivrePercentual = dados.recursosTotais.espacoLivrePerc;
+
+        console.log(this.espacoLivre);
+        console.log(this.espacoTotal);        
+        console.log(dados.recursosTotais.espacoTotal);
+        console.log(dados.recursosTotais.espacoLivre);        
+
+        this.quantidadeDigitalizas = dados.producaoTotais.digitalizadasQtde;
+        this.quantidadeIntegradas = dados.producaoTotais.integradasQtde;
+        this.percentualIntegracao = dados.producaoTotais.integradasPerc;
+
+        this.quantidadeDistribuida = dados.utilizacaoTotais.distribuidasQtde;
+        this.quantidadeVisualizada = dados.utilizacaoTotais.visualizadasQtde;
+        this.percentualVisualizacao = dados.utilizacaoTotais.visualizadasPerc;
+
+        this.espacoLivreTitulo = dados.graficoEspacoLivre.titulo;
+        this.espacoLivreSeries = dados.graficoEspacoLivre.series;
+        this.espacoLivreCategorias = dados.graficoEspacoLivre.categorias;
+        this.espacoLivreDescricaoEixoX = dados.graficoEspacoLivre.descricaoEixoX;
+
+        this.producaoScannersTitulo = dados.graficoProducaoScanners.titulo;
+        this.producaoScannersSeries = dados.graficoProducaoScanners.series;
+        this.producaoScannersCategorias = dados.graficoProducaoScanners.categorias;
+        this.producaoScannersDescricaoEixoX = dados.graficoProducaoScanners.descricaoEixoX;
+
+        this.performanceScannersTitulo = dados.graficoPerformanceScanners.titulo;
+        this.performanceScannersSeries = dados.graficoPerformanceScanners.series;
+
+        console.log(this.performanceScannersSeries);
+
+        this.performanceScannersCategorias = dados.graficoPerformanceScanners.categorias;
+        this.performanceScannersDescricaoEixoX = dados.graficoPerformanceScanners.descricaoEixoX;
+
+        this.engajamentoPatologistasSeries = dados.graficoEngajamentoPatologistas.series;
+        this.engajamentoPatologistasCategorias = dados.graficoEngajamentoPatologistas.categorias;
+        this.engajamentoPatologistasTitulo = dados.graficoEngajamentoPatologistas.titulo;
+        this.engajamentoPatologistasDescricaoEixoX = dados.graficoEngajamentoPatologistas.descricaoEixoX;
+
+        this.indicadoresTempoDigitalizacaoValorMedio = dados.indicadoresTotais.tempoDigitalizacaoValorMedio;
+        this.indicadoresLaminasPorHoraValorMedio = dados.indicadoresTotais.laminasPorHoraValorMedio;
+
+    }, (err) => this.isLoading = false);
+}
+
     onFilterClick(months) {
         if (this.months !== months) {
             this.months = months;
