@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
 
 namespace DashboardApi.Controllers
 {
@@ -29,7 +28,7 @@ namespace DashboardApi.Controllers
             {
                 string conteudoDashoboard = System.IO.File.ReadAllText("dashboard.json");
 
-                DashboardConsulta dashboard = JsonConvert.DeserializeObject<DashboardConsulta>(conteudoDashoboard);
+                DashboardConsulta dashboard = DashboardConsulta.FromJson(conteudoDashoboard);
 
                 return dashboard != null ?
                     CriarResposta(HttpStatusCode.OK, dashboard) :

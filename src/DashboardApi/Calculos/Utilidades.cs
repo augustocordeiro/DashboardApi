@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Telepatologia.Dashboard.Dominio.Calculos
+namespace DashboardApi.Calculos
 {
     public static class Utilidades
     {
@@ -13,8 +11,7 @@ namespace Telepatologia.Dashboard.Dominio.Calculos
 
         public static decimal CalcularPercentual(long valor1, long valor2)
         {
-            if (valor2 == 0) return 0;
-            return Math.Round(valor1 / (decimal) valor2, 2);
+            return valor2 == 0 ? 0 : Math.Round(valor1 / (decimal) valor2, 2);
         }
         public static int? CalcularEspacoLivreImagens(long espacoLivre, long? tamanhoMedioImagem)
         {

@@ -676,8 +676,8 @@
     ]
   },
   "RecursosTotais": {
-    "EspacoTotal": "183.290 GB",
-    "EspacoLivre": "84.433 GB",
+    "EspacoTotal": "183,3TB",
+    "EspacoLivre": "84,5TB",
     "EspacoTotalBytes": 196806539411456,
     "EspacoLivreBytes": 90659811416397,
     "EspacoLivrePerc": 0.46,
@@ -699,10 +699,10 @@
     "VisualizadasPerc": 0.03
   },
   "IndicadoresTotais": {
-    "TempoDigitalizacaoValorMedio": 36,
+    "TempoDigitalizacaoValorMedio": 92,
     "TempoDigitalizacaoValorMaximo": 423,
     "TempoDigitalizacaoValorMinimo": 18,
-    "LaminasPorHoraValorMedio": 36,
+    "LaminasPorHoraValorMedio": 39,
     "LaminasPorHoraValorMaximo": 200,
     "LaminasPorHoraValorMinimo": 8,
     "TempoDigitalizacaoMelhorHistorico": 17,

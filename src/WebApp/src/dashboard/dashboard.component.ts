@@ -7,7 +7,6 @@ import { IssuesModel } from './../shared/issues.model';
 import 'hammerjs';
 import { Subscription, of, merge } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { DashboardModel } from "src/Entidades/DashboardModel";
 import { Serie } from 'src/Entidades/Serie';
 import { Utilizacao } from 'src/Entidades/Utilizacao';
 
@@ -99,8 +98,7 @@ carregarDados(tipoConsulta:number){
     .obterDados(tipoConsulta)
     .subscribe(dados => {
 
-        this.utilizacoes = dados.utilizacoes.sort((a, b) => { return a.visualizadasPerc > b.visualizadasPerc ? -1 : 1 });
-
+        this.utilizacoes = dados.utilizacoes.sort((a, b) => { return a.visualizadasPerc > b.visualizadasPerc ? -1 : 1 });       
         this.titulo = dados.titulo;
         this.subtitulo = dados.subtitulo;
 
