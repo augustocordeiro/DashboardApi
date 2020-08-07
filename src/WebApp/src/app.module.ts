@@ -22,10 +22,8 @@ import { LayoutModule } from '@progress/kendo-angular-layout';
 import { RippleModule } from '@progress/kendo-angular-ripple';
 
 // Components
-import { SigninComponent } from './signin/signin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { IssuesComponent } from './issues/issues.component';
-import { LabelClass } from './issues/label.directive';
+
 import { MarkdownComponent } from './markdown/markdown.component';
 import { ActiveIssuesComponent } from './charts/active-issues.component';
 import { TypesDistributionComponent } from './charts/types-distribution.component';
@@ -49,21 +47,17 @@ export function createTranslateLoader(http: HttpClient) {
 
 @NgModule({
     declarations: [
-        LabelClass,
+
         AppComponent,
-        SigninComponent,
         DashboardComponent,
-        IssuesComponent,
         MarkdownComponent,
         ActiveIssuesComponent,
         TypesDistributionComponent,
         IssueTypesComponent,
-        StatisticsComponent,        
+        StatisticsComponent,
         LoadingComponent,
-
         GraficoPercentualComponent,
         GraficoAreaComponent,
-
         AmountConverterPipe
     ],
     imports: [
@@ -88,6 +82,6 @@ export function createTranslateLoader(http: HttpClient) {
         RippleModule,
     ],
     providers: [],
-    bootstrap: [ AppComponent ]
+    bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
