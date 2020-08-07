@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "integration-pwa-material": {
+    "dashboard-telepatologia": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "aot": true,
-            "outputPath": "dist/integration-pwa-material",
+            "outputPath": "dist/dashboard-telepatologia",
             "index": "index.html",
             "main": "main.ts",
             "polyfills": "polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "integration-pwa-material:build"
+            "browserTarget": "dashboard-telepatologia:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "integration-pwa-material:build:production"
+              "browserTarget": "dashboard-telepatologia:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "integration-pwa-material:build"
+            "browserTarget": "dashboard-telepatologia:build"
           }
         },
         "test": {
@@ -117,7 +117,7 @@
       }
     }
   },
-  "defaultProject": "integration-pwa-material",
+  "defaultProject": "dashboard-telepatologia",
   "cli": {
     "analytics": "5c7cbb72-1eac-455a-a65f-5b4c00fbf61b"
   }

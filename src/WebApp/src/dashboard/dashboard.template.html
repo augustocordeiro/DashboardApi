@@ -1,141 +1,155 @@
-<div id="header" class="row">
+<div id="header" class="row justify-content-md-center">
 
     <div class="col-sm text-sm-left p-0 p-sm-3">
-        <p class="h1" style="color:seagreen; font-size: 25px;">{{titulo}}</p>
+        <p class="h1" style="color: seagreen; font-size: 25px;">{{titulo}}</p>
         <p class="h4">{{subtitulo}}</p>
     </div>
 
     <div class="col-sm text-sm-right p-0 p-sm-3">
         <kendo-buttongroup [selection]="'single'">
-            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
-                (click)="carregarDados(1)" [selected]="true">
+            <button
+                kendoRippleContainer="kendoRippleContainer"
+                kendoButton="kendoButton"
+                [togglable]="true"
+                (click)="carregarDados(1)"
+                [selected]="true">
                 Dia
             </button>
-            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
+            <button
+                kendoRippleContainer="kendoRippleContainer"
+                kendoButton="kendoButton"
+                [togglable]="true"
                 (click)="carregarDados(2)">
-                Semana</button>
-            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
-                (click)="carregarDados(3)">Mês</button>
+                Semana
+            </button>
+            <button
+                kendoRippleContainer="kendoRippleContainer"
+                kendoButton="kendoButton"
+                [togglable]="true"
+                (click)="carregarDados(3)">
+                Mês
+            </button>
 
-            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
-                (click)="carregarDados(4)">Ano</button>
+            <button
+                kendoRippleContainer="kendoRippleContainer"
+                kendoButton="kendoButton"
+                [togglable]="true"
+                (click)="carregarDados(4)">
+                Ano
+            </button>
 
-            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
-                (click)="carregarDados(5)">12 meses</button>
+            <button
+                kendoRippleContainer="kendoRippleContainer"
+                kendoButton="kendoButton"
+                [togglable]="true"
+                (click)="carregarDados(5)">
+                12 meses
+            </button>
         </kendo-buttongroup>
     </div>
 </div>
 
-<div class="k-card-deck" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+<div
+    class="k-card-deck"
+    style="display: flex; flex-wrap: wrap; justify-content: space-around;">
 
-    <div class="k-card" style="min-height: 200px; width: 300px; color: orangered;">
+    <div class="k-card" style="color: orangered; min-height: 200px; width: 300px;">
         <div class="k-card-body">
-            <span class="comp-label">
-                <div class="issues-count" style="font-size: 80px;">{{ espacoLivrePercentual | percent:'2.0-0' }}</div>
-                <div class="issues-label" style="font-size: 18px;">Espaço Livre</div>
-            </span>
-            <p class="m-0 medium  text-muted">
-                Espaço Total:
-                {{espacoTotal}}
-            </p>
-            <p class="m-0 medium  text-muted">
-                Espaço Livre:
-                {{espacoLivre}}
-            </p>
-        </div>
-    </div>
-
-    <div class="k-card" style="min-height: 200px; width: 300px; color: darkgreen">
-        <div class="k-card-body">
-
-            <span class="comp-label">
-                <div class="issues-count" style="font-size: 80px;">{{ percentualIntegracao | percent:'2.0-0' }}</div>
-                <div class="issues-label" style="font-size: 18px;">Integração</div>
-            </span>
-            <p class="m-0 medium  text-muted">
-                Digitalizadas:
-                {{quantidadeDigitalizas | number}}
-            </p>
-            <p class="m-0 medium text-muted">
-                Integradas:
-                {{quantidadeIntegradas | number}}
-            </p>
-        </div>
-    </div>
-    <div class="k-card" style="min-height: 200px; width: 300px; color: saddlebrown;">
-        <div class="k-card-body">
-
-            <span class="comp-label">
-                <div class="issues-count" style="font-size: 80px;">{{ percentualVisualizacao | percent:'2.0-0' }}</div>
-                <div class="issues-label" style="font-size: 18px;">Visualização</div>
-            </span>
-            <p class="m-0 medium text-muted">
-                Distribuídas:
-                {{quantidadeDistribuida | number}}
-            </p>
-            <p class="m-0 medium text-muted">
-                Visualizadas:
-                {{quantidadeVisualizada | number}}
-            </p>
-
+            <app-card-percentual-texto
+                [valorPercentual]="espacoLivrePercentual"
+                titulo="Espaço Livre"
+                subTitulo1="Espaço Total"
+                subTitulo2="Espaço Livre"
+                [texto1]="espacoTotal"
+                [texto2]="espacoLivre">
+            </app-card-percentual-texto>
 
         </div>
     </div>
 
-    <div class="k-card" style="min-height: 200px; width: 300px; color: midnightblue;">
+    <div class="k-card" style="color: darkgreen; min-height: 200px; width: 300px;">
         <div class="k-card-body">
-            <span class="comp-label">
-                <div class="issues-count" style="font-size: 80px;">{{ indicadoresLaminasPorHoraValorMedio | number }}
-                </div>
-                <div class="issues-label" style="font-size: 18px;">Lâminas/hr</div>
-            </span>
-            <p class="m-0 medium text-muted">
-                Tempo de digitalização:
-                {{indicadoresTempoDigitalizacaoValorMedio}} segundos
-            </p>
+            <app-card-percentual
+                [valorPercentual]="percentualIntegracao"
+                titulo="Integração"
+                subTitulo1="Digitalizadas"
+                subTitulo2="Integradas"
+                [valor1]="quantidadeDigitalizas"
+                [valor2]="quantidadeIntegradas">
+            </app-card-percentual>
+        </div>
+    </div>
+    <div
+        class="k-card"
+        style="color: saddlebrown; min-height: 200px; width: 300px;">
+        <div class="k-card-body">
+            <app-card-percentual
+                [valorPercentual]="percentualVisualizacao"
+                titulo="Visualização"
+                subTitulo1="Distribuídas"
+                subTitulo2="Visualizadas"
+                [valor1]="quantidadeDistribuida"
+                [valor2]="quantidadeVisualizada">
+            </app-card-percentual>
+
         </div>
     </div>
 
+    <div
+        class="k-card"
+        style="color: midnightblue; min-height: 200px; width: 300px;">
+        <div class="k-card-body">
+            <app-card-numerico-basico
+                [valorPrincipal]="indicadoresLaminasPorHoraValorMedio"
+                titulo="Lâminas/hr"
+                subTitulo="Tempo de digitalização"
+                [valor]="indicadoresTempoDigitalizacaoValorMedio"
+                unidadeMedida="segundos">
+            </app-card-numerico-basico>
+
+        </div>
+    </div>
 </div>
 
-<div class="k-card-deck" style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+<div
+    class="k-card-deck"
+    style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
     <div class="k-card" style="width: 600px;">
         <div class="k-card-body">
 
-            <app-grafico-percentual [serie]="espacoLivreSeries" [titulo]="espacoLivreTitulo"
-                [categorias]="espacoLivreCategorias" [descricaoEixoX]="espacoLivreDescricaoEixoX" tipo="column">
+            <app-grafico-percentual
+                [serie]="espacoLivreSeries"
+                [titulo]="espacoLivreTitulo"
+                [categorias]="espacoLivreCategorias"
+                [descricaoEixoX]="espacoLivreDescricaoEixoX"
+                tipo="column">
             </app-grafico-percentual>
         </div>
     </div>
 
     <div class="k-card" style="width: 600px;">
         <div class="k-card-body">
-            <app-grafico-area [serie]="producaoScannersSeries" [titulo]="producaoScannersTitulo"
-                [categorias]="producaoScannersCategorias" [descricaoEixoX]="producaoScannersDescricaoEixoX">
+            <app-grafico-area
+                [serie]="producaoScannersSeries"
+                [titulo]="producaoScannersTitulo"
+                [categorias]="producaoScannersCategorias"
+                [descricaoEixoX]="producaoScannersDescricaoEixoX">
             </app-grafico-area>
         </div>
     </div>
 
     <div class="k-card" style="width: 600px;">
         <div class="k-card-body">
-            <app-grafico-percentual [serie]="engajamentoPatologistasSeries" [titulo]="engajamentoPatologistasTitulo"
+            <app-grafico-percentual
+                [serie]="engajamentoPatologistasSeries"
+                [titulo]="engajamentoPatologistasTitulo"
                 [categorias]="engajamentoPatologistasCategorias"
-                [descricaoEixoX]="engajamentoPatologistasDescricaoEixoX" tipo="line"></app-grafico-percentual>
+                [descricaoEixoX]="engajamentoPatologistasDescricaoEixoX"
+                tipo="line">
+            </app-grafico-percentual>
         </div>
     </div>
 
-    <!-- <div class="k-card" style="width: 600px;">
-        <div class="k-card-body">
-            <app-grafico-percentual
-                [serie]="performanceScannersSeries"
-                [titulo]="performanceScannersTitulo"
-                [categorias]="performanceScannersCategorias"
-                [descricaoEixoX]="performanceScannersDescricaoEixoX"
-                tipo="line"
-                unidade="number"
-                ></app-grafico-percentual>
-        </div>
-    </div> -->
     <div class="k-card" style="width: 600px;">
         <div class="k-card-body">
 
@@ -143,14 +157,21 @@
                 <kendo-chart-axis-defaults>
                     <kendo-chart-axis-defaults-labels format="N0"></kendo-chart-axis-defaults-labels>
                 </kendo-chart-axis-defaults>
-
                 <kendo-chart-category-axis>
-                    <kendo-chart-category-axis-item [categories]="performanceScannersCategorias"
-                        [title]="{ text: performanceScannersDescricaoEixoX }"></kendo-chart-category-axis-item>
+                    <kendo-chart-category-axis-item
+                        [categories]="performanceScannersCategorias"
+                        [title]="{ text: performanceScannersDescricaoEixoX }">
+                    </kendo-chart-category-axis-item>
                 </kendo-chart-category-axis>
                 <kendo-chart-series>
-                    <kendo-chart-series-item *ngFor="let item of performanceScannersSeries" [data]="item.dados"
-                        [name]="item.nome" field="valor" categoryField="categoria" [color]="item.cor" type="line">
+                    <kendo-chart-series-item
+                        *ngFor="let item of performanceScannersSeries"
+                        [data]="item.dados"
+                        [name]="item.nome"
+                        field="valor"
+                        categoryField="categoria"
+                        [color]="item.cor"
+                        type="line">
                         <kendo-chart-series-item-tooltip>
                             <ng-template let-dataItem="dataItem">
                                 {{item.nome}}

@@ -1,4 +1,3 @@
-
 import { Component, Input } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import es from '@angular/common/locales/es';

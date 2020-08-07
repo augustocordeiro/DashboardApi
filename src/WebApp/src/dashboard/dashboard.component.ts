@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation, HostBinding } from '@angular/core';
-import { DashboardService } from './../shared/dashboard.service';
+import { DashboardService } from '../servicos/dashboard.service';
 
 import 'hammerjs';
 import { Serie } from 'src/Entidades/Serie';
