@@ -24,7 +24,6 @@ import { RippleModule } from '@progress/kendo-angular-ripple';
 // Components
 import { SigninComponent } from './signin/signin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProfileComponent } from './profile/profile.component';
 import { IssuesComponent } from './issues/issues.component';
 import { LabelClass } from './issues/label.directive';
 import { MarkdownComponent } from './markdown/markdown.component';
@@ -54,7 +53,6 @@ export function createTranslateLoader(http: HttpClient) {
         AppComponent,
         SigninComponent,
         DashboardComponent,
-        ProfileComponent,
         IssuesComponent,
         MarkdownComponent,
         ActiveIssuesComponent,

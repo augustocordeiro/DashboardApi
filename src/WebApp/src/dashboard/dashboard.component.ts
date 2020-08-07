@@ -1,31 +1,19 @@
-import { Component, ViewEncapsulation, HostBinding, OnDestroy } from '@angular/core';
-import { GithubService } from './../shared/github.service';
+import { Component, ViewEncapsulation, HostBinding } from '@angular/core';
 import { DashboardService } from './../shared/dashboard.service';
-import { IssuesProcessor } from './../shared/issues-processor.service';
-import { IssuesModel } from './../shared/issues.model';
 
 import 'hammerjs';
-import { Subscription, of, merge } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { Serie } from 'src/Entidades/Serie';
 import { Utilizacao } from 'src/Entidades/Utilizacao';
 
 @Component({
     selector: 'app-dashboard',
-    providers: [DashboardService, GithubService, IssuesProcessor],
+    providers: [DashboardService],
     encapsulation: ViewEncapsulation.None,
     templateUrl: './dashboard.template.html'
 })
 
-export class DashboardComponent implements OnDestroy {
+export class DashboardComponent {
     public isLoading = true;
-    public today: Date = new Date();
-    public rangeStart: Date;
-    public issues: any;
-    public months = 3;
-    private data: any;
-    private subscription: Subscription;
-    private selectedIndex = 0;
 
     @HostBinding('attr.id') get get_id() { return 'dashboard'; }
     @HostBinding('class') get get_class() { return 'container-fluid'; }
@@ -69,124 +57,61 @@ export class DashboardComponent implements OnDestroy {
     public indicadoresTempoDigitalizacaoValorMedio: number;
     public indicadoresLaminasPorHoraValorMedio: number;
 
-    constructor(public githubService: GithubService, public issuesProcessor: IssuesProcessor, public dashboardService: DashboardService) {
-        this.rangeStart = this.issuesProcessor.getMonthsRange(this.months);
+    constructor(public dashboardService: DashboardService) {
 
-        this.subscription =
-            merge(
-                githubService
-                    .getGithubIssues({ pages: 5 })
-                    .pipe(map(data => {
-                        this.data = data;
-                        this.isLoading = false;
-                        return this.issuesProcessor.process(data, this.months);
-                    }, (err) => this.isLoading = false)),
-                of(new IssuesModel())
-            )
-                .subscribe((data: IssuesModel) => {
-                    this.issues = data;
-                });
     }
 
     ngOnInit() {
 
-       this.carregarDados(1);
-    }
-    
-carregarDados(tipoConsulta:number){
-    this.dashboardService
-    .obterDados(tipoConsulta)
-    .subscribe(dados => {
-
-        this.utilizacoes = dados.utilizacoes.sort((a, b) => { return a.visualizadasPerc > b.visualizadasPerc ? -1 : 1 });       
-        this.titulo = dados.titulo;
-        this.subtitulo = dados.subtitulo;
-
-        this.espacoTotal = dados.recursosTotais.espacoTotal;
-        this.espacoLivre = dados.recursosTotais.espacoLivre;
-        this.espacoLivrePercentual = dados.recursosTotais.espacoLivrePerc;
-
-        console.log(this.espacoLivre);
-        console.log(this.espacoTotal);        
-        console.log(dados.recursosTotais.espacoTotal);
-        console.log(dados.recursosTotais.espacoLivre);        
-
-        this.quantidadeDigitalizas = dados.producaoTotais.digitalizadasQtde;
-        this.quantidadeIntegradas = dados.producaoTotais.integradasQtde;
-        this.percentualIntegracao = dados.producaoTotais.integradasPerc;
-
-        this.quantidadeDistribuida = dados.utilizacaoTotais.distribuidasQtde;
-        this.quantidadeVisualizada = dados.utilizacaoTotais.visualizadasQtde;
-        this.percentualVisualizacao = dados.utilizacaoTotais.visualizadasPerc;
-
-        this.espacoLivreTitulo = dados.graficoEspacoLivre.titulo;
-        this.espacoLivreSeries = dados.graficoEspacoLivre.series;
-        this.espacoLivreCategorias = dados.graficoEspacoLivre.categorias;
-        this.espacoLivreDescricaoEixoX = dados.graficoEspacoLivre.descricaoEixoX;
-
-        this.producaoScannersTitulo = dados.graficoProducaoScanners.titulo;
-        this.producaoScannersSeries = dados.graficoProducaoScanners.series;
-        this.producaoScannersCategorias = dados.graficoProducaoScanners.categorias;
-        this.producaoScannersDescricaoEixoX = dados.graficoProducaoScanners.descricaoEixoX;
-
-        this.performanceScannersTitulo = dados.graficoPerformanceScanners.titulo;
-        this.performanceScannersSeries = dados.graficoPerformanceScanners.series;
-
-        console.log(this.performanceScannersSeries);
-
-        this.performanceScannersCategorias = dados.graficoPerformanceScanners.categorias;
-        this.performanceScannersDescricaoEixoX = dados.graficoPerformanceScanners.descricaoEixoX;
-
-        this.engajamentoPatologistasSeries = dados.graficoEngajamentoPatologistas.series;
-        this.engajamentoPatologistasCategorias = dados.graficoEngajamentoPatologistas.categorias;
-        this.engajamentoPatologistasTitulo = dados.graficoEngajamentoPatologistas.titulo;
-        this.engajamentoPatologistasDescricaoEixoX = dados.graficoEngajamentoPatologistas.descricaoEixoX;
-
-        this.indicadoresTempoDigitalizacaoValorMedio = dados.indicadoresTotais.tempoDigitalizacaoValorMedio;
-        this.indicadoresLaminasPorHoraValorMedio = dados.indicadoresTotais.laminasPorHoraValorMedio;
-
-    }, (err) => this.isLoading = false);
-}
-
-    onFilterClick(months) {
-        if (this.months !== months) {
-            this.months = months;
-            this.rangeStart = this.issuesProcessor.getMonthsRange(months);
-            this.issues = this.issuesProcessor.process(this.data, months);
-            this.filterIssues(this.selectedIndex);
-        }
+        this.carregarDados(1);
     }
 
-    ngOnDestroy() {
-        this.subscription.unsubscribe();
+    carregarDados(tipoConsulta: number) {
+        this.dashboardService
+            .obterDados(tipoConsulta)
+            .subscribe(dados => {
+
+                this.utilizacoes = dados.utilizacoes.sort((a, b) => { return a.visualizadasPerc > b.visualizadasPerc ? -1 : 1 });
+                this.titulo = dados.titulo;
+                this.subtitulo = dados.subtitulo;
+
+                this.espacoTotal = dados.recursosTotais.espacoTotal;
+                this.espacoLivre = dados.recursosTotais.espacoLivre;
+                this.espacoLivrePercentual = dados.recursosTotais.espacoLivrePerc;
+
+                this.quantidadeDigitalizas = dados.producaoTotais.digitalizadasQtde;
+                this.quantidadeIntegradas = dados.producaoTotais.integradasQtde;
+                this.percentualIntegracao = dados.producaoTotais.integradasPerc;
+
+                this.quantidadeDistribuida = dados.utilizacaoTotais.distribuidasQtde;
+                this.quantidadeVisualizada = dados.utilizacaoTotais.visualizadasQtde;
+                this.percentualVisualizacao = dados.utilizacaoTotais.visualizadasPerc;
+
+                this.espacoLivreTitulo = dados.graficoEspacoLivre.titulo;
+                this.espacoLivreSeries = dados.graficoEspacoLivre.series;
+                this.espacoLivreCategorias = dados.graficoEspacoLivre.categorias;
+                this.espacoLivreDescricaoEixoX = dados.graficoEspacoLivre.descricaoEixoX;
+
+                this.producaoScannersTitulo = dados.graficoProducaoScanners.titulo;
+                this.producaoScannersSeries = dados.graficoProducaoScanners.series;
+                this.producaoScannersCategorias = dados.graficoProducaoScanners.categorias;
+                this.producaoScannersDescricaoEixoX = dados.graficoProducaoScanners.descricaoEixoX;
+
+                this.performanceScannersTitulo = dados.graficoPerformanceScanners.titulo;
+                this.performanceScannersSeries = dados.graficoPerformanceScanners.series;
+
+                this.performanceScannersCategorias = dados.graficoPerformanceScanners.categorias;
+                this.performanceScannersDescricaoEixoX = dados.graficoPerformanceScanners.descricaoEixoX;
+
+                this.engajamentoPatologistasSeries = dados.graficoEngajamentoPatologistas.series;
+                this.engajamentoPatologistasCategorias = dados.graficoEngajamentoPatologistas.categorias;
+                this.engajamentoPatologistasTitulo = dados.graficoEngajamentoPatologistas.titulo;
+                this.engajamentoPatologistasDescricaoEixoX = dados.graficoEngajamentoPatologistas.descricaoEixoX;
+
+                this.indicadoresTempoDigitalizacaoValorMedio = dados.indicadoresTotais.tempoDigitalizacaoValorMedio;
+                this.indicadoresLaminasPorHoraValorMedio = dados.indicadoresTotais.laminasPorHoraValorMedio;
+
+            }, (err) => this.isLoading = false);
     }
 
-    onTabSelect(event) {
-        this.filterIssues(event.index);
-    }
-
-    filterIssues(index) {
-        switch (index) {
-            case 0:
-                this.issues = this.issuesProcessor.process(this.data, this.months);
-                this.selectedIndex = 0;
-                break;
-            case 1:
-                const assigned = this.issuesProcessor
-                    .flatten(this.data)
-                    .filter(item => item.assignee ? item.assignee.login === 'ggkrustev' : false);
-                this.issues = this.issuesProcessor.process(assigned, this.months);
-                this.selectedIndex = 1;
-                break;
-            case 2:
-                const created = this.issuesProcessor
-                .flatten(this.data)
-                .filter(item => item.user.login === 'ggkrustev');
-                this.issues = this.issuesProcessor
-                .process(created, this.months);
-                this.selectedIndex = 2;
-                break;
-            default: this.issues = this.issuesProcessor.process(this.data, this.months);
-        }
-    }
 }
