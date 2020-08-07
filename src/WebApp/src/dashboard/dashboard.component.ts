@@ -2,8 +2,8 @@ import { Component, ViewEncapsulation, HostBinding } from '@angular/core';
 import { DashboardService } from '../servicos/dashboard.service';
 
 import 'hammerjs';
-import { Serie } from 'src/Entidades/Serie';
-import { Utilizacao } from 'src/Entidades/Utilizacao';
+import { Serie } from 'src/entidades/Serie';
+import { Utilizacao } from 'src/entidades/Utilizacao';
 
 @Component({
     selector: 'app-dashboard',
@@ -69,9 +69,8 @@ export class DashboardComponent {
     carregarDados(tipoConsulta: number) {
         this.dashboardService
             .obterDados(tipoConsulta)
-            .subscribe(dados => {
+            .subscribe(dados => {                
 
-                this.utilizacoes = dados.utilizacoes.sort((a, b) => { return a.visualizadasPerc > b.visualizadasPerc ? -1 : 1 });
                 this.titulo = dados.titulo;
                 this.subtitulo = dados.subtitulo;
 
