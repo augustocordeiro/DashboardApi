@@ -49,9 +49,7 @@
     </div>
 </div>
 
-<div
-    class="k-card-deck"
-    style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+<div class="k-card-deck" style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
 
     <div class="k-card" style="color: orangered; min-height: 200px; width: 300px;">
         <div class="k-card-body">
@@ -107,44 +105,45 @@
     </div>
 </div>
 
-<div class="k-card-deck" style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+<div
+    class="k-card-deck"
+    style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
 
+    <div class="k-card" style="width: 600px;">
+        <div class="k-card-body">
 
-   <div class="k-card" style="width: 600px;">
-    <div class="k-card-body">
-
-        <app-grafico-percentual
-            [serie]="espacoLivreSeries"
-            [titulo]="espacoLivreTitulo"
-            [categorias]="espacoLivreCategorias"
-            [descricaoEixoX]="espacoLivreDescricaoEixoX"
-            tipo="column"></app-grafico-percentual>
+            <app-grafico-percentual
+                [serie]="espacoLivreSeries"
+                [titulo]="espacoLivreTitulo"
+                [categorias]="espacoLivreCategorias"
+                [descricaoEixoX]="espacoLivreDescricaoEixoX"
+                tipo="column"></app-grafico-percentual>
+        </div>
     </div>
-</div>
 
-<div class="k-card" style="width: 600px;">
-    <div class="k-card-body">
-        <app-grafico-area
-            [serie]="producaoScannersSeries"
-            [titulo]="producaoScannersTitulo"
-            [categorias]="producaoScannersCategorias"
-            [descricaoEixoX]="producaoScannersDescricaoEixoX"></app-grafico-area>
+    <div class="k-card" style="width: 600px;">
+        <div class="k-card-body">
+            <app-grafico-area
+                [serie]="producaoScannersSeries"
+                [titulo]="producaoScannersTitulo"
+                [categorias]="producaoScannersCategorias"
+                [descricaoEixoX]="producaoScannersDescricaoEixoX"></app-grafico-area>
+        </div>
     </div>
-</div>
 
     <div class="k-card" style="width: 600px;">
 
-
-
         <div class="k-card-body">
 
-            <app-grafico-percentual *ngIf="apresentacaoPatologistas == 'grafico'"
-                [serie]="engajamentoPatologistasSeries" [titulo]="engajamentoPatologistasTitulo"
+            <app-grafico-percentual
+                *ngIf="apresentacaoPatologistas == 'grafico'"
+                [serie]="engajamentoPatologistasSeries"
+                [titulo]="engajamentoPatologistasTitulo"
                 [categorias]="engajamentoPatologistasCategorias"
-                [descricaoEixoX]="engajamentoPatologistasDescricaoEixoX" tipo="line">
-            </app-grafico-percentual>
+                [descricaoEixoX]="engajamentoPatologistasDescricaoEixoX"
+                tipo="line"></app-grafico-percentual>
 
-            <kendo-grid *ngIf="apresentacaoPatologistas == 'tabela'" [scrollable]="true" [data]="ultilizacoes"
+                <kendo-grid *ngIf="apresentacaoPatologistas == 'tabela'" [scrollable]="true" [data]="ultilizacoes"
                 style="height: 400px;">
             
                 <ng-template kendoGridToolbarTemplate>
@@ -174,58 +173,58 @@
             </kendo-grid>
         </div>
 
-    <kendo-card-actions orientation="horizontal" layout="end">
+        <kendo-card-actions orientation="horizontal" layout="end">
 
-    <button
-        *ngIf="apresentacaoPatologistas === 'tabela'"
-        class="k-button k-primary k-flat"
-        (click)="alterarVisaoPatologistas('grafico')">
-        <span class="k-icon"></span>
-        Ver Gráfico
-    </button>
+            <button
+                *ngIf="apresentacaoPatologistas === 'tabela'"
+                class="k-button k-primary k-flat"
+                (click)="alterarVisaoPatologistas('grafico')">
+                <span class="k-icon"></span>
+                Ver Gráfico
+            </button>
 
-    <button
-        *ngIf="apresentacaoPatologistas === 'grafico'"
-        class="k-button k-primary k-flat"
-        (click)="alterarVisaoPatologistas('tabela')">
-        <span class="k-icon"></span>
-        Ver Tabela
-    </button>
+            <button
+                *ngIf="apresentacaoPatologistas === 'grafico'"
+                class="k-button k-primary k-flat"
+                (click)="alterarVisaoPatologistas('tabela')">
+                <span class="k-icon"></span>
+                Ver Tabela
+            </button>
 
-</kendo-card-actions>
+        </kendo-card-actions>
     </div>
 
-  <div class="k-card" style="width: 600px;">
-    <div class="k-card-body">
+    <div class="k-card" style="width: 600px;">
+        <div class="k-card-body">
 
-        <kendo-chart [title]="{text: performanceScannersTitulo}">
-            <kendo-chart-axis-defaults>
-                <kendo-chart-axis-defaults-labels format="N0"></kendo-chart-axis-defaults-labels>
-            </kendo-chart-axis-defaults>
-            <kendo-chart-category-axis>
-                <kendo-chart-category-axis-item
-                    [categories]="performanceScannersCategorias"
-                    [title]="{ text: performanceScannersDescricaoEixoX }"></kendo-chart-category-axis-item>
-            </kendo-chart-category-axis>
-            <kendo-chart-series>
-                <kendo-chart-series-item
-                    *ngFor="let item of performanceScannersSeries"
-                    [data]="item.dados"
-                    [name]="item.nome"
-                    field="valor"
-                    categoryField="categoria"
-                    [color]="item.cor"
-                    type="line">
-                    <kendo-chart-series-item-tooltip>
-                        <ng-template let-dataItem="dataItem">
-                            {{item.nome}}
-                            |
-                            {{dataItem.valor | number}}
-                        </ng-template>
-                    </kendo-chart-series-item-tooltip>
-                </kendo-chart-series-item>
-            </kendo-chart-series>
-        </kendo-chart>
+            <kendo-chart [title]="{text: performanceScannersTitulo}">
+                <kendo-chart-axis-defaults>
+                    <kendo-chart-axis-defaults-labels format="N0"></kendo-chart-axis-defaults-labels>
+                </kendo-chart-axis-defaults>
+                <kendo-chart-category-axis>
+                    <kendo-chart-category-axis-item
+                        [categories]="performanceScannersCategorias"
+                        [title]="{ text: performanceScannersDescricaoEixoX }"></kendo-chart-category-axis-item>
+                </kendo-chart-category-axis>
+                <kendo-chart-series>
+                    <kendo-chart-series-item
+                        *ngFor="let item of performanceScannersSeries"
+                        [data]="item.dados"
+                        [name]="item.nome"
+                        field="valor"
+                        categoryField="categoria"
+                        [color]="item.cor"
+                        type="line">
+                        <kendo-chart-series-item-tooltip>
+                            <ng-template let-dataItem="dataItem">
+                                {{item.nome}}
+                                |
+                                {{dataItem.valor | number}}
+                            </ng-template>
+                        </kendo-chart-series-item-tooltip>
+                    </kendo-chart-series-item>
+                </kendo-chart-series>
+            </kendo-chart>
+        </div>
     </div>
-</div>
 </div>
