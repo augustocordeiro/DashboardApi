@@ -114,6 +114,8 @@
 <div
     class="k-card-deck"
     style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+  
+
     <div class="k-card" style="width: 600px;">
         <div class="k-card-body">
 
@@ -127,6 +129,7 @@
         </div>
     </div>
 
+
     <div class="k-card" style="width: 600px;">
         <div class="k-card-body">
             <app-grafico-area
@@ -139,18 +142,87 @@
     </div>
 
     <div class="k-card" style="width: 600px;">
+        
+       
+        
         <div class="k-card-body">
+
+            
+
+          
+
             <app-grafico-percentual
+            
+            *ngIf="apresentacaoPatologistas === 'grafico'"    
                 [serie]="engajamentoPatologistasSeries"
                 [titulo]="engajamentoPatologistasTitulo"
                 [categorias]="engajamentoPatologistasCategorias"
                 [descricaoEixoX]="engajamentoPatologistasDescricaoEixoX"
                 tipo="line">
             </app-grafico-percentual>
+
+            <kendo-grid        
+            *ngIf="apresentacaoPatologistas === 'tabela'"    
+            [scrollable]="true"
+            [data]="ultilizacoes"           
+            style="height: 500px;">
+        
+            <ng-template kendoGridToolbarTemplate>
+                <button type="button" kendoGridExcelCommand icon="file-excel">Exportar</button>
+            </ng-template>
+    
+            <kendo-grid-column class="price-col" field="nomPatologista" title="Patologista" [width]="200"></kendo-grid-column>                        
+            <kendo-grid-column class="price-col" field="visualizadasPerc" title="%" [width]="80">
+        
+            <ng-template kendoGridCellTemplate let-dataItem>
+                
+                <strong>{{dataItem.visualizadasPerc | percent}}</strong>
+            </ng-template>
+        
+            </kendo-grid-column>
+            <kendo-grid-excel fileName="Patologistas.xlsx" >
+                
+                <kendo-excelexport-column field="codPatologista" title="Código"></kendo-excelexport-column>
+                <kendo-excelexport-column field="nomPatologista" title="Nome"></kendo-excelexport-column>
+                <kendo-excelexport-column field="distribuidasQtde" title="Distribuidas"></kendo-excelexport-column>
+                <kendo-excelexport-column field="visualizadasQtde" title="Visualizadas"></kendo-excelexport-column>
+                <kendo-excelexport-column field="visualizadasPerc" title="Visualizadas %"></kendo-excelexport-column>
+    
+            </kendo-grid-excel>
+        </kendo-grid>
         </div>
+
+        <kendo-card-actions orientation="horizontal" layout="end">
+           
+            
+            <button
+
+            *ngIf="apresentacaoPatologistas === 'tabela'"    
+
+             class="k-button k-primary k-flat" (click)="alterarVisaoPatologistas('grafico')">
+                <span class="k-icon" ></span>
+                Ver Gráfico
+            </button>
+
+            <button 
+            
+            *ngIf="apresentacaoPatologistas === 'grafico'"    
+
+            class="k-button k-primary k-flat" (click)="alterarVisaoPatologistas('tabela')">
+                <span class="k-icon"></span>
+                Ver Tabela
+            </button>
+
+
+        </kendo-card-actions>
     </div>
 
     <div class="k-card" style="width: 600px;">
+        
+        
+     
+        
+        
         <div class="k-card-body">
 
             <kendo-chart [title]="{text: performanceScannersTitulo}">

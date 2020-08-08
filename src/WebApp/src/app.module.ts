@@ -13,7 +13,7 @@ import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 
 // Kendo UI
-import { GridModule } from "@progress/kendo-angular-grid";
+import { GridModule, ExcelModule} from "@progress/kendo-angular-grid";
 import { ChartsModule } from "@progress/kendo-angular-charts";
 import { DialogModule } from "@progress/kendo-angular-dialog";
 import { InputsModule } from "@progress/kendo-angular-inputs";
@@ -56,6 +56,7 @@ export function createTranslateLoader(http: HttpClient) {
         BrowserModule,
         ChartsModule,
         GridModule,
+        ExcelModule,
         DialogModule,
         InputsModule,
         ButtonsModule,

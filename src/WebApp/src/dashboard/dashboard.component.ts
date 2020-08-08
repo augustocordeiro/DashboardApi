@@ -1,15 +1,15 @@
 import { Component, ViewEncapsulation, HostBinding } from '@angular/core';
 import { DashboardService } from '../servicos/dashboard.service';
-
 import 'hammerjs';
 import { Serie } from 'src/entidades/Serie';
 import { Utilizacao } from 'src/entidades/Utilizacao';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-dashboard',
     providers: [DashboardService],
     encapsulation: ViewEncapsulation.None,
-    templateUrl: './dashboard.template.html'
+    templateUrl: './dashboard.template.html'    
 })
 
 export class DashboardComponent {
@@ -57,19 +57,30 @@ export class DashboardComponent {
     public indicadoresTempoDigitalizacaoValorMedio: number;
     public indicadoresLaminasPorHoraValorMedio: number;
 
+    public ultilizacoes: Utilizacao[];
+
+    public apresentacaoPatologistas: string;
+
     constructor(public dashboardService: DashboardService) {
 
     }
 
     ngOnInit() {
 
+        this.apresentacaoPatologistas = "grafico";
         this.carregarDados(1);
+    }
+
+    alterarVisaoPatologistas(apresentacao: string){
+        this.apresentacaoPatologistas = apresentacao;
     }
 
     carregarDados(tipoConsulta: number) {
         this.dashboardService
             .obterDados(tipoConsulta)
             .subscribe(dados => {                
+
+                this.ultilizacoes = dados.utilizacoes.sort((a, b) => { return a.visualizadasPerc > b.visualizadasPerc ? -1 : 1 });
 
                 this.titulo = dados.titulo;
                 this.subtitulo = dados.subtitulo;
@@ -112,5 +123,14 @@ export class DashboardComponent {
 
             }, (err) => this.isLoading = false);
     }
+
+    public allData = (): Utilizacao[] => {
+        
+        console.log(this.ultilizacoes);
+        
+        return this.ultilizacoes;
+    }  
+
+    
 
 }
