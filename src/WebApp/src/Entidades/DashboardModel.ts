@@ -8,6 +8,7 @@ import { RecursosTotais } from './RecursosTotais';
 import { UtilizacaoTotais } from './UtilizacaoTotais';
 import { Utilizacao } from './Utilizacao';
 export interface DashboardModel {
+    processadoEm: string;
     subtitulo: any;
     titulo: any;
     dataObservacao: Date;

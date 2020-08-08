@@ -3,6 +3,7 @@
     <div class="col-sm text-sm-left p-0 p-sm-3">
         <p class="h1" style="color: seagreen; font-size: 25px;">{{titulo}}</p>
         <p class="h4">{{subtitulo}}</p>
+        
     </div>
 
     <div class="col-sm text-sm-right p-0 p-sm-3">
@@ -30,6 +31,9 @@
                 12 meses
             </button>
         </kendo-buttongroup>
+        <div class="col-sm text-sm-right p-0 p-sm-2">
+        <p>Processado em: 10/01/2020 14:23 {{processadoEm}}</p>
+    </div>
     </div>
 </div>
 
@@ -115,7 +119,7 @@
                     </ng-template>
 
                 </kendo-grid-column>
-                <kendo-grid-excel fileName="Patologistas.xlsx">
+                <kendo-grid-excel fileName="dashboard-engajamento-patologistas.xlsx">
 
                     <kendo-excelexport-column field="codPatologista" title="Código"></kendo-excelexport-column>
                     <kendo-excelexport-column field="nomPatologista" title="Nome"></kendo-excelexport-column>

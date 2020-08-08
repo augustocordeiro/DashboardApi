@@ -14,6 +14,7 @@ import { Observable } from 'rxjs';
 
 export class DashboardComponent {
     public isLoading = true;
+    
 
     @HostBinding('attr.id') get get_id() { return 'dashboard'; }
     @HostBinding('class') get get_class() { return 'container-fluid'; }
@@ -24,6 +25,7 @@ export class DashboardComponent {
     public performanceScannersDescricaoEixoX: string;
     public titulo: string;
     public subtitulo: string;
+    public processadoEm: string;
 
     public espacoLivreTitulo: string;
     public espacoLivreSeries: Serie[];
@@ -84,6 +86,7 @@ export class DashboardComponent {
 
                 this.titulo = dados.titulo;
                 this.subtitulo = dados.subtitulo;
+                this.processadoEm = dados.processadoEm;
 
                 this.espacoTotal = dados.recursosTotais.espacoTotal;
                 this.espacoLivre = dados.recursosTotais.espacoLivre;
