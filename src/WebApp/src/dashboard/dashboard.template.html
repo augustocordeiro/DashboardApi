@@ -7,41 +7,25 @@
 
     <div class="col-sm text-sm-right p-0 p-sm-3">
         <kendo-buttongroup [selection]="'single'">
-            <button
-                kendoRippleContainer="kendoRippleContainer"
-                kendoButton="kendoButton"
-                [togglable]="true"
-                (click)="carregarDados(1)"
-                [selected]="true">
+            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
+                (click)="carregarDados(1)" [selected]="true">
                 Dia
             </button>
-            <button
-                kendoRippleContainer="kendoRippleContainer"
-                kendoButton="kendoButton"
-                [togglable]="true"
+            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
                 (click)="carregarDados(2)">
                 Semana
             </button>
-            <button
-                kendoRippleContainer="kendoRippleContainer"
-                kendoButton="kendoButton"
-                [togglable]="true"
+            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
                 (click)="carregarDados(3)">
                 Mês
             </button>
 
-            <button
-                kendoRippleContainer="kendoRippleContainer"
-                kendoButton="kendoButton"
-                [togglable]="true"
+            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
                 (click)="carregarDados(4)">
                 Ano
             </button>
 
-            <button
-                kendoRippleContainer="kendoRippleContainer"
-                kendoButton="kendoButton"
-                [togglable]="true"
+            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
                 (click)="carregarDados(5)">
                 12 meses
             </button>
@@ -53,81 +37,55 @@
 
     <div class="k-card" style="color: orangered; min-height: 200px; width: 300px;">
         <div class="k-card-body">
-            <app-card-percentual-texto
-                [valorPercentual]="espacoLivrePercentual"
-                titulo="Espaço Livre"
-                subTitulo1="Espaço Total"
-                subTitulo2="Espaço Livre"
-                [texto1]="espacoTotal"
-                [texto2]="espacoLivre"></app-card-percentual-texto>
+            <app-card-percentual-texto [valorPercentual]="espacoLivrePercentual" titulo="Espaço Livre"
+                subTitulo1="Espaço Total" subTitulo2="Espaço Livre" [texto1]="espacoTotal" [texto2]="espacoLivre">
+            </app-card-percentual-texto>
 
         </div>
     </div>
 
     <div class="k-card" style="color: darkgreen; min-height: 200px; width: 300px;">
         <div class="k-card-body">
-            <app-card-percentual
-                [valorPercentual]="percentualIntegracao"
-                titulo="Integração"
-                subTitulo1="Digitalizadas"
-                subTitulo2="Integradas"
-                [valor1]="quantidadeDigitalizas"
-                [valor2]="quantidadeIntegradas"></app-card-percentual>
+            <app-card-percentual [valorPercentual]="percentualIntegracao" titulo="Integração" subTitulo1="Digitalizadas"
+                subTitulo2="Integradas" [valor1]="quantidadeDigitalizas" [valor2]="quantidadeIntegradas">
+            </app-card-percentual>
         </div>
     </div>
-    <div
-        class="k-card"
-        style="color: saddlebrown; min-height: 200px; width: 300px;">
+    <div class="k-card" style="color: saddlebrown; min-height: 200px; width: 300px;">
         <div class="k-card-body">
-            <app-card-percentual
-                [valorPercentual]="percentualVisualizacao"
-                titulo="Visualização"
-                subTitulo1="Distribuídas"
-                subTitulo2="Visualizadas"
-                [valor1]="quantidadeDistribuida"
+            <app-card-percentual [valorPercentual]="percentualVisualizacao" titulo="Visualização"
+                subTitulo1="Distribuídas" subTitulo2="Visualizadas" [valor1]="quantidadeDistribuida"
                 [valor2]="quantidadeVisualizada"></app-card-percentual>
 
         </div>
     </div>
 
-    <div
-        class="k-card"
-        style="color: midnightblue; min-height: 200px; width: 300px;">
+    <div class="k-card" style="color: midnightblue; min-height: 200px; width: 300px;">
         <div class="k-card-body">
-            <app-card-numerico-basico
-                [valorPrincipal]="indicadoresLaminasPorHoraValorMedio"
-                titulo="Lâminas/hr"
-                subTitulo="Tempo de digitalização"
-                [valor]="indicadoresTempoDigitalizacaoValorMedio"
+            <app-card-numerico-basico [valorPrincipal]="indicadoresLaminasPorHoraValorMedio" titulo="Lâminas/hr"
+                subTitulo="Tempo de digitalização" [valor]="indicadoresTempoDigitalizacaoValorMedio"
                 unidadeMedida="segundos"></app-card-numerico-basico>
 
         </div>
     </div>
 </div>
 
-<div
-    class="k-card-deck"
-    style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+<div class="k-card-deck" style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
 
     <div class="k-card" style="width: 600px;">
         <div class="k-card-body">
 
-            <app-grafico-percentual
-                [serie]="espacoLivreSeries"
-                [titulo]="espacoLivreTitulo"
-                [categorias]="espacoLivreCategorias"
-                [descricaoEixoX]="espacoLivreDescricaoEixoX"
-                tipo="column"></app-grafico-percentual>
+            <app-grafico-percentual [serie]="espacoLivreSeries" [titulo]="espacoLivreTitulo"
+                [categorias]="espacoLivreCategorias" [descricaoEixoX]="espacoLivreDescricaoEixoX" tipo="column">
+            </app-grafico-percentual>
         </div>
     </div>
 
     <div class="k-card" style="width: 600px;">
         <div class="k-card-body">
-            <app-grafico-area
-                [serie]="producaoScannersSeries"
-                [titulo]="producaoScannersTitulo"
-                [categorias]="producaoScannersCategorias"
-                [descricaoEixoX]="producaoScannersDescricaoEixoX"></app-grafico-area>
+            <app-grafico-area [serie]="producaoScannersSeries" [titulo]="producaoScannersTitulo"
+                [categorias]="producaoScannersCategorias" [descricaoEixoX]="producaoScannersDescricaoEixoX">
+            </app-grafico-area>
         </div>
     </div>
 
@@ -135,57 +93,50 @@
 
         <div class="k-card-body">
 
-            <app-grafico-percentual
-                *ngIf="apresentacaoPatologistas == 'grafico'"
-                [serie]="engajamentoPatologistasSeries"
-                [titulo]="engajamentoPatologistasTitulo"
+            <app-grafico-percentual *ngIf="apresentacaoPatologistas == 'grafico'"
+                [serie]="engajamentoPatologistasSeries" [titulo]="engajamentoPatologistasTitulo"
                 [categorias]="engajamentoPatologistasCategorias"
-                [descricaoEixoX]="engajamentoPatologistasDescricaoEixoX"
-                tipo="line"></app-grafico-percentual>
+                [descricaoEixoX]="engajamentoPatologistasDescricaoEixoX" tipo="line"></app-grafico-percentual>
 
-                <kendo-grid *ngIf="apresentacaoPatologistas == 'tabela'" [scrollable]="true" [data]="ultilizacoes"
+            <kendo-grid *ngIf="apresentacaoPatologistas == 'tabela'" [scrollable]="true" [data]="ultilizacoes"
                 style="height: 400px;">
-            
+
                 <ng-template kendoGridToolbarTemplate>
-                    <button type="button" kendoGridExcelCommand icon="file-excel">Exportar</button>
+                    <button type="button" kendoGridExcelCommand="kendoGridExcelCommand"
+                        icon="file-excel">Exportar</button>
                 </ng-template>
-            
+
                 <kendo-grid-column class="price-col" field="nomPatologista" title="Patologista" [width]="200">
                 </kendo-grid-column>
                 <kendo-grid-column class="price-col" field="visualizadasPerc" title="%" [width]="80">
-            
+
                     <ng-template kendoGridCellTemplate let-dataItem>
-            
                         <strong>{{dataItem.visualizadasPerc | percent}}</strong>
                     </ng-template>
-            
+
                 </kendo-grid-column>
                 <kendo-grid-excel fileName="Patologistas.xlsx">
-            
+
                     <kendo-excelexport-column field="codPatologista" title="Código"></kendo-excelexport-column>
                     <kendo-excelexport-column field="nomPatologista" title="Nome"></kendo-excelexport-column>
                     <kendo-excelexport-column field="distribuidasQtde" title="Distribuidas"></kendo-excelexport-column>
                     <kendo-excelexport-column field="visualizadasQtde" title="Visualizadas"></kendo-excelexport-column>
                     <kendo-excelexport-column field="visualizadasPerc" title="Visualizadas %">
                     </kendo-excelexport-column>
-            
+
                 </kendo-grid-excel>
             </kendo-grid>
         </div>
 
         <kendo-card-actions orientation="horizontal" layout="end">
 
-            <button
-                *ngIf="apresentacaoPatologistas === 'tabela'"
-                class="k-button k-primary k-flat"
+            <button *ngIf="apresentacaoPatologistas === 'tabela'" class="k-button k-primary k-flat"
                 (click)="alterarVisaoPatologistas('grafico')">
                 <span class="k-icon"></span>
                 Ver Gráfico
             </button>
 
-            <button
-                *ngIf="apresentacaoPatologistas === 'grafico'"
-                class="k-button k-primary k-flat"
+            <button *ngIf="apresentacaoPatologistas === 'grafico'" class="k-button k-primary k-flat"
                 (click)="alterarVisaoPatologistas('tabela')">
                 <span class="k-icon"></span>
                 Ver Tabela
@@ -202,19 +153,12 @@
                     <kendo-chart-axis-defaults-labels format="N0"></kendo-chart-axis-defaults-labels>
                 </kendo-chart-axis-defaults>
                 <kendo-chart-category-axis>
-                    <kendo-chart-category-axis-item
-                        [categories]="performanceScannersCategorias"
+                    <kendo-chart-category-axis-item [categories]="performanceScannersCategorias"
                         [title]="{ text: performanceScannersDescricaoEixoX }"></kendo-chart-category-axis-item>
                 </kendo-chart-category-axis>
                 <kendo-chart-series>
-                    <kendo-chart-series-item
-                        *ngFor="let item of performanceScannersSeries"
-                        [data]="item.dados"
-                        [name]="item.nome"
-                        field="valor"
-                        categoryField="categoria"
-                        [color]="item.cor"
-                        type="line">
+                    <kendo-chart-series-item *ngFor="let item of performanceScannersSeries" [data]="item.dados"
+                        [name]="item.nome" field="valor" categoryField="categoria" [color]="item.cor" type="line">
                         <kendo-chart-series-item-tooltip>
                             <ng-template let-dataItem="dataItem">
                                 {{item.nome}}
