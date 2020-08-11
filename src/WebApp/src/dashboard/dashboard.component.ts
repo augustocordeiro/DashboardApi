@@ -3,18 +3,18 @@ import { DashboardService } from '../servicos/dashboard.service';
 import 'hammerjs';
 import { Serie } from 'src/entidades/Serie';
 import { Utilizacao } from 'src/entidades/Utilizacao';
-import { Observable } from 'rxjs';
+import { interval } from 'rxjs';
 
 @Component({
     selector: 'app-dashboard',
     providers: [DashboardService],
     encapsulation: ViewEncapsulation.None,
-    templateUrl: './dashboard.template.html'    
+    templateUrl: './dashboard.template.html'
 })
 
 export class DashboardComponent {
     public isLoading = true;
-    
+
 
     @HostBinding('attr.id') get get_id() { return 'dashboard'; }
     @HostBinding('class') get get_class() { return 'container-fluid'; }
@@ -63,24 +63,38 @@ export class DashboardComponent {
 
     public apresentacaoPatologistas: string;
 
+    public tipoConsulta: number;
+    public timer: number;
+
     constructor(public dashboardService: DashboardService) {
+
+        this.tipoConsulta = 1;
 
     }
 
     ngOnInit() {
 
         this.apresentacaoPatologistas = "grafico";
-        this.carregarDados(1);
+        this.carregarDados(this.tipoConsulta);
+
+        interval(30000).subscribe(
+            (n) => {
+                this.carregarDados(this.tipoConsulta);
+
+            });
     }
 
-    alterarVisaoPatologistas(apresentacao: string){
+    alterarVisaoPatologistas(apresentacao: string) {
         this.apresentacaoPatologistas = apresentacao;
     }
 
     carregarDados(tipoConsulta: number) {
+
+        this.tipoConsulta = tipoConsulta;
+
         this.dashboardService
             .obterDados(tipoConsulta)
-            .subscribe(dados => {                
+            .subscribe(dados => {
 
                 this.ultilizacoes = dados.utilizacoes.sort((a, b) => { return a.visualizadasPerc > b.visualizadasPerc ? -1 : 1 });
 
@@ -128,12 +142,12 @@ export class DashboardComponent {
     }
 
     public allData = (): Utilizacao[] => {
-        
-        console.log(this.ultilizacoes);
-        
-        return this.ultilizacoes;
-    }  
 
-    
+        console.log(this.ultilizacoes);
+
+        return this.ultilizacoes;
+    }
+
+
 
 }
