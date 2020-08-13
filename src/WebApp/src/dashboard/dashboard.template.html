@@ -7,22 +7,24 @@
                     kendoRippleContainer="kendoRippleContainer"
                     kendoButton="kendoButton"
                     [togglable]="true"
-                    (click)="carregarDados(1)"
-                    [selected]="true">
+                    (click)="carregarDados(1, 'MG')"
+                    [selected]="mgSelecionado">
                     MG
                 </button>
                 <button
                     kendoRippleContainer="kendoRippleContainer"
                     kendoButton="kendoButton"
                     [togglable]="true"
-                    (click)="carregarDados(2)">
+                    (click)="carregarDados(1, 'SP')"
+                    [selected]="spSelecionado">
                     SP
                 </button>
                 <button
                     kendoRippleContainer="kendoRippleContainer"
                     kendoButton="kendoButton"
                     [togglable]="true"
-                    (click)="carregarDados(3)">
+                    (click)="carregarDados(1, 'geral')"
+                    [selected]="geralSelecionado">
                     Geral
                 </button>
             </kendo-buttongroup>
@@ -43,22 +45,24 @@
                         kendoRippleContainer="kendoRippleContainer"
                         kendoButton="kendoButton"
                         [togglable]="true"
-                        (click)="carregarDados(1)"
-                        [selected]="true">
+                        (click)="carregarDados(1,'')"
+                        [selected]="diaSelecionado">
                         Dia
                     </button>
                     <button
                         kendoRippleContainer="kendoRippleContainer"
                         kendoButton="kendoButton"
                         [togglable]="true"
-                        (click)="carregarDados(2)">
+                        (click)="carregarDados(2,'')"
+                        [selected]="semanaSelecionado">
                         Semana
                     </button>
                     <button
                         kendoRippleContainer="kendoRippleContainer"
                         kendoButton="kendoButton"
                         [togglable]="true"
-                        (click)="carregarDados(3)">
+                        (click)="carregarDados(3,'')"
+                        [selected]="mesSelecionado">
                         Mês
                     </button>
 
@@ -66,7 +70,8 @@
                         kendoRippleContainer="kendoRippleContainer"
                         kendoButton="kendoButton"
                         [togglable]="true"
-                        (click)="carregarDados(4)">
+                        (click)="carregarDados(4,'')"
+                        [selected]="anoSelecionado">
                         Ano
                     </button>
 
@@ -74,13 +79,14 @@
                         kendoRippleContainer="kendoRippleContainer"
                         kendoButton="kendoButton"
                         [togglable]="true"
-                        (click)="carregarDados(5)">
+                        (click)="carregarDados(5,'')"
+                        [selected]="dozeMesesSelecionado">
                         12 meses
                     </button>
                 </kendo-buttongroup>
                 <div class="col-sm text-sm-right p-0 p-sm-2">
                     <p>Processado em: 10/01/2020 14:23
-                        {{processadoEm}}</p>
+                        {{processadoEm}} {{local}}</p>
                 </div>
             </div>
         </div>
