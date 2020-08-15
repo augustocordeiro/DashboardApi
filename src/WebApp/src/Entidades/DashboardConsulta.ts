@@ -7,12 +7,13 @@ import { ProducaoTotais } from './ProducaoTotais';
 import { RecursosTotais } from './RecursosTotais';
 import { UtilizacaoTotais } from './UtilizacaoTotais';
 import { Utilizacao } from './Utilizacao';
-export interface DashboardModel {
+export interface DashboardConsulta {
     processadoEm: string;
-    subtitulo: any;
-    titulo: any;
+    subtitulo: string;
+    titulo: string;
+    local: string;
     dataObservacao: Date;
-    recursosTotais:    RecursosTotais;
+    recursosTotais:    RecursosTotais;    
     producaoTotais:    ProducaoTotais;
     utilizacaoTotais:  UtilizacaoTotais;
     indicadoresTotais: IndicadoresTotais;
@@ -21,8 +22,10 @@ export interface DashboardModel {
     utilizacoes: Utilizacao[];
     indicadores: Indicador[];
     graficoEspacoLivre: Grafico;
+    graficoPrevisaoRecursos: Grafico;
     graficoProducaoScanners: Grafico;
     graficoEngajamentoPatologistas: Grafico;
     graficoPerformanceScanners: Grafico;
 }
+
 

@@ -4,6 +4,15 @@
         overflow: visible;
     }
 
+    .imagens-topo {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 13%;
+    }
+
     .height-1 {
         min-height: 400px;
     }
@@ -29,44 +38,44 @@
     position: relative;
 
     #statistics {
-      position: relative;
+        position: relative;
     }
 
     .issue-types {
-      .chart-label {
-        margin: 5px 0 0;
-        white-space: nowrap;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        .percentage {
+        .chart-label {
+            margin: 5px 0 0;
+            white-space: nowrap;
+            text-align: center;
             position: absolute;
-            top: .4rem;
-            right: -15;
-            font-size: 1.5rem;
-        }
-      }
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
 
-      .comp-label {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+            .percentage {
+                position: absolute;
+                top: 0.4rem;
+                right: -15;
+                font-size: 1.5rem;
+            }
+        }
 
-        strong {
-          font-size: 4em;
-          line-height: 1;
-          font-weight: 100;
-          display: block;
+        .comp-label {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            strong {
+                font-size: 4em;
+                line-height: 1;
+                font-weight: 100;
+                display: block;
+            }
+            small {
+                font-size: 1em;
+                text-transform: uppercase;
+                display: block;
+            }
         }
-        small {
-          font-size: 1em;
-          text-transform: uppercase;
-          display: block;
-        }
-      }
     }
 }

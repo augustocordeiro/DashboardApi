@@ -3,18 +3,18 @@ import { DashboardService } from '../servicos/dashboard.service';
 import 'hammerjs';
 import { Serie } from 'src/entidades/Serie';
 import { Utilizacao } from 'src/entidades/Utilizacao';
-import { Observable } from 'rxjs';
+import { interval } from 'rxjs';
+import { DashboardConsulta } from 'src/entidades/DashboardConsulta';
+import { DashboardRaiz } from 'src/entidades/DashboardRaiz';
 
 @Component({
     selector: 'app-dashboard',
     providers: [DashboardService],
     encapsulation: ViewEncapsulation.None,
-    templateUrl: './dashboard.template.html'    
+    templateUrl: './dashboard.template.html'
 })
 
 export class DashboardComponent {
-    public isLoading = true;
-    
 
     @HostBinding('attr.id') get get_id() { return 'dashboard'; }
     @HostBinding('class') get get_class() { return 'container-fluid'; }
@@ -31,6 +31,11 @@ export class DashboardComponent {
     public espacoLivreSeries: Serie[];
     public espacoLivreCategorias: string[];
     public espacoLivreDescricaoEixoX: string;
+
+    public previsaoRecursosTitulo: string;
+    public previsaoRecursosSeries: Serie[];
+    public previsaoRecursosCategorias: string[];
+    public previsaoRecursosDescricaoEixoX: string;
 
     public utilizacoes: Utilizacao[];
 
@@ -62,78 +67,126 @@ export class DashboardComponent {
     public ultilizacoes: Utilizacao[];
 
     public apresentacaoPatologistas: string;
+    public apresentacaoRecursos: string;
+
+
+    public tipoConsulta: number;
+    public localConsulta: string;     
+    public dadosLocal: DashboardRaiz;
 
     constructor(public dashboardService: DashboardService) {
 
+        this.tipoConsulta = 1;
+        this.apresentacaoPatologistas = "grafico";
+        this.localConsulta = "geral";
+        this.apresentacaoRecursos = 'historico';
     }
 
     ngOnInit() {
 
-        this.apresentacaoPatologistas = "grafico";
-        this.carregarDados(1);
+        this.carregarDados(this.tipoConsulta, this.localConsulta);
+
+        interval(30000).subscribe(
+            () => {
+                this.carregarDados(this.tipoConsulta, this.localConsulta);
+
+            });
     }
 
-    alterarVisaoPatologistas(apresentacao: string){
+    alterarVisaoPatologistas(apresentacao: string) {
         this.apresentacaoPatologistas = apresentacao;
     }
 
-    carregarDados(tipoConsulta: number) {
-        this.dashboardService
-            .obterDados(tipoConsulta)
-            .subscribe(dados => {                
-
-                this.ultilizacoes = dados.utilizacoes.sort((a, b) => { return a.visualizadasPerc > b.visualizadasPerc ? -1 : 1 });
-
-                this.titulo = dados.titulo;
-                this.subtitulo = dados.subtitulo;
-                this.processadoEm = dados.processadoEm;
-
-                this.espacoTotal = dados.recursosTotais.espacoTotal;
-                this.espacoLivre = dados.recursosTotais.espacoLivre;
-                this.espacoLivrePercentual = dados.recursosTotais.espacoLivrePerc;
-
-                this.quantidadeDigitalizas = dados.producaoTotais.digitalizadasQtde;
-                this.quantidadeIntegradas = dados.producaoTotais.integradasQtde;
-                this.percentualIntegracao = dados.producaoTotais.integradasPerc;
-
-                this.quantidadeDistribuida = dados.utilizacaoTotais.distribuidasQtde;
-                this.quantidadeVisualizada = dados.utilizacaoTotais.visualizadasQtde;
-                this.percentualVisualizacao = dados.utilizacaoTotais.visualizadasPerc;
-
-                this.espacoLivreTitulo = dados.graficoEspacoLivre.titulo;
-                this.espacoLivreSeries = dados.graficoEspacoLivre.series;
-                this.espacoLivreCategorias = dados.graficoEspacoLivre.categorias;
-                this.espacoLivreDescricaoEixoX = dados.graficoEspacoLivre.descricaoEixoX;
-
-                this.producaoScannersTitulo = dados.graficoProducaoScanners.titulo;
-                this.producaoScannersSeries = dados.graficoProducaoScanners.series;
-                this.producaoScannersCategorias = dados.graficoProducaoScanners.categorias;
-                this.producaoScannersDescricaoEixoX = dados.graficoProducaoScanners.descricaoEixoX;
-
-                this.performanceScannersTitulo = dados.graficoPerformanceScanners.titulo;
-                this.performanceScannersSeries = dados.graficoPerformanceScanners.series;
-
-                this.performanceScannersCategorias = dados.graficoPerformanceScanners.categorias;
-                this.performanceScannersDescricaoEixoX = dados.graficoPerformanceScanners.descricaoEixoX;
-
-                this.engajamentoPatologistasSeries = dados.graficoEngajamentoPatologistas.series;
-                this.engajamentoPatologistasCategorias = dados.graficoEngajamentoPatologistas.categorias;
-                this.engajamentoPatologistasTitulo = dados.graficoEngajamentoPatologistas.titulo;
-                this.engajamentoPatologistasDescricaoEixoX = dados.graficoEngajamentoPatologistas.descricaoEixoX;
-
-                this.indicadoresTempoDigitalizacaoValorMedio = dados.indicadoresTotais.tempoDigitalizacaoValorMedio;
-                this.indicadoresLaminasPorHoraValorMedio = dados.indicadoresTotais.laminasPorHoraValorMedio;
-
-            }, (err) => this.isLoading = false);
+    
+    alterarVisaoRecursos(apresentacao: string) {
+        this.apresentacaoRecursos = apresentacao;
     }
 
-    public allData = (): Utilizacao[] => {
-        
-        console.log(this.ultilizacoes);
-        
-        return this.ultilizacoes;
-    }  
+    carregarDados(tipoConsulta: number, local: string) {
+        if (local != '') {
+            this.localConsulta = local;
+        }
 
-    
+        if (tipoConsulta == 0) {
 
+            var consulta = null;
+            if (this.localConsulta === 'geral') {
+
+                consulta = this.dadosLocal.geral;
+            }
+            else {
+                consulta = this.dadosLocal.locais.filter(local => local.local === this.localConsulta)[0];
+            }
+
+            this.carregarDashboard(consulta);
+        }
+        else {
+            this.dashboardService
+                .obterDados(tipoConsulta)
+                .subscribe(dados => {
+
+                    var consulta = null;
+                    if (this.localConsulta === 'geral') {
+
+                        consulta = dados.geral;
+                    }
+                    else {
+                        consulta = dados.locais.filter(local => local.local === this.localConsulta)[0];
+                    }
+
+                    this.dadosLocal = dados;
+                    this.carregarDashboard(consulta);
+                });
+        }
+    }
+
+    public carregarDashboard(dados: DashboardConsulta) {
+
+        this.ultilizacoes = dados.utilizacoes.sort((a, b) => { return a.visualizadasPerc > b.visualizadasPerc ? -1 : 1 });
+
+        this.titulo = dados.titulo;
+        this.subtitulo = dados.subtitulo;
+        this.processadoEm = dados.processadoEm;
+
+        this.espacoTotal = dados.recursosTotais.espacoTotal;
+        this.espacoLivre = dados.recursosTotais.espacoLivre;
+        this.espacoLivrePercentual = dados.recursosTotais.espacoLivrePerc;
+
+        this.quantidadeDigitalizas = dados.producaoTotais.digitalizadasQtde;
+        this.quantidadeIntegradas = dados.producaoTotais.integradasQtde;
+        this.percentualIntegracao = dados.producaoTotais.integradasPerc;
+
+        this.quantidadeDistribuida = dados.utilizacaoTotais.distribuidasQtde;
+        this.quantidadeVisualizada = dados.utilizacaoTotais.visualizadasQtde;
+        this.percentualVisualizacao = dados.utilizacaoTotais.visualizadasPerc;
+
+        this.espacoLivreTitulo = dados.graficoEspacoLivre.titulo;
+        this.espacoLivreSeries = dados.graficoEspacoLivre.series;
+        this.espacoLivreCategorias = dados.graficoEspacoLivre.categorias;
+        this.espacoLivreDescricaoEixoX = dados.graficoEspacoLivre.descricaoEixoX;
+
+        this.previsaoRecursosTitulo = dados.graficoPrevisaoRecursos.titulo;
+        this.previsaoRecursosSeries = dados.graficoPrevisaoRecursos.series;
+        this.previsaoRecursosCategorias = dados.graficoPrevisaoRecursos.categorias;
+        this.previsaoRecursosDescricaoEixoX = dados.graficoPrevisaoRecursos.descricaoEixoX;
+
+        this.producaoScannersTitulo = dados.graficoProducaoScanners.titulo;
+        this.producaoScannersSeries = dados.graficoProducaoScanners.series;
+        this.producaoScannersCategorias = dados.graficoProducaoScanners.categorias;
+        this.producaoScannersDescricaoEixoX = dados.graficoProducaoScanners.descricaoEixoX;
+
+        this.performanceScannersTitulo = dados.graficoPerformanceScanners.titulo;
+        this.performanceScannersSeries = dados.graficoPerformanceScanners.series;
+
+        this.performanceScannersCategorias = dados.graficoPerformanceScanners.categorias;
+        this.performanceScannersDescricaoEixoX = dados.graficoPerformanceScanners.descricaoEixoX;
+
+        this.engajamentoPatologistasSeries = dados.graficoEngajamentoPatologistas.series;
+        this.engajamentoPatologistasCategorias = dados.graficoEngajamentoPatologistas.categorias;
+        this.engajamentoPatologistasTitulo = dados.graficoEngajamentoPatologistas.titulo;
+        this.engajamentoPatologistasDescricaoEixoX = dados.graficoEngajamentoPatologistas.descricaoEixoX;
+
+        this.indicadoresTempoDigitalizacaoValorMedio = dados.indicadoresTotais.tempoDigitalizacaoValorMedio;
+        this.indicadoresLaminasPorHoraValorMedio = dados.indicadoresTotais.laminasPorHoraValorMedio;
+    }
 }

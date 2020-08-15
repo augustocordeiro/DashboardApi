@@ -1,39 +1,62 @@
+<div class="imagens-topo">
+    <img src="assets/logodk.png" class="logo">
+    <img src="assets/logohp.png" class="logo"></div>
+
+
 <div id="header" class="row justify-content-md-center">
 
     <div class="col-sm text-sm-left p-0 p-sm-3">
         <p class="h1" style="color: seagreen; font-size: 25px;">{{titulo}}</p>
         <p class="h4">{{subtitulo}}</p>
-        
+    </div>
+
+    <div class="col-sm text-sm-right p-0 p-sm-1">
+
     </div>
 
     <div class="col-sm text-sm-right p-0 p-sm-3">
         <kendo-buttongroup [selection]="'single'">
             <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
-                (click)="carregarDados(1)" [selected]="true">
+                (click)="carregarDados(0, 'MG')">
+                MG
+            </button>
+            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
+                (click)="carregarDados(0, 'SP')">
+                SP
+            </button>
+            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
+                (click)="carregarDados(0, 'geral')" [selected]="true">
+                Geral
+            </button>
+        </kendo-buttongroup>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <kendo-buttongroup [selection]="'single'">
+            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
+                (click)="carregarDados(1,'')" [selected]="true">
                 Dia
             </button>
             <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
-                (click)="carregarDados(2)">
+                (click)="carregarDados(2,'')">
                 Semana
             </button>
             <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
-                (click)="carregarDados(3)">
+                (click)="carregarDados(3,'')">
                 Mês
             </button>
 
             <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
-                (click)="carregarDados(4)">
+                (click)="carregarDados(4,'')">
                 Ano
             </button>
 
             <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
-                (click)="carregarDados(5)">
+                (click)="carregarDados(5,'')">
                 12 meses
             </button>
         </kendo-buttongroup>
         <div class="col-sm text-sm-right p-0 p-sm-2">
-        <p>Processado em: {{processadoEm}}</p>
-    </div>
+            <p>Processado em: {{processadoEm}}</p>
+        </div>
     </div>
 </div>
 
@@ -79,11 +102,53 @@
     <div class="k-card" style="width: 600px;">
         <div class="k-card-body">
 
-            <app-grafico-percentual [serie]="espacoLivreSeries" [titulo]="espacoLivreTitulo"
+            <app-grafico-percentual *ngIf="apresentacaoRecursos == 'historico'" [serie]="espacoLivreSeries" [titulo]="espacoLivreTitulo"
                 [categorias]="espacoLivreCategorias" [descricaoEixoX]="espacoLivreDescricaoEixoX" tipo="column">
             </app-grafico-percentual>
+
+            <kendo-chart *ngIf="apresentacaoRecursos == 'previsao'" [title]="{text:previsaoRecursosTitulo}">
+                <kendo-chart-axis-defaults>
+                    <kendo-chart-axis-defaults-labels format="N0"></kendo-chart-axis-defaults-labels>
+                </kendo-chart-axis-defaults>
+                <kendo-chart-category-axis>
+                    <kendo-chart-category-axis-item [categories]="previsaoRecursosCategorias"
+                        [title]="{ text: previsaoRecursosDescricaoEixoX }"></kendo-chart-category-axis-item>
+                </kendo-chart-category-axis>
+                <kendo-chart-series>
+                    <kendo-chart-series-item *ngFor="let item of previsaoRecursosSeries" [data]="item.dados"
+                        [name]="item.nome" field="valor" categoryField="categoria" [color]="item.cor" type="line">
+                        <kendo-chart-series-item-tooltip>
+                            <ng-template let-dataItem="dataItem">
+                                {{item.nome}}
+                                |
+                                {{dataItem.valor | number}}
+                            </ng-template>
+                        </kendo-chart-series-item-tooltip>
+                    </kendo-chart-series-item>
+                </kendo-chart-series>
+            </kendo-chart>
+
         </div>
+
+        <kendo-card-actions orientation="horizontal" layout="end">
+
+            <button *ngIf="apresentacaoRecursos === 'previsao'" class="k-button k-primary k-flat"
+                (click)="alterarVisaoRecursos('historico')">
+                <span class="k-icon"></span>
+                Histórico
+            </button>
+
+            <button *ngIf="apresentacaoRecursos === 'historico'" class="k-button k-primary k-flat"
+                (click)="alterarVisaoRecursos('previsao')">
+                <span class="k-icon"></span>
+                Previsão
+            </button>
+
+        </kendo-card-actions>
     </div>
+
+   
+
 
     <div class="k-card" style="width: 600px;">
         <div class="k-card-body">
@@ -105,7 +170,7 @@
             <kendo-grid *ngIf="apresentacaoPatologistas == 'tabela'" [scrollable]="true" [data]="ultilizacoes"
                 style="height: 400px;">
 
-                <ng-template kendoGridToolbarTemplate>
+                <ng-template kendoGridToolbarTemplate="kendoGridToolbarTemplate">
                     <button type="button" kendoGridExcelCommand="kendoGridExcelCommand"
                         icon="file-excel">Exportar</button>
                 </ng-template>

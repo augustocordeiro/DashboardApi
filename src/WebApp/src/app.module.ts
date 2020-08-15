@@ -9,7 +9,6 @@ import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 // app
 import { Config } from "./common/index";
-import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 
 // Kendo UI
@@ -42,7 +41,6 @@ export function createTranslateLoader(http: HttpClient) {
 
 @NgModule({
     declarations: [
-        AppComponent,
         DashboardComponent,
         GraficoPercentualComponent,
         GraficoAreaComponent,
@@ -73,7 +71,7 @@ export function createTranslateLoader(http: HttpClient) {
         RippleModule,
     ],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [DashboardComponent]
 })
 export class AppModule {
 }
