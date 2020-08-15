@@ -5,6 +5,7 @@ import { Serie } from 'src/entidades/Serie';
 import { Utilizacao } from 'src/entidades/Utilizacao';
 import { interval } from 'rxjs';
 import { DashboardConsulta } from 'src/entidades/DashboardConsulta';
+import { DashboardRaiz } from 'src/entidades/DashboardRaiz';
 
 @Component({
     selector: 'app-dashboard',
@@ -30,6 +31,11 @@ export class DashboardComponent {
     public espacoLivreSeries: Serie[];
     public espacoLivreCategorias: string[];
     public espacoLivreDescricaoEixoX: string;
+
+    public previsaoRecursosTitulo: string;
+    public previsaoRecursosSeries: Serie[];
+    public previsaoRecursosCategorias: string[];
+    public previsaoRecursosDescricaoEixoX: string;
 
     public utilizacoes: Utilizacao[];
 
@@ -61,36 +67,27 @@ export class DashboardComponent {
     public ultilizacoes: Utilizacao[];
 
     public apresentacaoPatologistas: string;
+    public apresentacaoRecursos: string;
+
 
     public tipoConsulta: number;
-    public localConsulta: string;
-    public timer: number;
-    public geralSelecionado: boolean;
-    public mgSelecionado: boolean;
-    public spSelecionado: boolean;
-    public diaSelecionado: boolean;
-    public semanaSelecionado: boolean;
-    public mesSelecionado: boolean;
-    public anoSelecionado: boolean;
-    public dozeMesesSelecionado: boolean;
-    public local: string;
+    public localConsulta: string;     
+    public dadosLocal: DashboardRaiz;
 
     constructor(public dashboardService: DashboardService) {
 
         this.tipoConsulta = 1;
         this.apresentacaoPatologistas = "grafico";
         this.localConsulta = "geral";
-        this.diaSelecionado = true;
-        this.geralSelecionado = true;
+        this.apresentacaoRecursos = 'historico';
     }
 
     ngOnInit() {
 
-        
         this.carregarDados(this.tipoConsulta, this.localConsulta);
 
         interval(30000).subscribe(
-            (n) => {
+            () => {
                 this.carregarDados(this.tipoConsulta, this.localConsulta);
 
             });
@@ -100,58 +97,52 @@ export class DashboardComponent {
         this.apresentacaoPatologistas = apresentacao;
     }
 
+    
+    alterarVisaoRecursos(apresentacao: string) {
+        this.apresentacaoRecursos = apresentacao;
+    }
+
     carregarDados(tipoConsulta: number, local: string) {
-
-        this.tipoConsulta = tipoConsulta;     
-
         if (local != '') {
-            this.localConsulta = local;           
-        }
-        else{
-            //this.diaSelecionado = false;
+            this.localConsulta = local;
         }
 
-        this.diaSelecionado = true;
-        this.semanaSelecionado = false;
-        this.mesSelecionado = false;
-        this.anoSelecionado = false;
-        this.dozeMesesSelecionado = false;
+        if (tipoConsulta == 0) {
 
-        console.log(this.diaSelecionado);
+            var consulta = null;
+            if (this.localConsulta === 'geral') {
 
-        this.dashboardService
-            .obterDados(tipoConsulta)
-            .subscribe(dados => {
+                consulta = this.dadosLocal.geral;
+            }
+            else {
+                consulta = this.dadosLocal.locais.filter(local => local.local === this.localConsulta)[0];
+            }
 
-                var consulta = null;
-                if (this.localConsulta === 'geral') {
-                    
-                    consulta = dados.geral;
-                    
-                    //this.geralSelecionado = true;
-                }
-                else {
+            this.carregarDashboard(consulta);
+        }
+        else {
+            this.dashboardService
+                .obterDados(tipoConsulta)
+                .subscribe(dados => {
 
-                    if (this.localConsulta === 'MG') {
-                        
-                        //this.mgSelecionado = true;
-                        
-                    
-                    } else {
-                    
-                        //this.spSelecionado = true;
-                                        }
+                    var consulta = null;
+                    if (this.localConsulta === 'geral') {
 
-                    consulta = dados.locais.filter(local => local.local === this.localConsulta)[0];
-                }
-                this.carregarDashboard(consulta);
-            });
+                        consulta = dados.geral;
+                    }
+                    else {
+                        consulta = dados.locais.filter(local => local.local === this.localConsulta)[0];
+                    }
+
+                    this.dadosLocal = dados;
+                    this.carregarDashboard(consulta);
+                });
+        }
     }
 
     public carregarDashboard(dados: DashboardConsulta) {
-        this.ultilizacoes = dados.utilizacoes.sort((a, b) => { return a.visualizadasPerc > b.visualizadasPerc ? -1 : 1 });
 
-        this.local = dados.local;
+        this.ultilizacoes = dados.utilizacoes.sort((a, b) => { return a.visualizadasPerc > b.visualizadasPerc ? -1 : 1 });
 
         this.titulo = dados.titulo;
         this.subtitulo = dados.subtitulo;
@@ -174,6 +165,11 @@ export class DashboardComponent {
         this.espacoLivreCategorias = dados.graficoEspacoLivre.categorias;
         this.espacoLivreDescricaoEixoX = dados.graficoEspacoLivre.descricaoEixoX;
 
+        this.previsaoRecursosTitulo = dados.graficoPrevisaoRecursos.titulo;
+        this.previsaoRecursosSeries = dados.graficoPrevisaoRecursos.series;
+        this.previsaoRecursosCategorias = dados.graficoPrevisaoRecursos.categorias;
+        this.previsaoRecursosDescricaoEixoX = dados.graficoPrevisaoRecursos.descricaoEixoX;
+
         this.producaoScannersTitulo = dados.graficoProducaoScanners.titulo;
         this.producaoScannersSeries = dados.graficoProducaoScanners.series;
         this.producaoScannersCategorias = dados.graficoProducaoScanners.categorias;
@@ -192,12 +188,5 @@ export class DashboardComponent {
 
         this.indicadoresTempoDigitalizacaoValorMedio = dados.indicadoresTotais.tempoDigitalizacaoValorMedio;
         this.indicadoresLaminasPorHoraValorMedio = dados.indicadoresTotais.laminasPorHoraValorMedio;
-    }
-
-    public allData = (): Utilizacao[] => {
-
-        console.log(this.ultilizacoes);
-
-        return this.ultilizacoes;
     }
 }

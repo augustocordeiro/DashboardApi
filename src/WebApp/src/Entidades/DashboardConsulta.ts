@@ -13,7 +13,7 @@ export interface DashboardConsulta {
     titulo: string;
     local: string;
     dataObservacao: Date;
-    recursosTotais:    RecursosTotais;
+    recursosTotais:    RecursosTotais;    
     producaoTotais:    ProducaoTotais;
     utilizacaoTotais:  UtilizacaoTotais;
     indicadoresTotais: IndicadoresTotais;
@@ -22,6 +22,7 @@ export interface DashboardConsulta {
     utilizacoes: Utilizacao[];
     indicadores: Indicador[];
     graficoEspacoLivre: Grafico;
+    graficoPrevisaoRecursos: Grafico;
     graficoProducaoScanners: Grafico;
     graficoEngajamentoPatologistas: Grafico;
     graficoPerformanceScanners: Grafico;
