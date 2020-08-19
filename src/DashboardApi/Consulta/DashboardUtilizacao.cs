@@ -8,6 +8,6 @@
         public int DistribuidasQtde { get; set; }
         public int VisualizadasQtde { get; set; }
         public decimal VisualizadasPerc { get; set; }
-        
+
     }
 }

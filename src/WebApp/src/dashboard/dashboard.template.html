@@ -108,8 +108,11 @@
 
             <kendo-chart *ngIf="apresentacaoRecursos == 'previsao'" [title]="{text:previsaoRecursosTitulo}">
                 <kendo-chart-axis-defaults>
-                    <kendo-chart-axis-defaults-labels format="N0"></kendo-chart-axis-defaults-labels>
+                    <kendo-chart-axis-defaults-labels format="P0"></kendo-chart-axis-defaults-labels>
                 </kendo-chart-axis-defaults>
+                <kendo-chart-value-axis>
+                    <kendo-chart-value-axis-item min="0" max="1"></kendo-chart-value-axis-item>
+                </kendo-chart-value-axis>
                 <kendo-chart-category-axis>
                     <kendo-chart-category-axis-item [categories]="previsaoRecursosCategorias"
                         [title]="{ text: previsaoRecursosDescricaoEixoX }"></kendo-chart-category-axis-item>

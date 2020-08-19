@@ -15,9 +15,5 @@
     </Content>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Consulta\" />
-  </ItemGroup>
-
 
 </Project>

@@ -121,6 +121,7 @@ export class DashboardComponent {
             this.carregarDashboard(consulta);
         }
         else {
+            this.tipoConsulta=tipoConsulta;
             this.dashboardService
                 .obterDados(tipoConsulta)
                 .subscribe(dados => {

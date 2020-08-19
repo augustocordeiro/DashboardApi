@@ -1,4 +1,6 @@
-﻿namespace DashboardApi.Consulta
+﻿
+
+namespace DashboardApi.Consulta
 {
     public class UtilizacaoTotais
     {

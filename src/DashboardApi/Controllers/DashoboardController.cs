@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Net;
+using DashboardApi.Consulta;
 using DashboardApi.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 
 namespace DashboardApi.Controllers
 {
@@ -21,13 +23,15 @@ namespace DashboardApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Get([FromQuery] int tipoConsulta)
         {
             try
             {
-                string conteudoDashoboard = System.IO.File.ReadAllText("dashboard.json");
+                string conteudoDashoboard = tipoConsulta == 1
+                    ? System.IO.File.ReadAllText("dashboard.json")
+                    : System.IO.File.ReadAllText("dashboardSemana.json");
 
-                DashboardRaiz dashboard = DashboardRaiz.FromJson(conteudoDashoboard);
+                DashboardRaiz dashboard = JsonConvert.DeserializeObject<DashboardRaiz>(conteudoDashoboard);
 
                 return dashboard != null ?
                     CriarResposta(HttpStatusCode.OK, dashboard) :

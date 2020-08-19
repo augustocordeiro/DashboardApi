@@ -1,85 +1,85 @@
 ﻿{
   "Geral": {
     "Titulo": "DASHBOARD TELEPATOLOGIA",
-    "Subtitulo": "Ref. 12/08/2020",
+    "Subtitulo": "Ref. 18/08/2020",
     "Local": "*",
     "Periodo": {
-      "DataInicial": "0001-01-01T00:00:00",
-      "DataFinal": "0001-01-01T00:00:00"
+      "DataInicial": "2020-08-18T00:00:00",
+      "DataFinal": "2020-08-18T00:00:00"
     },
-    "DataObservacao": "2020-08-12T00:00:00",
-    "AtualizadoEm": "2020-08-12T10:08:38.7536967-03:00",
-    "ProcessadoEm": "12/08/2020 10:08",
+    "DataObservacao": "2020-08-18T00:00:00",
+    "AtualizadoEm": "2020-08-18T10:00:43.4304135-03:00",
+    "ProcessadoEm": "18/08/2020 10:00",
     "Recursos": [
       {
         "Local": "MG",
         "EspacoTotal": "34,0 TB",
-        "EspacoLivre": "7,4 TB",
+        "EspacoLivre": "6,3 TB",
         "EspacoTotalBytes": 43980465111040,
-        "EspacoLivreBytes": 9574933381120,
-        "EspacoLivrePerc": 0.22,
-        "EspacoLivreImagens": 8800,
-        "EspacoLivreDias": 36,
+        "EspacoLivreBytes": 8139630428160,
+        "EspacoLivrePerc": 0.19,
+        "EspacoLivreImagens": 7990,
+        "EspacoLivreDias": 24,
         "Detalhes": [
           {
             "DiasPrevisao": 30,
             "EspacoTotalBytes": 43980465111040,
-            "EspacoLivreBytes": 19867616528832,
-            "EspacoLivrePerc": 0.45,
-            "EspacoLivreImagens": 18260,
-            "EspacoLivreDias": 74
+            "EspacoLivreBytes": 10271777020280,
+            "EspacoLivrePerc": 0.23,
+            "EspacoLivreImagens": 10083,
+            "EspacoLivreDias": 31
           },
           {
             "DiasPrevisao": 60,
             "EspacoTotalBytes": 43980465111040,
-            "EspacoLivreBytes": 29714902796736,
-            "EspacoLivrePerc": 0.68,
-            "EspacoLivreImagens": 27311,
-            "EspacoLivreDias": 111
+            "EspacoLivreBytes": 9282049038960,
+            "EspacoLivrePerc": 0.21,
+            "EspacoLivreImagens": 9112,
+            "EspacoLivreDias": 28
           },
           {
             "DiasPrevisao": 90,
             "EspacoTotalBytes": 43980465111040,
-            "EspacoLivreBytes": 41772878342594,
-            "EspacoLivrePerc": 0.95,
-            "EspacoLivreImagens": 38394,
-            "EspacoLivreDias": 157
+            "EspacoLivreBytes": 11562485308886,
+            "EspacoLivrePerc": 0.26,
+            "EspacoLivreImagens": 11350,
+            "EspacoLivreDias": 35
           }
         ]
       },
       {
         "Local": "SP",
         "EspacoTotal": "118,2 TB",
-        "EspacoLivre": "58,3 TB",
+        "EspacoLivre": "55,6 TB",
         "EspacoTotalBytes": 152826074300416,
-        "EspacoLivreBytes": 75378305466368,
-        "EspacoLivrePerc": 0.49,
-        "EspacoLivreImagens": 53036,
-        "EspacoLivreDias": 100,
+        "EspacoLivreBytes": 71935089770496,
+        "EspacoLivrePerc": 0.47,
+        "EspacoLivreImagens": 53628,
+        "EspacoLivreDias": 85,
         "Detalhes": [
           {
             "DiasPrevisao": 30,
             "EspacoTotalBytes": 152826074300416,
-            "EspacoLivreBytes": 96895821019854,
-            "EspacoLivrePerc": 0.63,
-            "EspacoLivreImagens": 68175,
-            "EspacoLivreDias": 129
+            "EspacoLivreBytes": 72079359817346,
+            "EspacoLivrePerc": 0.47,
+            "EspacoLivreImagens": 53736,
+            "EspacoLivreDias": 86
           },
           {
             "DiasPrevisao": 60,
             "EspacoTotalBytes": 152826074300416,
-            "EspacoLivreBytes": 128151439452612,
-            "EspacoLivrePerc": 0.84,
-            "EspacoLivreImagens": 90167,
-            "EspacoLivreDias": 171
+            "EspacoLivreBytes": 76359201609060,
+            "EspacoLivrePerc": 0.50,
+            "EspacoLivreImagens": 56927,
+            "EspacoLivreDias": 91
           },
           {
             "DiasPrevisao": 90,
             "EspacoTotalBytes": 152826074300416,
-            "EspacoLivreBytes": 148955092974077,
-            "EspacoLivrePerc": 0.97,
-            "EspacoLivreImagens": 104804,
-            "EspacoLivreDias": 199
+            "EspacoLivreBytes": 70880283755269,
+            "EspacoLivrePerc": 0.46,
+            "EspacoLivreImagens": 52842,
+            "EspacoLivreDias": 84
           }
         ]
       }
@@ -88,13 +88,13 @@
       {
         "Scanner": "SS12025",
         "Local": "MG",
-        "DigitalizadasQtde": 144,
-        "IntegradasQtde": 46,
+        "DigitalizadasQtde": 0,
+        "IntegradasQtde": 0,
         "IntegradasPerc": 0.0,
         "ErroCodigoBarrasQtde": 0,
         "ErroCodigoBarrasPerc": 0.00,
-        "ErroQualidadeImagemQtde": 11,
-        "ErroQualidadeImagemPerc": 0.08
+        "ErroQualidadeImagemQtde": 0,
+        "ErroQualidadeImagemPerc": 0.00
       },
       {
         "Scanner": "SS12026",
@@ -110,8 +110,8 @@
       {
         "Scanner": "SS12027",
         "Local": "SP",
-        "DigitalizadasQtde": 300,
-        "IntegradasQtde": 208,
+        "DigitalizadasQtde": 325,
+        "IntegradasQtde": 324,
         "IntegradasPerc": 0.0,
         "ErroCodigoBarrasQtde": 0,
         "ErroCodigoBarrasPerc": 0.00,
@@ -122,49 +122,41 @@
     "Utilizacoes": [
       {
         "Local": "SP",
-        "CodPatologista": "783",
-        "NomPatologista": "Daniel Chang",
-        "DistribuidasQtde": 26,
-        "VisualizadasQtde": 0,
-        "VisualizadasPerc": 0.00
-      },
-      {
-        "Local": "SP",
         "CodPatologista": "1115",
         "NomPatologista": "Esther Vanessa C Oliveira",
-        "DistribuidasQtde": 26,
-        "VisualizadasQtde": 57,
-        "VisualizadasPerc": 2.19
-      },
-      {
-        "Local": "SP",
-        "CodPatologista": "23",
-        "NomPatologista": "Regina Cubero Leitão",
-        "DistribuidasQtde": 30,
-        "VisualizadasQtde": 0,
-        "VisualizadasPerc": 0.00
+        "DistribuidasQtde": 29,
+        "VisualizadasQtde": 21,
+        "VisualizadasPerc": 0.72
       },
       {
         "Local": "SP",
         "CodPatologista": "1171",
         "NomPatologista": "Fábio Joao Travizan Vieira",
-        "DistribuidasQtde": 24,
+        "DistribuidasQtde": 31,
         "VisualizadasQtde": 0,
         "VisualizadasPerc": 0.00
       },
       {
         "Local": "SP",
-        "CodPatologista": "1401",
-        "NomPatologista": "Joana Angrisani Granato Queen",
-        "DistribuidasQtde": 7,
+        "CodPatologista": "783",
+        "NomPatologista": "Daniel Chang",
+        "DistribuidasQtde": 32,
         "VisualizadasQtde": 0,
         "VisualizadasPerc": 0.00
       },
       {
         "Local": "SP",
-        "CodPatologista": "1261",
-        "NomPatologista": "Adriano de Almeida",
-        "DistribuidasQtde": 12,
+        "CodPatologista": "1181",
+        "NomPatologista": "Lisandro Ferreira Lopes",
+        "DistribuidasQtde": 8,
+        "VisualizadasQtde": 0,
+        "VisualizadasPerc": 0.00
+      },
+      {
+        "Local": "SP",
+        "CodPatologista": "1438",
+        "NomPatologista": "Dulcelena Oliveira",
+        "DistribuidasQtde": 4,
         "VisualizadasQtde": 0,
         "VisualizadasPerc": 0.00
       }
@@ -173,28 +165,15 @@
       {
         "Scanner": "SS12027",
         "Local": "SP",
-        "NumeroOcorrencias": 300,
-        "TempoDigitalizacaoValorMedio": 102,
-        "TempoDigitalizacaoValorMaximo": 185,
-        "TempoDigitalizacaoValorMinimo": 36,
-        "LaminasPorHoraValorMedio": 35,
-        "LaminasPorHoraValorMaximo": 100,
-        "LaminasPorHoraValorMinimo": 19,
+        "NumeroOcorrencias": 325,
+        "TempoDigitalizacaoValorMedio": 90,
+        "TempoDigitalizacaoValorMaximo": 199,
+        "TempoDigitalizacaoValorMinimo": 31,
+        "LaminasPorHoraValorMedio": 40,
+        "LaminasPorHoraValorMaximo": 116,
+        "LaminasPorHoraValorMinimo": 18,
         "TempoDigitalizacaoMelhorHistorico": 17,
         "LaminasPorHoraMelhorHistorico": 211
-      },
-      {
-        "Scanner": "SS12025",
-        "Local": "MG",
-        "NumeroOcorrencias": 144,
-        "TempoDigitalizacaoValorMedio": 79,
-        "TempoDigitalizacaoValorMaximo": 175,
-        "TempoDigitalizacaoValorMinimo": 28,
-        "LaminasPorHoraValorMedio": 45,
-        "LaminasPorHoraValorMaximo": 128,
-        "LaminasPorHoraValorMinimo": 20,
-        "TempoDigitalizacaoMelhorHistorico": 19,
-        "LaminasPorHoraMelhorHistorico": 189
       }
     ],
     "GraficoEspacoLivre": {
@@ -226,7 +205,7 @@
             },
             {
               "Categoria": "08/20",
-              "Valor": 0.23
+              "Valor": 0.21
             }
           ]
         },
@@ -256,7 +235,7 @@
             },
             {
               "Categoria": "08/20",
-              "Valor": 0.51
+              "Valor": 0.50
             }
           ]
         }
@@ -265,7 +244,7 @@
       "DescricaoEixoX": "Meses",
       "DescricaoEixoY": "%",
       "DataInicial": "2020-03-12T00:00:00",
-      "DataFinal": "2020-08-11T00:00:00",
+      "DataFinal": "2020-08-17T00:00:00",
       "Descricao": "Mostra o espaço livre em disco (%) por local",
       "Categorias": [
         "03/20",
@@ -305,7 +284,7 @@
             },
             {
               "Categoria": "08/20",
-              "Valor": 2817.0
+              "Valor": 4940.0
             }
           ]
         },
@@ -365,7 +344,7 @@
             },
             {
               "Categoria": "08/20",
-              "Valor": 5567.0
+              "Valor": 8944.0
             }
           ]
         }
@@ -374,7 +353,7 @@
       "DescricaoEixoX": "Meses",
       "DescricaoEixoY": "Quantidade de imagens digitalizadas",
       "DataInicial": "2020-03-12T00:00:00",
-      "DataFinal": "2020-08-11T00:00:00",
+      "DataFinal": "2020-08-17T00:00:00",
       "Descricao": "Mostra a produção por scanner em quantidade de lâminas digitalizadas",
       "Categorias": [
         "03/20",
@@ -410,7 +389,7 @@
             },
             {
               "Categoria": "08/20",
-              "Valor": 0.04
+              "Valor": 0.07
             }
           ]
         },
@@ -436,7 +415,7 @@
             },
             {
               "Categoria": "08/20",
-              "Valor": 0.15
+              "Valor": 0.19
             }
           ]
         }
@@ -445,7 +424,7 @@
       "DescricaoEixoX": "Meses",
       "DescricaoEixoY": null,
       "DataInicial": "2020-04-22T00:00:00",
-      "DataFinal": "2020-08-11T00:00:00",
+      "DataFinal": "2020-08-17T00:00:00",
       "Descricao": "Mostra o percentual de visualização de lâminas em relação ao total distribuído pela Telepatologia",
       "Categorias": [
         "04/20",
@@ -484,7 +463,7 @@
             },
             {
               "Categoria": "08/20",
-              "Valor": 45.9
+              "Valor": 45.7
             }
           ]
         },
@@ -544,7 +523,7 @@
             },
             {
               "Categoria": "08/20",
-              "Valor": 38.8
+              "Valor": 40.2
             }
           ]
         }
@@ -553,7 +532,7 @@
       "DescricaoEixoX": "Meses",
       "DescricaoEixoY": "%",
       "DataInicial": "2020-03-12T00:00:00",
-      "DataFinal": "2020-08-11T00:00:00",
+      "DataFinal": "2020-08-17T00:00:00",
       "Descricao": "Mostra a performance por scanner em quantidade de lâminas digitalizadas/hora",
       "Categorias": [
         "03/20",
@@ -564,36 +543,97 @@
         "08/20"
       ]
     },
+    "GraficoPrevisaoRecursos": {
+      "Tipo": "line",
+      "Series": [
+        {
+          "Nome": "MG",
+          "Cor": "MidnightBlue",
+          "Dados": [
+            {
+              "Categoria": "08/2020",
+              "Valor": 0.19
+            },
+            {
+              "Categoria": "09/2020",
+              "Valor": 0.23
+            },
+            {
+              "Categoria": "10/2020",
+              "Valor": 0.22
+            },
+            {
+              "Categoria": "11/2020",
+              "Valor": 0.27
+            }
+          ]
+        },
+        {
+          "Nome": "SP",
+          "Cor": "SeaGreen",
+          "Dados": [
+            {
+              "Categoria": "08/2020",
+              "Valor": 0.47
+            },
+            {
+              "Categoria": "09/2020",
+              "Valor": 0.47
+            },
+            {
+              "Categoria": "10/2020",
+              "Valor": 0.51
+            },
+            {
+              "Categoria": "11/2020",
+              "Valor": 0.47
+            }
+          ]
+        }
+      ],
+      "Titulo": "PREVISÃO DE RECURSOS",
+      "DescricaoEixoX": "Meses",
+      "DescricaoEixoY": "%",
+      "DataInicial": "2020-03-12T00:00:00",
+      "DataFinal": "2020-08-17T00:00:00",
+      "Descricao": "Mostra a previsão de espaço livre em disco (%) por local",
+      "Categorias": [
+        "08/2020",
+        "09/2020",
+        "10/2020",
+        "11/2020"
+      ]
+    },
     "RecursosTotais": {
       "EspacoTotal": "152,2 TB",
-      "EspacoLivre": "65,7 TB",
+      "EspacoLivre": "61,9 TB",
       "EspacoTotalBytes": 196806539411456,
-      "EspacoLivreBytes": 84953238847488,
-      "EspacoLivrePerc": 0.43,
-      "EspacoLivreImagens": 61836,
-      "EspacoLivreDias": 36
+      "EspacoLivreBytes": 80074720198656,
+      "EspacoLivrePerc": 0.41,
+      "EspacoLivreImagens": 61618,
+      "EspacoLivreDias": 24
     },
     "ProducaoTotais": {
-      "DigitalizadasQtde": 444,
-      "IntegradasQtde": 254,
-      "IntegradasPerc": 0.57,
+      "DigitalizadasQtde": 325,
+      "IntegradasQtde": 324,
+      "IntegradasPerc": 1.00,
       "ErroCodigoBarrasQtde": 0,
       "ErroCodigoBarrasPerc": 0.0,
-      "ErroQualidadeImagemQtde": 11,
-      "ErroQualidadeImagemPerc": 0.02
+      "ErroQualidadeImagemQtde": 0,
+      "ErroQualidadeImagemPerc": 0.0
     },
     "UtilizacaoTotais": {
-      "DistribuidasQtde": 125,
-      "VisualizadasQtde": 57,
-      "VisualizadasPerc": 0.46
+      "DistribuidasQtde": 104,
+      "VisualizadasQtde": 21,
+      "VisualizadasPerc": 0.20
     },
     "IndicadoresTotais": {
-      "TempoDigitalizacaoValorMedio": 94,
-      "TempoDigitalizacaoValorMaximo": 185,
-      "TempoDigitalizacaoValorMinimo": 28,
-      "LaminasPorHoraValorMedio": 38,
-      "LaminasPorHoraValorMaximo": 128,
-      "LaminasPorHoraValorMinimo": 19,
+      "TempoDigitalizacaoValorMedio": 90,
+      "TempoDigitalizacaoValorMaximo": 199,
+      "TempoDigitalizacaoValorMinimo": 31,
+      "LaminasPorHoraValorMedio": 40,
+      "LaminasPorHoraValorMaximo": 116,
+      "LaminasPorHoraValorMinimo": 18,
       "TempoDigitalizacaoMelhorHistorico": 17,
       "LaminasPorHoraMelhorHistorico": 211
     }
@@ -601,49 +641,49 @@
   "Locais": [
     {
       "Titulo": "DASHBOARD TELEPATOLOGIA",
-      "Subtitulo": "Ref. 12/08/2020",
+      "Subtitulo": "Ref. 18/08/2020",
       "Local": "MG",
       "Periodo": {
-        "DataInicial": "0001-01-01T00:00:00",
-        "DataFinal": "0001-01-01T00:00:00"
+        "DataInicial": "2020-08-18T00:00:00",
+        "DataFinal": "2020-08-18T00:00:00"
       },
-      "DataObservacao": "2020-08-12T00:00:00",
-      "AtualizadoEm": "2020-08-12T10:08:38.7536967-03:00",
-      "ProcessadoEm": "12/08/2020 10:08",
+      "DataObservacao": "2020-08-18T00:00:00",
+      "AtualizadoEm": "2020-08-18T10:00:43.4304135-03:00",
+      "ProcessadoEm": "18/08/2020 10:00",
       "Recursos": [
         {
           "Local": "MG",
           "EspacoTotal": "34,0 TB",
-          "EspacoLivre": "7,4 TB",
+          "EspacoLivre": "6,3 TB",
           "EspacoTotalBytes": 43980465111040,
-          "EspacoLivreBytes": 9574933381120,
-          "EspacoLivrePerc": 0.22,
-          "EspacoLivreImagens": 8800,
-          "EspacoLivreDias": 36,
+          "EspacoLivreBytes": 8139630428160,
+          "EspacoLivrePerc": 0.19,
+          "EspacoLivreImagens": 7990,
+          "EspacoLivreDias": 24,
           "Detalhes": [
             {
               "DiasPrevisao": 30,
               "EspacoTotalBytes": 43980465111040,
-              "EspacoLivreBytes": 19867616528832,
-              "EspacoLivrePerc": 0.45,
-              "EspacoLivreImagens": 18260,
-              "EspacoLivreDias": 74
+              "EspacoLivreBytes": 10271777020280,
+              "EspacoLivrePerc": 0.23,
+              "EspacoLivreImagens": 10083,
+              "EspacoLivreDias": 31
             },
             {
               "DiasPrevisao": 60,
               "EspacoTotalBytes": 43980465111040,
-              "EspacoLivreBytes": 29714902796736,
-              "EspacoLivrePerc": 0.68,
-              "EspacoLivreImagens": 27311,
-              "EspacoLivreDias": 111
+              "EspacoLivreBytes": 9282049038960,
+              "EspacoLivrePerc": 0.21,
+              "EspacoLivreImagens": 9112,
+              "EspacoLivreDias": 28
             },
             {
               "DiasPrevisao": 90,
               "EspacoTotalBytes": 43980465111040,
-              "EspacoLivreBytes": 41772878342594,
-              "EspacoLivrePerc": 0.95,
-              "EspacoLivreImagens": 38394,
-              "EspacoLivreDias": 157
+              "EspacoLivreBytes": 11562485308886,
+              "EspacoLivrePerc": 0.26,
+              "EspacoLivreImagens": 11350,
+              "EspacoLivreDias": 35
             }
           ]
         }
@@ -652,18 +692,18 @@
         {
           "Scanner": "SS12025",
           "Local": "MG",
-          "DigitalizadasQtde": 144,
-          "IntegradasQtde": 46,
+          "DigitalizadasQtde": 0,
+          "IntegradasQtde": 0,
           "IntegradasPerc": 0.0,
           "ErroCodigoBarrasQtde": 0,
           "ErroCodigoBarrasPerc": 0.00,
-          "ErroQualidadeImagemQtde": 11,
-          "ErroQualidadeImagemPerc": 0.08
+          "ErroQualidadeImagemQtde": 0,
+          "ErroQualidadeImagemPerc": 0.00
         }
       ],
       "Utilizacoes": [
         {
-          "Local": null,
+          "Local": "MG",
           "CodPatologista": "6086",
           "NomPatologista": "Camila Campos",
           "DistribuidasQtde": 0,
@@ -671,7 +711,7 @@
           "VisualizadasPerc": 0.0
         },
         {
-          "Local": null,
+          "Local": "MG",
           "CodPatologista": "1463",
           "NomPatologista": "Camila França Campos",
           "DistribuidasQtde": 0,
@@ -679,7 +719,7 @@
           "VisualizadasPerc": 0.0
         },
         {
-          "Local": null,
+          "Local": "MG",
           "CodPatologista": "5048",
           "NomPatologista": "Eduardo Alves Bambirra",
           "DistribuidasQtde": 0,
@@ -687,7 +727,7 @@
           "VisualizadasPerc": 0.0
         },
         {
-          "Local": null,
+          "Local": "MG",
           "CodPatologista": "6093",
           "NomPatologista": "Eliane Maria de A. Caetano Tibúrcio",
           "DistribuidasQtde": 0,
@@ -695,7 +735,7 @@
           "VisualizadasPerc": 0.0
         },
         {
-          "Local": null,
+          "Local": "MG",
           "CodPatologista": "5049",
           "NomPatologista": "Juberto José Chaves",
           "DistribuidasQtde": 0,
@@ -703,7 +743,7 @@
           "VisualizadasPerc": 0.0
         },
         {
-          "Local": null,
+          "Local": "MG",
           "CodPatologista": "5050",
           "NomPatologista": "Lidiane de Araújo Lima",
           "DistribuidasQtde": 0,
@@ -711,7 +751,7 @@
           "VisualizadasPerc": 0.0
         },
         {
-          "Local": null,
+          "Local": "MG",
           "CodPatologista": "5052",
           "NomPatologista": "Mario Félix Richard de Lima",
           "DistribuidasQtde": 0,
@@ -719,7 +759,7 @@
           "VisualizadasPerc": 0.0
         },
         {
-          "Local": null,
+          "Local": "MG",
           "CodPatologista": "6094",
           "NomPatologista": "Pedro Lobo Alcântara Neves",
           "DistribuidasQtde": 0,
@@ -727,7 +767,7 @@
           "VisualizadasPerc": 0.0
         },
         {
-          "Local": null,
+          "Local": "MG",
           "CodPatologista": "5053",
           "NomPatologista": "Soraya Kumaira Vilchez",
           "DistribuidasQtde": 0,
@@ -735,7 +775,7 @@
           "VisualizadasPerc": 0.0
         },
         {
-          "Local": null,
+          "Local": "MG",
           "CodPatologista": "5132",
           "NomPatologista": "Taismara Simas de Oliveira",
           "DistribuidasQtde": 0,
@@ -743,7 +783,7 @@
           "VisualizadasPerc": 0.0
         },
         {
-          "Local": null,
+          "Local": "MG",
           "CodPatologista": "5045",
           "NomPatologista": "Vânia da Fonseca Amaral",
           "DistribuidasQtde": 0,
@@ -751,21 +791,7 @@
           "VisualizadasPerc": 0.0
         }
       ],
-      "Indicadores": [
-        {
-          "Scanner": "SS12025",
-          "Local": "MG",
-          "NumeroOcorrencias": 144,
-          "TempoDigitalizacaoValorMedio": 79,
-          "TempoDigitalizacaoValorMaximo": 175,
-          "TempoDigitalizacaoValorMinimo": 28,
-          "LaminasPorHoraValorMedio": 45,
-          "LaminasPorHoraValorMaximo": 128,
-          "LaminasPorHoraValorMinimo": 20,
-          "TempoDigitalizacaoMelhorHistorico": 19,
-          "LaminasPorHoraMelhorHistorico": 189
-        }
-      ],
+      "Indicadores": [],
       "GraficoEspacoLivre": {
         "Tipo": "column",
         "Series": [
@@ -795,7 +821,7 @@
               },
               {
                 "Categoria": "08/20",
-                "Valor": 0.23
+                "Valor": 0.21
               }
             ]
           }
@@ -804,7 +830,7 @@
         "DescricaoEixoX": "Meses",
         "DescricaoEixoY": "%",
         "DataInicial": "2020-03-12T00:00:00",
-        "DataFinal": "2020-08-11T00:00:00",
+        "DataFinal": "2020-08-17T00:00:00",
         "Descricao": "Mostra o espaço livre em disco (%) por local",
         "Categorias": [
           "03/20",
@@ -844,7 +870,7 @@
               },
               {
                 "Categoria": "08/20",
-                "Valor": 2817.0
+                "Valor": 4940.0
               }
             ]
           }
@@ -853,7 +879,7 @@
         "DescricaoEixoX": "Meses",
         "DescricaoEixoY": "Quantidade de imagens digitalizadas",
         "DataInicial": "2020-03-12T00:00:00",
-        "DataFinal": "2020-08-11T00:00:00",
+        "DataFinal": "2020-08-17T00:00:00",
         "Descricao": "Mostra a produção por scanner em quantidade de lâminas digitalizadas",
         "Categorias": [
           "03/20",
@@ -889,7 +915,7 @@
               },
               {
                 "Categoria": "08/20",
-                "Valor": 0.15
+                "Valor": 0.19
               }
             ]
           }
@@ -898,7 +924,7 @@
         "DescricaoEixoX": "Meses",
         "DescricaoEixoY": null,
         "DataInicial": "2020-04-28T00:00:00",
-        "DataFinal": "2020-08-07T00:00:00",
+        "DataFinal": "2020-08-13T00:00:00",
         "Descricao": "Mostra o percentual de visualização de lâminas em relação ao total distribuído pela Telepatologia",
         "Categorias": [
           "04/20",
@@ -937,7 +963,7 @@
               },
               {
                 "Categoria": "08/20",
-                "Valor": 45.9
+                "Valor": 45.7
               }
             ]
           }
@@ -946,7 +972,7 @@
         "DescricaoEixoX": "Meses",
         "DescricaoEixoY": "%",
         "DataInicial": "2020-03-12T00:00:00",
-        "DataFinal": "2020-08-11T00:00:00",
+        "DataFinal": "2020-08-17T00:00:00",
         "Descricao": "Mostra a performance por scanner em quantidade de lâminas digitalizadas/hora",
         "Categorias": [
           "03/20",
@@ -957,23 +983,62 @@
           "08/20"
         ]
       },
+      "GraficoPrevisaoRecursos": {
+        "Tipo": "line",
+        "Series": [
+          {
+            "Nome": "MG",
+            "Cor": "MidnightBlue",
+            "Dados": [
+              {
+                "Categoria": "08/2020",
+                "Valor": 0.19
+              },
+              {
+                "Categoria": "09/2020",
+                "Valor": 0.23
+              },
+              {
+                "Categoria": "10/2020",
+                "Valor": 0.22
+              },
+              {
+                "Categoria": "11/2020",
+                "Valor": 0.27
+              }
+            ]
+          }
+        ],
+        "Titulo": "PREVISÃO DE RECURSOS",
+        "DescricaoEixoX": "Meses",
+        "DescricaoEixoY": "%",
+        "DataInicial": "2020-03-12T00:00:00",
+        "DataFinal": "2020-08-17T00:00:00",
+        "Descricao": "Mostra a previsão de espaço livre em disco (%) por local",
+        "Categorias": [
+          "08/2020",
+          "09/2020",
+          "10/2020",
+          "11/2020"
+        ]
+      },
       "RecursosTotais": {
         "EspacoTotal": "34,0 TB",
-        "EspacoLivre": "7,4 TB",
+        "EspacoLivre": "6,3 TB",
         "EspacoTotalBytes": 43980465111040,
-        "EspacoLivreBytes": 9574933381120,
-        "EspacoLivrePerc": 0.22,
-        "EspacoLivreImagens": 8800,
-        "EspacoLivreDias": 36
+        "EspacoLivreBytes": 8139630428160,
+        "EspacoLivrePerc": 0.19,
+        "EspacoLivreImagens": 7990,
+        "EspacoLivreDias": 24
       },
       "ProducaoTotais": {
-        "DigitalizadasQtde": 144,
-        "IntegradasQtde": 46,
-        "IntegradasPerc": 0.32,
+        "DigitalizadasQtde": 0,
+        "IntegradasQtde": 0,
+        "IntegradasPerc": 0.0,
         "ErroCodigoBarrasQtde": 0,
         "ErroCodigoBarrasPerc": 0.0,
-        "ErroQualidadeImagemQtde": 11,
-        "ErroQualidadeImagemPerc": 0.08
+        "ErroQualidadeImagemQtde": 0,
+        "ErroQualidadeImagemPerc": 0.0
       },
       "UtilizacaoTotais": {
         "DistribuidasQtde": 0,
@@ -981,61 +1046,61 @@
         "VisualizadasPerc": 0.0
       },
       "IndicadoresTotais": {
-        "TempoDigitalizacaoValorMedio": 79,
-        "TempoDigitalizacaoValorMaximo": 175,
-        "TempoDigitalizacaoValorMinimo": 28,
-        "LaminasPorHoraValorMedio": 45,
-        "LaminasPorHoraValorMaximo": 128,
-        "LaminasPorHoraValorMinimo": 20,
-        "TempoDigitalizacaoMelhorHistorico": 19,
-        "LaminasPorHoraMelhorHistorico": 189
+        "TempoDigitalizacaoValorMedio": 0,
+        "TempoDigitalizacaoValorMaximo": 0,
+        "TempoDigitalizacaoValorMinimo": 0,
+        "LaminasPorHoraValorMedio": 0,
+        "LaminasPorHoraValorMaximo": 0,
+        "LaminasPorHoraValorMinimo": 0,
+        "TempoDigitalizacaoMelhorHistorico": 0,
+        "LaminasPorHoraMelhorHistorico": 0
       }
     },
     {
       "Titulo": "DASHBOARD TELEPATOLOGIA",
-      "Subtitulo": "Ref. 12/08/2020",
+      "Subtitulo": "Ref. 18/08/2020",
       "Local": "SP",
       "Periodo": {
-        "DataInicial": "0001-01-01T00:00:00",
-        "DataFinal": "0001-01-01T00:00:00"
+        "DataInicial": "2020-08-18T00:00:00",
+        "DataFinal": "2020-08-18T00:00:00"
       },
-      "DataObservacao": "2020-08-12T00:00:00",
-      "AtualizadoEm": "2020-08-12T10:08:38.7536967-03:00",
-      "ProcessadoEm": "12/08/2020 10:08",
+      "DataObservacao": "2020-08-18T00:00:00",
+      "AtualizadoEm": "2020-08-18T10:00:43.4304135-03:00",
+      "ProcessadoEm": "18/08/2020 10:00",
       "Recursos": [
         {
           "Local": "SP",
           "EspacoTotal": "118,2 TB",
-          "EspacoLivre": "58,3 TB",
+          "EspacoLivre": "55,6 TB",
           "EspacoTotalBytes": 152826074300416,
-          "EspacoLivreBytes": 75378305466368,
-          "EspacoLivrePerc": 0.49,
-          "EspacoLivreImagens": 53036,
-          "EspacoLivreDias": 100,
+          "EspacoLivreBytes": 71935089770496,
+          "EspacoLivrePerc": 0.47,
+          "EspacoLivreImagens": 53628,
+          "EspacoLivreDias": 85,
           "Detalhes": [
             {
               "DiasPrevisao": 30,
               "EspacoTotalBytes": 152826074300416,
-              "EspacoLivreBytes": 96895821019854,
-              "EspacoLivrePerc": 0.63,
-              "EspacoLivreImagens": 68175,
-              "EspacoLivreDias": 129
+              "EspacoLivreBytes": 72079359817346,
+              "EspacoLivrePerc": 0.47,
+              "EspacoLivreImagens": 53736,
+              "EspacoLivreDias": 86
             },
             {
               "DiasPrevisao": 60,
               "EspacoTotalBytes": 152826074300416,
-              "EspacoLivreBytes": 128151439452612,
-              "EspacoLivrePerc": 0.84,
-              "EspacoLivreImagens": 90167,
-              "EspacoLivreDias": 171
+              "EspacoLivreBytes": 76359201609060,
+              "EspacoLivrePerc": 0.50,
+              "EspacoLivreImagens": 56927,
+              "EspacoLivreDias": 91
             },
             {
               "DiasPrevisao": 90,
               "EspacoTotalBytes": 152826074300416,
-              "EspacoLivreBytes": 148955092974077,
-              "EspacoLivrePerc": 0.97,
-              "EspacoLivreImagens": 104804,
-              "EspacoLivreDias": 199
+              "EspacoLivreBytes": 70880283755269,
+              "EspacoLivrePerc": 0.46,
+              "EspacoLivreImagens": 52842,
+              "EspacoLivreDias": 84
             }
           ]
         }
@@ -1055,8 +1120,8 @@
         {
           "Scanner": "SS12027",
           "Local": "SP",
-          "DigitalizadasQtde": 300,
-          "IntegradasQtde": 208,
+          "DigitalizadasQtde": 325,
+          "IntegradasQtde": 324,
           "IntegradasPerc": 0.0,
           "ErroCodigoBarrasQtde": 0,
           "ErroCodigoBarrasPerc": 0.00,
@@ -1067,49 +1132,41 @@
       "Utilizacoes": [
         {
           "Local": "SP",
-          "CodPatologista": "783",
-          "NomPatologista": "Daniel Chang",
-          "DistribuidasQtde": 26,
-          "VisualizadasQtde": 0,
-          "VisualizadasPerc": 0.00
-        },
-        {
-          "Local": "SP",
           "CodPatologista": "1115",
           "NomPatologista": "Esther Vanessa C Oliveira",
-          "DistribuidasQtde": 26,
-          "VisualizadasQtde": 57,
-          "VisualizadasPerc": 2.19
-        },
-        {
-          "Local": "SP",
-          "CodPatologista": "23",
-          "NomPatologista": "Regina Cubero Leitão",
-          "DistribuidasQtde": 30,
-          "VisualizadasQtde": 0,
-          "VisualizadasPerc": 0.00
+          "DistribuidasQtde": 29,
+          "VisualizadasQtde": 21,
+          "VisualizadasPerc": 0.72
         },
         {
           "Local": "SP",
           "CodPatologista": "1171",
           "NomPatologista": "Fábio Joao Travizan Vieira",
-          "DistribuidasQtde": 24,
+          "DistribuidasQtde": 31,
           "VisualizadasQtde": 0,
           "VisualizadasPerc": 0.00
         },
         {
           "Local": "SP",
-          "CodPatologista": "1401",
-          "NomPatologista": "Joana Angrisani Granato Queen",
-          "DistribuidasQtde": 7,
+          "CodPatologista": "783",
+          "NomPatologista": "Daniel Chang",
+          "DistribuidasQtde": 32,
           "VisualizadasQtde": 0,
           "VisualizadasPerc": 0.00
         },
         {
           "Local": "SP",
-          "CodPatologista": "1261",
-          "NomPatologista": "Adriano de Almeida",
-          "DistribuidasQtde": 12,
+          "CodPatologista": "1181",
+          "NomPatologista": "Lisandro Ferreira Lopes",
+          "DistribuidasQtde": 8,
+          "VisualizadasQtde": 0,
+          "VisualizadasPerc": 0.00
+        },
+        {
+          "Local": "SP",
+          "CodPatologista": "1438",
+          "NomPatologista": "Dulcelena Oliveira",
+          "DistribuidasQtde": 4,
           "VisualizadasQtde": 0,
           "VisualizadasPerc": 0.00
         }
@@ -1118,13 +1175,13 @@
         {
           "Scanner": "SS12027",
           "Local": "SP",
-          "NumeroOcorrencias": 300,
-          "TempoDigitalizacaoValorMedio": 102,
-          "TempoDigitalizacaoValorMaximo": 185,
-          "TempoDigitalizacaoValorMinimo": 36,
-          "LaminasPorHoraValorMedio": 35,
-          "LaminasPorHoraValorMaximo": 100,
-          "LaminasPorHoraValorMinimo": 19,
+          "NumeroOcorrencias": 325,
+          "TempoDigitalizacaoValorMedio": 90,
+          "TempoDigitalizacaoValorMaximo": 199,
+          "TempoDigitalizacaoValorMinimo": 31,
+          "LaminasPorHoraValorMedio": 40,
+          "LaminasPorHoraValorMaximo": 116,
+          "LaminasPorHoraValorMinimo": 18,
           "TempoDigitalizacaoMelhorHistorico": 17,
           "LaminasPorHoraMelhorHistorico": 211
         }
@@ -1158,7 +1215,7 @@
               },
               {
                 "Categoria": "08/20",
-                "Valor": 0.51
+                "Valor": 0.50
               }
             ]
           }
@@ -1167,7 +1224,7 @@
         "DescricaoEixoX": "Meses",
         "DescricaoEixoY": "%",
         "DataInicial": "2020-03-12T00:00:00",
-        "DataFinal": "2020-08-11T00:00:00",
+        "DataFinal": "2020-08-17T00:00:00",
         "Descricao": "Mostra o espaço livre em disco (%) por local",
         "Categorias": [
           "03/20",
@@ -1237,7 +1294,7 @@
               },
               {
                 "Categoria": "08/20",
-                "Valor": 5567.0
+                "Valor": 8944.0
               }
             ]
           }
@@ -1246,7 +1303,7 @@
         "DescricaoEixoX": "Meses",
         "DescricaoEixoY": "Quantidade de imagens digitalizadas",
         "DataInicial": "2020-03-12T00:00:00",
-        "DataFinal": "2020-08-11T00:00:00",
+        "DataFinal": "2020-08-17T00:00:00",
         "Descricao": "Mostra a produção por scanner em quantidade de lâminas digitalizadas",
         "Categorias": [
           "03/20",
@@ -1282,7 +1339,7 @@
               },
               {
                 "Categoria": "08/20",
-                "Valor": 0.04
+                "Valor": 0.07
               }
             ]
           }
@@ -1291,7 +1348,7 @@
         "DescricaoEixoX": "Meses",
         "DescricaoEixoY": null,
         "DataInicial": "2020-04-22T00:00:00",
-        "DataFinal": "2020-08-11T00:00:00",
+        "DataFinal": "2020-08-17T00:00:00",
         "Descricao": "Mostra o percentual de visualização de lâminas em relação ao total distribuído pela Telepatologia",
         "Categorias": [
           "04/20",
@@ -1360,7 +1417,7 @@
               },
               {
                 "Categoria": "08/20",
-                "Valor": 38.8
+                "Valor": 40.2
               }
             ]
           }
@@ -1369,7 +1426,7 @@
         "DescricaoEixoX": "Meses",
         "DescricaoEixoY": "%",
         "DataInicial": "2020-03-12T00:00:00",
-        "DataFinal": "2020-08-11T00:00:00",
+        "DataFinal": "2020-08-17T00:00:00",
         "Descricao": "Mostra a performance por scanner em quantidade de lâminas digitalizadas/hora",
         "Categorias": [
           "03/20",
@@ -1380,36 +1437,75 @@
           "08/20"
         ]
       },
+      "GraficoPrevisaoRecursos": {
+        "Tipo": "line",
+        "Series": [
+          {
+            "Nome": "SP",
+            "Cor": "MidnightBlue",
+            "Dados": [
+              {
+                "Categoria": "08/2020",
+                "Valor": 0.47
+              },
+              {
+                "Categoria": "09/2020",
+                "Valor": 0.47
+              },
+              {
+                "Categoria": "10/2020",
+                "Valor": 0.51
+              },
+              {
+                "Categoria": "11/2020",
+                "Valor": 0.47
+              }
+            ]
+          }
+        ],
+        "Titulo": "PREVISÃO DE RECURSOS",
+        "DescricaoEixoX": "Meses",
+        "DescricaoEixoY": "%",
+        "DataInicial": "2020-03-12T00:00:00",
+        "DataFinal": "2020-08-17T00:00:00",
+        "Descricao": "Mostra a previsão de espaço livre em disco (%) por local",
+        "Categorias": [
+          "08/2020",
+          "09/2020",
+          "10/2020",
+          "11/2020"
+        ]
+      },
       "RecursosTotais": {
         "EspacoTotal": "118,2 TB",
-        "EspacoLivre": "58,3 TB",
+        "EspacoLivre": "55,6 TB",
         "EspacoTotalBytes": 152826074300416,
-        "EspacoLivreBytes": 75378305466368,
-        "EspacoLivrePerc": 0.49,
-        "EspacoLivreImagens": 53036,
-        "EspacoLivreDias": 100
+        "EspacoLivreBytes": 71935089770496,
+        "EspacoLivrePerc": 0.47,
+        "EspacoLivreImagens": 53628,
+        "EspacoLivreDias": 85
       },
       "ProducaoTotais": {
-        "DigitalizadasQtde": 300,
-        "IntegradasQtde": 208,
-        "IntegradasPerc": 0.69,
+        "DigitalizadasQtde": 325,
+        "IntegradasQtde": 324,
+        "IntegradasPerc": 1.00,
         "ErroCodigoBarrasQtde": 0,
         "ErroCodigoBarrasPerc": 0.0,
         "ErroQualidadeImagemQtde": 0,
         "ErroQualidadeImagemPerc": 0.0
       },
       "UtilizacaoTotais": {
-        "DistribuidasQtde": 125,
-        "VisualizadasQtde": 57,
-        "VisualizadasPerc": 0.46
+        "DistribuidasQtde": 104,
+        "VisualizadasQtde": 21,
+        "VisualizadasPerc": 0.20
       },
       "IndicadoresTotais": {
-        "TempoDigitalizacaoValorMedio": 102,
-        "TempoDigitalizacaoValorMaximo": 185,
-        "TempoDigitalizacaoValorMinimo": 36,
-        "LaminasPorHoraValorMedio": 35,
-        "LaminasPorHoraValorMaximo": 100,
-        "LaminasPorHoraValorMinimo": 19,
+        "TempoDigitalizacaoValorMedio": 90,
+        "TempoDigitalizacaoValorMaximo": 199,
+        "TempoDigitalizacaoValorMinimo": 31,
+        "LaminasPorHoraValorMedio": 40,
+        "LaminasPorHoraValorMaximo": 116,
+        "LaminasPorHoraValorMinimo": 18,
         "TempoDigitalizacaoMelhorHistorico": 17,
         "LaminasPorHoraMelhorHistorico": 211
       }
