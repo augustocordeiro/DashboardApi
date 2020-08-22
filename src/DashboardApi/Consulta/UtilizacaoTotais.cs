@@ -1,16 +1,18 @@
-﻿using Newtonsoft.Json;
+﻿
 
 namespace DashboardApi.Consulta
 {
     public class UtilizacaoTotais
     {
-        [JsonProperty("DistribuidasQtde")]
-        public long DistribuidasQtde { get; set; }
+        public int DistribuidasQtde { get; set; }
+        public int VisualizadasQtde { get; set; }
+        public decimal VisualizadasPerc { get; set; }
 
-        [JsonProperty("VisualizadasQtde")]
-        public long VisualizadasQtde { get; set; }
+        public UtilizacaoTotais()
+        {
+            //DistribuidasQtde = 0;
+            //VisualizadasQtde = 0;
 
-        [JsonProperty("VisualizadasPerc")]
-        public double VisualizadasPerc { get; set; }
+        }
     }
 }

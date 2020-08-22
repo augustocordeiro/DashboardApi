@@ -1,14 +1,32 @@
 ﻿using System;
-using Newtonsoft.Json;
 
 namespace DashboardApi.Consulta
 {
-    public class Periodo
+    public struct Periodo
     {
-        [JsonProperty("DataInicial")]
-        public DateTimeOffset DataInicial { get; set; }
+        public DateTime DataInicial { get; set; }
+        public DateTime DataFinal { get; set; }
+        public override string ToString()
+        {
+            return ObterDescricao();
+        }
 
-        [JsonProperty("DataFinal")]
-        public DateTimeOffset DataFinal { get; set; }
+        private string ObterDescricao()
+        {
+            string retorno = @"Período de Consulta: ";
+            if (DataInicial == DataFinal)
+            {
+                return $"{retorno}{DataInicial:dd/MM/yyyy}";
+            }
+            if (DataInicial.Year == DataFinal.Year)
+            {
+                if (DataInicial.Month == DataFinal.Month)
+                {
+                    return $"{retorno}de {DataInicial:dd} até {DataFinal:dd/MM/yyyy}";
+                }
+                return $"{retorno}de {DataInicial:dd/MM} até {DataFinal:dd/MM/yyyy}";
+            }
+            return $"{retorno}de {DataInicial:dd/MM/yyyy} até {DataFinal:dd/MM/yyyy}";
+        }
     }
 }
