@@ -40,32 +40,22 @@ namespace DashboardApi
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseCors(builder => builder.AllowAnyHeader()
-                                          .AllowAnyMethod()
-                                          .AllowAnyOrigin());
-
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
-
             app.UseRouting();
 
-            app.UseAuthentication();
+            app.UseCors(builder =>
+                        {
+                            builder
+                               .AllowAnyOrigin()
+                               .AllowAnyMethod()
+                               .AllowAnyHeader();
+                        });
 
-            app.UseAuthorization();
-
-
-            app.UseEndpoints(endpoints =>
-                             {
-                                 endpoints.MapControllers();
-                             });
-
-
-
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }
 }

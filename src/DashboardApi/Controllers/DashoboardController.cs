@@ -27,9 +27,15 @@ namespace DashboardApi.Controllers
         {
             try
             {
-                string conteudoDashoboard = tipoConsulta == 1
-                    ? System.IO.File.ReadAllText("dashboard.json")
-                    : System.IO.File.ReadAllText("dashboardSemana.json");
+                string conteudoDashoboard = tipoConsulta switch
+                {
+                    1 => System.IO.File.ReadAllText("dashboard_dia.json"),
+                    2 => System.IO.File.ReadAllText("dashboard_SemanaAtual.json"),
+                    3 => System.IO.File.ReadAllText("dashboard_MesAtual.json"),
+                    4 => System.IO.File.ReadAllText("dashboard_AnoAtual.json"),
+                    5 => System.IO.File.ReadAllText("dashboard_Ultimos12Meses.json"),
+                    _ => System.IO.File.ReadAllText("dashboard_dia.json")
+                };
 
                 DashboardRaiz dashboard = JsonConvert.DeserializeObject<DashboardRaiz>(conteudoDashoboard);
 

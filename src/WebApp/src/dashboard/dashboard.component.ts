@@ -145,7 +145,7 @@ export class DashboardComponent {
 
         this.ultilizacoes = dados.utilizacoes.sort((a, b) => { return a.visualizadasPerc > b.visualizadasPerc ? -1 : 1 });
 
-        this.titulo = dados.titulo;
+        this.titulo = dados.titulo;        
         this.subtitulo = dados.subtitulo;
         this.processadoEm = dados.processadoEm;
 
@@ -166,10 +166,10 @@ export class DashboardComponent {
         this.espacoLivreCategorias = dados.graficoEspacoLivre.categorias;
         this.espacoLivreDescricaoEixoX = dados.graficoEspacoLivre.descricaoEixoX;
 
-        this.previsaoRecursosTitulo = dados.graficoPrevisaoRecursos.titulo;
-        this.previsaoRecursosSeries = dados.graficoPrevisaoRecursos.series;
-        this.previsaoRecursosCategorias = dados.graficoPrevisaoRecursos.categorias;
-        this.previsaoRecursosDescricaoEixoX = dados.graficoPrevisaoRecursos.descricaoEixoX;
+        this.previsaoRecursosTitulo = dados.graficoPrevisaoRecursos?.titulo;
+        this.previsaoRecursosSeries = dados.graficoPrevisaoRecursos?.series;
+        this.previsaoRecursosCategorias = dados.graficoPrevisaoRecursos?.categorias;
+        this.previsaoRecursosDescricaoEixoX = dados.graficoPrevisaoRecursos?.descricaoEixoX;
 
         this.producaoScannersTitulo = dados.graficoProducaoScanners.titulo;
         this.producaoScannersSeries = dados.graficoProducaoScanners.series;
@@ -186,8 +186,8 @@ export class DashboardComponent {
         this.engajamentoPatologistasCategorias = dados.graficoEngajamentoPatologistas.categorias;
         this.engajamentoPatologistasTitulo = dados.graficoEngajamentoPatologistas.titulo;
         this.engajamentoPatologistasDescricaoEixoX = dados.graficoEngajamentoPatologistas.descricaoEixoX;
-
+    
         this.indicadoresTempoDigitalizacaoValorMedio = dados.indicadoresTotais.tempoDigitalizacaoValorMedio;
-        this.indicadoresLaminasPorHoraValorMedio = dados.indicadoresTotais.laminasPorHoraValorMedio;
+        this.indicadoresLaminasPorHoraValorMedio = dados.indicadoresTotais.laminasPorHoraValorMedio;        
     }
 }
