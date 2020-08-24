@@ -153,8 +153,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _componentes_card_percentual_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./componentes/card-percentual.component */ "./src/componentes/card-percentual.component.ts");
 /* harmony import */ var _componentes_card_percentual_texto_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./componentes/card-percentual-texto.component */ "./src/componentes/card-percentual-texto.component.ts");
 /* harmony import */ var _componentes_card_numerico_basico_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./componentes/card-numerico-basico.component */ "./src/componentes/card-numerico-basico.component.ts");
-/* harmony import */ var _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./componentes/grafico-area.component */ "./src/componentes/grafico-area.component.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../environments/environment */ "./environments/environment.ts");
+/* harmony import */ var _componentes_card_percentual_3linhas_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./componentes/card-percentual-3linhas.component */ "./src/componentes/card-percentual-3linhas.component.ts");
+/* harmony import */ var _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./componentes/grafico-area.component */ "./src/componentes/grafico-area.component.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../environments/environment */ "./environments/environment.ts");
 
 
 
@@ -181,6 +182,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 // environment
 
 
@@ -196,7 +198,7 @@ var AppModule = /** @class */ (function () {
     AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_16__["DashboardComponent"]] });
     AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [], imports: [[
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
-                _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__["ServiceWorkerModule"].register("ngsw-worker.js", { enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_22__["environment"].production }),
+                _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__["ServiceWorkerModule"].register("ngsw-worker.js", { enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_23__["environment"].production }),
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_10__["ChartsModule"],
                 _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_9__["GridModule"],
@@ -221,10 +223,11 @@ var AppModule = /** @class */ (function () {
 
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_16__["DashboardComponent"],
         _componentes_grafico_percentual_component__WEBPACK_IMPORTED_MODULE_17__["GraficoPercentualComponent"],
-        _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_21__["GraficoAreaComponent"],
+        _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_22__["GraficoAreaComponent"],
         _componentes_card_percentual_component__WEBPACK_IMPORTED_MODULE_18__["CardPercentualComponent"],
         _componentes_card_percentual_texto_component__WEBPACK_IMPORTED_MODULE_19__["CardPercentualTextoComponent"],
-        _componentes_card_numerico_basico_component__WEBPACK_IMPORTED_MODULE_20__["CardNumericoBasicoComponent"]], imports: [_app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__["ServiceWorkerModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+        _componentes_card_numerico_basico_component__WEBPACK_IMPORTED_MODULE_20__["CardNumericoBasicoComponent"],
+        _componentes_card_percentual_3linhas_component__WEBPACK_IMPORTED_MODULE_21__["CardPercentual3LinhasComponent"]], imports: [_app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__["ServiceWorkerModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
         _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_10__["ChartsModule"],
         _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_9__["GridModule"],
         _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_9__["ExcelModule"],
@@ -240,14 +243,15 @@ var AppModule = /** @class */ (function () {
                 declarations: [
                     _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_16__["DashboardComponent"],
                     _componentes_grafico_percentual_component__WEBPACK_IMPORTED_MODULE_17__["GraficoPercentualComponent"],
-                    _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_21__["GraficoAreaComponent"],
+                    _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_22__["GraficoAreaComponent"],
                     _componentes_card_percentual_component__WEBPACK_IMPORTED_MODULE_18__["CardPercentualComponent"],
                     _componentes_card_percentual_texto_component__WEBPACK_IMPORTED_MODULE_19__["CardPercentualTextoComponent"],
-                    _componentes_card_numerico_basico_component__WEBPACK_IMPORTED_MODULE_20__["CardNumericoBasicoComponent"]
+                    _componentes_card_numerico_basico_component__WEBPACK_IMPORTED_MODULE_20__["CardNumericoBasicoComponent"],
+                    _componentes_card_percentual_3linhas_component__WEBPACK_IMPORTED_MODULE_21__["CardPercentual3LinhasComponent"]
                 ],
                 imports: [
                     _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
-                    _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__["ServiceWorkerModule"].register("ngsw-worker.js", { enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_22__["environment"].production }),
+                    _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__["ServiceWorkerModule"].register("ngsw-worker.js", { enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_23__["environment"].production }),
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                     _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_10__["ChartsModule"],
                     _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_9__["GridModule"],
@@ -451,6 +455,92 @@ var CardNumericoBasicoComponent = /** @class */ (function () {
         }], valor: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }], unidadeMedida: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }] }); })();
+
+
+/***/ }),
+
+/***/ "./src/componentes/card-percentual-3linhas.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/componentes/card-percentual-3linhas.component.ts ***!
+  \**************************************************************/
+/*! exports provided: CardPercentual3LinhasComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CardPercentual3LinhasComponent", function() { return CardPercentual3LinhasComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+
+
+
+var CardPercentual3LinhasComponent = /** @class */ (function () {
+    function CardPercentual3LinhasComponent() {
+    }
+    CardPercentual3LinhasComponent.ɵfac = function CardPercentual3LinhasComponent_Factory(t) { return new (t || CardPercentual3LinhasComponent)(); };
+    CardPercentual3LinhasComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: CardPercentual3LinhasComponent, selectors: [["app-card-percentual-3linhas"]], inputs: { valorPercentual: "valorPercentual", titulo: "titulo", subTitulo1: "subTitulo1", subTitulo2: "subTitulo2", subTitulo3: "subTitulo3", valor1: "valor1", valor2: "valor2", valor3: "valor3" }, decls: 17, vars: 17, consts: [[1, "comp-label"], [1, "issues-count", 2, "font-size", "80px"], [1, "issues-label", 2, "font-size", "18px"], [1, "m-0", "medium", "text-muted"]], template: function CardPercentual3LinhasComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](3, "percent");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "p", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](8, "number");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "p", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "span");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](12, "number");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "\u00A0\u00A0|\u00A0\u00A0 ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "span");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](16, "number");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](3, 8, ctx.valorPercentual, "2.0-0"));
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.titulo);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"](" ", ctx.subTitulo1, ": ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](8, 11, ctx.valor1), "\n");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", ctx.subTitulo2, ": ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](12, 13, ctx.valor2), "");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", ctx.subTitulo3, ": ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](16, 15, ctx.valor3), "");
+        } }, pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["PercentPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["DecimalPipe"]], encapsulation: 2 });
+    return CardPercentual3LinhasComponent;
+}());
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CardPercentual3LinhasComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-card-percentual-3linhas',
+                template: "\n    <span class=\"comp-label\">\n    <div class=\"issues-count\" style=\"font-size: 80px;\">{{ valorPercentual | percent:'2.0-0' }}</div>\n    <div class=\"issues-label\" style=\"font-size: 18px;\">{{titulo}}</div>\n</span>\n<p class=\"m-0 medium text-muted\">\n    {{subTitulo1}}:\n    {{valor1 | number}}\n</p>\n<p class=\"m-0 medium text-muted\">\n    <span>{{subTitulo2}}:\n    {{valor2 | number}}</span>&nbsp;&nbsp;|&nbsp;&nbsp;\n    <span>{{subTitulo3}}:\n    {{valor3 | number}}</span>\n</p>"
+            }]
+    }], null, { valorPercentual: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], titulo: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], subTitulo1: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], subTitulo2: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], subTitulo3: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], valor1: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], valor2: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], valor3: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }] }); })();
 
@@ -794,15 +884,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _progress_kendo_angular_buttons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @progress/kendo-angular-buttons */ "./node_modules/@progress/kendo-angular-buttons/__ivy_ngcc__/dist/fesm2015/index.js");
 /* harmony import */ var _progress_kendo_angular_ripple__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @progress/kendo-angular-ripple */ "./node_modules/@progress/kendo-angular-ripple/__ivy_ngcc__/dist/fesm2015/index.js");
 /* harmony import */ var _componentes_card_percentual_texto_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../componentes/card-percentual-texto.component */ "./src/componentes/card-percentual-texto.component.ts");
-/* harmony import */ var _componentes_card_percentual_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../componentes/card-percentual.component */ "./src/componentes/card-percentual.component.ts");
-/* harmony import */ var _componentes_card_numerico_basico_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../componentes/card-numerico-basico.component */ "./src/componentes/card-numerico-basico.component.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _progress_kendo_angular_layout__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @progress/kendo-angular-layout */ "./node_modules/@progress/kendo-angular-layout/__ivy_ngcc__/dist/fesm2015/index.js");
-/* harmony import */ var _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../componentes/grafico-area.component */ "./src/componentes/grafico-area.component.ts");
-/* harmony import */ var _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @progress/kendo-angular-charts */ "./node_modules/@progress/kendo-angular-charts/__ivy_ngcc__/dist/fesm2015/index.js");
-/* harmony import */ var _componentes_grafico_percentual_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../componentes/grafico-percentual.component */ "./src/componentes/grafico-percentual.component.ts");
-/* harmony import */ var _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @progress/kendo-angular-grid */ "./node_modules/@progress/kendo-angular-grid/__ivy_ngcc__/dist/fesm2015/index.js");
-/* harmony import */ var _progress_kendo_angular_excel_export__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @progress/kendo-angular-excel-export */ "./node_modules/@progress/kendo-angular-excel-export/__ivy_ngcc__/dist/fesm2015/index.js");
+/* harmony import */ var _componentes_card_percentual_3linhas_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../componentes/card-percentual-3linhas.component */ "./src/componentes/card-percentual-3linhas.component.ts");
+/* harmony import */ var _componentes_card_percentual_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../componentes/card-percentual.component */ "./src/componentes/card-percentual.component.ts");
+/* harmony import */ var _componentes_card_numerico_basico_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../componentes/card-numerico-basico.component */ "./src/componentes/card-numerico-basico.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _progress_kendo_angular_layout__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @progress/kendo-angular-layout */ "./node_modules/@progress/kendo-angular-layout/__ivy_ngcc__/dist/fesm2015/index.js");
+/* harmony import */ var _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../componentes/grafico-area.component */ "./src/componentes/grafico-area.component.ts");
+/* harmony import */ var _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @progress/kendo-angular-charts */ "./node_modules/@progress/kendo-angular-charts/__ivy_ngcc__/dist/fesm2015/index.js");
+/* harmony import */ var _componentes_grafico_percentual_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../componentes/grafico-percentual.component */ "./src/componentes/grafico-percentual.component.ts");
+/* harmony import */ var _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @progress/kendo-angular-grid */ "./node_modules/@progress/kendo-angular-grid/__ivy_ngcc__/dist/fesm2015/index.js");
+/* harmony import */ var _progress_kendo_angular_excel_export__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @progress/kendo-angular-excel-export */ "./node_modules/@progress/kendo-angular-excel-export/__ivy_ngcc__/dist/fesm2015/index.js");
+
 
 
 
@@ -1027,6 +1119,7 @@ var DashboardComponent = /** @class */ (function () {
         }
     };
     DashboardComponent.prototype.carregarDashboard = function (dados) {
+        var _a, _b, _c, _d;
         this.ultilizacoes = dados.utilizacoes.sort(function (a, b) { return a.visualizadasPerc > b.visualizadasPerc ? -1 : 1; });
         this.titulo = dados.titulo;
         this.subtitulo = dados.subtitulo;
@@ -1036,6 +1129,7 @@ var DashboardComponent = /** @class */ (function () {
         this.espacoLivrePercentual = dados.recursosTotais.espacoLivrePerc;
         this.quantidadeDigitalizas = dados.producaoTotais.digitalizadasQtde;
         this.quantidadeIntegradas = dados.producaoTotais.integradasQtde;
+        this.quantidadeErros = dados.producaoTotais.erroCodigoBarrasQtde + dados.producaoTotais.erroQualidadeImagemQtde;
         this.percentualIntegracao = dados.producaoTotais.integradasPerc;
         this.quantidadeDistribuida = dados.utilizacaoTotais.distribuidasQtde;
         this.quantidadeVisualizada = dados.utilizacaoTotais.visualizadasQtde;
@@ -1044,10 +1138,10 @@ var DashboardComponent = /** @class */ (function () {
         this.espacoLivreSeries = dados.graficoEspacoLivre.series;
         this.espacoLivreCategorias = dados.graficoEspacoLivre.categorias;
         this.espacoLivreDescricaoEixoX = dados.graficoEspacoLivre.descricaoEixoX;
-        this.previsaoRecursosTitulo = dados.graficoPrevisaoRecursos.titulo;
-        this.previsaoRecursosSeries = dados.graficoPrevisaoRecursos.series;
-        this.previsaoRecursosCategorias = dados.graficoPrevisaoRecursos.categorias;
-        this.previsaoRecursosDescricaoEixoX = dados.graficoPrevisaoRecursos.descricaoEixoX;
+        this.previsaoRecursosTitulo = (_a = dados.graficoPrevisaoRecursos) === null || _a === void 0 ? void 0 : _a.titulo;
+        this.previsaoRecursosSeries = (_b = dados.graficoPrevisaoRecursos) === null || _b === void 0 ? void 0 : _b.series;
+        this.previsaoRecursosCategorias = (_c = dados.graficoPrevisaoRecursos) === null || _c === void 0 ? void 0 : _c.categorias;
+        this.previsaoRecursosDescricaoEixoX = (_d = dados.graficoPrevisaoRecursos) === null || _d === void 0 ? void 0 : _d.descricaoEixoX;
         this.producaoScannersTitulo = dados.graficoProducaoScanners.titulo;
         this.producaoScannersSeries = dados.graficoProducaoScanners.series;
         this.producaoScannersCategorias = dados.graficoProducaoScanners.categorias;
@@ -1067,7 +1161,7 @@ var DashboardComponent = /** @class */ (function () {
     DashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DashboardComponent, selectors: [["app-dashboard"]], hostVars: 3, hostBindings: function DashboardComponent_HostBindings(rf, ctx) { if (rf & 2) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵattribute"]("id", ctx.get_id);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx.get_class);
-        } }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([_servicos_dashboard_service__WEBPACK_IMPORTED_MODULE_1__["DashboardService"]])], decls: 74, vars: 46, consts: [[1, "imagens-topo"], ["src", "assets/logodk.png", 1, "logo"], ["src", "assets/logohp.png", 1, "logo"], ["id", "header", 1, "row", "justify-content-md-center"], [1, "col-sm", "text-sm-left", "p-0", "p-sm-3"], [1, "h1", 2, "color", "seagreen", "font-size", "25px"], [1, "h4"], [1, "col-sm", "text-sm-right", "p-0", "p-sm-1"], [1, "col-sm", "text-sm-right", "p-0", "p-sm-3"], [3, "selection"], ["kendoRippleContainer", "kendoRippleContainer", "kendoButton", "kendoButton", 3, "togglable", "click"], ["kendoRippleContainer", "kendoRippleContainer", "kendoButton", "kendoButton", 3, "togglable", "selected", "click"], [1, "col-sm", "text-sm-right", "p-0", "p-sm-2"], [1, "k-card-deck", 2, "display", "flex", "flex-wrap", "wrap", "justify-content", "space-evenly"], [1, "k-card", 2, "color", "orangered", "min-height", "200px", "width", "300px"], [1, "k-card-body"], ["titulo", "Espa\u00E7o Livre", "subTitulo1", "Espa\u00E7o Total", "subTitulo2", "Espa\u00E7o Livre", 3, "valorPercentual", "texto1", "texto2"], [1, "k-card", 2, "color", "darkgreen", "min-height", "200px", "width", "300px"], ["titulo", "Integra\u00E7\u00E3o", "subTitulo1", "Digitalizadas", "subTitulo2", "Integradas", 3, "valorPercentual", "valor1", "valor2"], [1, "k-card", 2, "color", "saddlebrown", "min-height", "200px", "width", "300px"], ["titulo", "Visualiza\u00E7\u00E3o", "subTitulo1", "Distribu\u00EDdas", "subTitulo2", "Visualizadas", 3, "valorPercentual", "valor1", "valor2"], [1, "k-card", 2, "color", "midnightblue", "min-height", "200px", "width", "300px"], ["titulo", "L\u00E2minas/hr", "subTitulo", "Tempo de digitaliza\u00E7\u00E3o", "unidadeMedida", "segundos", 3, "valorPrincipal", "valor"], [1, "k-card", 2, "width", "600px"], ["tipo", "column", 3, "serie", "titulo", "categorias", "descricaoEixoX", 4, "ngIf"], [3, "title", 4, "ngIf"], ["orientation", "horizontal", "layout", "end"], ["class", "k-button k-primary k-flat", 3, "click", 4, "ngIf"], [3, "serie", "titulo", "categorias", "descricaoEixoX"], ["tipo", "line", 3, "serie", "titulo", "categorias", "descricaoEixoX", 4, "ngIf"], ["style", "height: 400px;", 3, "scrollable", "data", 4, "ngIf"], [3, "title"], ["format", "N0"], [3, "categories", "title"], ["field", "valor", "categoryField", "categoria", "type", "line", 3, "data", "name", "color", 4, "ngFor", "ngForOf"], ["tipo", "column", 3, "serie", "titulo", "categorias", "descricaoEixoX"], ["format", "P0"], ["min", "0", "max", "1"], ["field", "valor", "categoryField", "categoria", "type", "line", 3, "data", "name", "color"], [1, "k-button", "k-primary", "k-flat", 3, "click"], [1, "k-icon"], ["tipo", "line", 3, "serie", "titulo", "categorias", "descricaoEixoX"], [2, "height", "400px", 3, "scrollable", "data"], ["kendoGridToolbarTemplate", "kendoGridToolbarTemplate"], ["field", "nomPatologista", "title", "Patologista", 1, "price-col", 3, "width"], ["field", "visualizadasPerc", "title", "%", 1, "price-col", 3, "width"], ["kendoGridCellTemplate", ""], ["fileName", "dashboard-engajamento-patologistas.xlsx"], ["field", "codPatologista", "title", "C\u00F3digo"], ["field", "nomPatologista", "title", "Nome"], ["field", "distribuidasQtde", "title", "Distribuidas"], ["field", "visualizadasQtde", "title", "Visualizadas"], ["field", "visualizadasPerc", "title", "Visualizadas %"], ["type", "button", "kendoGridExcelCommand", "kendoGridExcelCommand", "icon", "file-excel"]], template: function DashboardComponent_Template(rf, ctx) { if (rf & 1) {
+        } }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([_servicos_dashboard_service__WEBPACK_IMPORTED_MODULE_1__["DashboardService"]])], decls: 74, vars: 47, consts: [[1, "imagens-topo"], ["src", "assets/logodk.png", 1, "logo"], ["src", "assets/logohp.png", 1, "logo"], ["id", "header", 1, "row", "justify-content-md-center"], [1, "col-sm", "text-sm-left", "p-0", "p-sm-3"], [1, "h1", 2, "color", "seagreen", "font-size", "25px"], [1, "h4"], [1, "col-sm", "text-sm-right", "p-0", "p-sm-1"], [1, "col-sm", "text-sm-right", "p-0", "p-sm-3"], [3, "selection"], ["kendoRippleContainer", "kendoRippleContainer", "kendoButton", "kendoButton", 3, "togglable", "click"], ["kendoRippleContainer", "kendoRippleContainer", "kendoButton", "kendoButton", 3, "togglable", "selected", "click"], [1, "col-sm", "text-sm-right", "p-0", "p-sm-2"], [1, "k-card-deck", 2, "display", "flex", "flex-wrap", "wrap", "justify-content", "space-evenly"], [1, "k-card", 2, "color", "orangered", "min-height", "200px", "width", "300px"], [1, "k-card-body"], ["titulo", "Espa\u00E7o Livre", "subTitulo1", "Espa\u00E7o Total", "subTitulo2", "Espa\u00E7o Livre", 3, "valorPercentual", "texto1", "texto2"], [1, "k-card", 2, "color", "darkgreen", "min-height", "200px", "width", "300px"], ["titulo", "Integra\u00E7\u00E3o", "subTitulo1", "Digitalizadas", "subTitulo2", "Integradas", "subTitulo3", "Erros", 3, "valorPercentual", "valor1", "valor2", "valor3"], [1, "k-card", 2, "color", "saddlebrown", "min-height", "200px", "width", "300px"], ["titulo", "Visualiza\u00E7\u00E3o", "subTitulo1", "Distribu\u00EDdas", "subTitulo2", "Visualizadas", 3, "valorPercentual", "valor1", "valor2"], [1, "k-card", 2, "color", "midnightblue", "min-height", "200px", "width", "300px"], ["titulo", "L\u00E2minas/hora", "subTitulo", "Tempo de digitaliza\u00E7\u00E3o", "unidadeMedida", "segundos", 3, "valorPrincipal", "valor"], [1, "k-card", 2, "width", "600px"], ["tipo", "column", 3, "serie", "titulo", "categorias", "descricaoEixoX", 4, "ngIf"], [3, "title", 4, "ngIf"], ["orientation", "horizontal", "layout", "end"], ["class", "k-button k-primary k-flat", 3, "click", 4, "ngIf"], [3, "serie", "titulo", "categorias", "descricaoEixoX"], ["tipo", "line", 3, "serie", "titulo", "categorias", "descricaoEixoX", 4, "ngIf"], ["style", "height: 400px;", 3, "scrollable", "data", 4, "ngIf"], [3, "title"], ["format", "N0"], [3, "categories", "title"], ["field", "valor", "categoryField", "categoria", "type", "line", 3, "data", "name", "color", 4, "ngFor", "ngForOf"], ["tipo", "column", 3, "serie", "titulo", "categorias", "descricaoEixoX"], ["format", "P0"], ["min", "0", "max", "1"], ["field", "valor", "categoryField", "categoria", "type", "line", 3, "data", "name", "color"], [1, "k-button", "k-primary", "k-flat", 3, "click"], [1, "k-icon"], ["tipo", "line", 3, "serie", "titulo", "categorias", "descricaoEixoX"], [2, "height", "400px", 3, "scrollable", "data"], ["kendoGridToolbarTemplate", "kendoGridToolbarTemplate"], ["field", "nomPatologista", "title", "Patologista", 1, "price-col", 3, "width"], ["field", "visualizadasPerc", "title", "%", 1, "price-col", 3, "width"], ["kendoGridCellTemplate", ""], ["fileName", "dashboard-engajamento-patologistas.xlsx"], ["field", "codPatologista", "title", "C\u00F3digo"], ["field", "nomPatologista", "title", "Nome"], ["field", "distribuidasQtde", "title", "Distribuidas"], ["field", "visualizadasQtde", "title", "Visualizadas"], ["field", "visualizadasPerc", "title", "Visualizadas %"], ["type", "button", "kendoGridExcelCommand", "kendoGridExcelCommand", "icon", "file-excel"]], template: function DashboardComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "img", 2);
@@ -1137,7 +1231,7 @@ var DashboardComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "div", 17);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "div", 15);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](40, "app-card-percentual", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](40, "app-card-percentual-3linhas", 18);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div", 19);
@@ -1223,7 +1317,7 @@ var DashboardComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("valorPercentual", ctx.espacoLivrePercentual)("texto1", ctx.espacoTotal)("texto2", ctx.espacoLivre);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("valorPercentual", ctx.percentualIntegracao)("valor1", ctx.quantidadeDigitalizas)("valor2", ctx.quantidadeIntegradas);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("valorPercentual", ctx.percentualIntegracao)("valor1", ctx.quantidadeDigitalizas)("valor2", ctx.quantidadeIntegradas)("valor3", ctx.quantidadeErros);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("valorPercentual", ctx.percentualVisualizacao)("valor1", ctx.quantidadeDistribuida)("valor2", ctx.quantidadeVisualizada);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
@@ -1247,12 +1341,12 @@ var DashboardComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.apresentacaoPatologistas === "grafico");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](42, _c0, ctx.performanceScannersTitulo));
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](43, _c0, ctx.performanceScannersTitulo));
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("categories", ctx.performanceScannersCategorias)("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](44, _c0, ctx.performanceScannersDescricaoEixoX));
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("categories", ctx.performanceScannersCategorias)("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](45, _c0, ctx.performanceScannersDescricaoEixoX));
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.performanceScannersSeries);
-        } }, directives: [_progress_kendo_angular_buttons__WEBPACK_IMPORTED_MODULE_4__["ButtonGroup"], _progress_kendo_angular_buttons__WEBPACK_IMPORTED_MODULE_4__["Button"], _progress_kendo_angular_ripple__WEBPACK_IMPORTED_MODULE_5__["RippleContainerDirective"], _componentes_card_percentual_texto_component__WEBPACK_IMPORTED_MODULE_6__["CardPercentualTextoComponent"], _componentes_card_percentual_component__WEBPACK_IMPORTED_MODULE_7__["CardPercentualComponent"], _componentes_card_numerico_basico_component__WEBPACK_IMPORTED_MODULE_8__["CardNumericoBasicoComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgIf"], _progress_kendo_angular_layout__WEBPACK_IMPORTED_MODULE_10__["CardActionsComponent"], _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_11__["GraficoAreaComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_12__["ChartComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_12__["AxisDefaultsComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_12__["AxisDefaultsLabelsComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_12__["CategoryAxisComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_12__["CategoryAxisItemComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_12__["SeriesComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgForOf"], _componentes_grafico_percentual_component__WEBPACK_IMPORTED_MODULE_13__["GraficoPercentualComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_12__["ValueAxisComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_12__["ValueAxisItemComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_12__["SeriesItemComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_12__["SeriesTooltipComponent"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_14__["GridComponent"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_14__["ToolbarTemplateDirective"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_14__["ColumnComponent"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_14__["CellTemplateDirective"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_14__["ExcelComponent"], _progress_kendo_angular_excel_export__WEBPACK_IMPORTED_MODULE_15__["ColumnComponent"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_14__["ExcelCommandDirective"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_9__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["PercentPipe"]], encapsulation: 2 });
+        } }, directives: [_progress_kendo_angular_buttons__WEBPACK_IMPORTED_MODULE_4__["ButtonGroup"], _progress_kendo_angular_buttons__WEBPACK_IMPORTED_MODULE_4__["Button"], _progress_kendo_angular_ripple__WEBPACK_IMPORTED_MODULE_5__["RippleContainerDirective"], _componentes_card_percentual_texto_component__WEBPACK_IMPORTED_MODULE_6__["CardPercentualTextoComponent"], _componentes_card_percentual_3linhas_component__WEBPACK_IMPORTED_MODULE_7__["CardPercentual3LinhasComponent"], _componentes_card_percentual_component__WEBPACK_IMPORTED_MODULE_8__["CardPercentualComponent"], _componentes_card_numerico_basico_component__WEBPACK_IMPORTED_MODULE_9__["CardNumericoBasicoComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], _progress_kendo_angular_layout__WEBPACK_IMPORTED_MODULE_11__["CardActionsComponent"], _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_12__["GraficoAreaComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_13__["ChartComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_13__["AxisDefaultsComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_13__["AxisDefaultsLabelsComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_13__["CategoryAxisComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_13__["CategoryAxisItemComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_13__["SeriesComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgForOf"], _componentes_grafico_percentual_component__WEBPACK_IMPORTED_MODULE_14__["GraficoPercentualComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_13__["ValueAxisComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_13__["ValueAxisItemComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_13__["SeriesItemComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_13__["SeriesTooltipComponent"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_15__["GridComponent"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_15__["ToolbarTemplateDirective"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_15__["ColumnComponent"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_15__["CellTemplateDirective"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_15__["ExcelComponent"], _progress_kendo_angular_excel_export__WEBPACK_IMPORTED_MODULE_16__["ColumnComponent"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_15__["ExcelCommandDirective"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_10__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["PercentPipe"]], encapsulation: 2 });
     return DashboardComponent;
 }());
 
@@ -1309,9 +1403,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var baseUrl = 'http://dgkdiagsystem:5005/api/dashboard';
-//const baseUrl = 'http://localhost:5005/api/dashboard';
-//  const baseUrl = 'https://demo5010569.mockable.io/api/dashboard';
-//  const baseUrl2 = 'https://demo0466118.mockable.io/api/dashboard';
+//const baseUrl = 'http://localhost:5000/api/dashboard'; 
+//const baseUrl = 'https://demo5010569.mockable.io/api/dashboard';
+//const baseUrl2 = 'https://demo0466118.mockable.io/api/dashboard';
 var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({ 'Content-Type': "application/json" });
 var DashboardService = /** @class */ (function () {
     function DashboardService(http) {
@@ -1319,12 +1413,6 @@ var DashboardService = /** @class */ (function () {
     }
     DashboardService.prototype.obterDados = function (tipoConsulta) {
         return this.http.get(baseUrl + "/?tipoConsulta=" + tipoConsulta, { headers: headers });
-        // if(tipoConsulta == 1){
-        //     return this.http.get<DashboardRaiz>(baseUrl, { headers });        
-        // }
-        // else{
-        //     return this.http.get<DashboardRaiz>(baseUrl2, { headers });        
-        // }       
     };
     DashboardService.ɵfac = function DashboardService_Factory(t) { return new (t || DashboardService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); };
     DashboardService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: DashboardService, factory: DashboardService.ɵfac });

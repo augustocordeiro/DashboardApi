@@ -67,15 +67,15 @@
             <app-card-percentual-texto [valorPercentual]="espacoLivrePercentual" titulo="Espaço Livre"
                 subTitulo1="Espaço Total" subTitulo2="Espaço Livre" [texto1]="espacoTotal" [texto2]="espacoLivre">
             </app-card-percentual-texto>
-
         </div>
     </div>
 
     <div class="k-card" style="color: darkgreen; min-height: 200px; width: 300px;">
         <div class="k-card-body">
-            <app-card-percentual [valorPercentual]="percentualIntegracao" titulo="Integração" subTitulo1="Digitalizadas"
-                subTitulo2="Integradas" [valor1]="quantidadeDigitalizas" [valor2]="quantidadeIntegradas">
-            </app-card-percentual>
+            <app-card-percentual-3linhas [valorPercentual]="percentualIntegracao" titulo="Integração" 
+                subTitulo1="Digitalizadas" subTitulo2="Integradas" subTitulo3="Erros" 
+                [valor1]="quantidadeDigitalizas" [valor2]="quantidadeIntegradas" [valor3]="quantidadeErros">
+            </app-card-percentual-3linhas>
         </div>
     </div>
     <div class="k-card" style="color: saddlebrown; min-height: 200px; width: 300px;">
@@ -89,7 +89,7 @@
 
     <div class="k-card" style="color: midnightblue; min-height: 200px; width: 300px;">
         <div class="k-card-body">
-            <app-card-numerico-basico [valorPrincipal]="indicadoresLaminasPorHoraValorMedio" titulo="Lâminas/hr"
+            <app-card-numerico-basico [valorPrincipal]="indicadoresLaminasPorHoraValorMedio" titulo="Lâminas/hora"
                 subTitulo="Tempo de digitalização" [valor]="indicadoresTempoDigitalizacaoValorMedio"
                 unidadeMedida="segundos"></app-card-numerico-basico>
 

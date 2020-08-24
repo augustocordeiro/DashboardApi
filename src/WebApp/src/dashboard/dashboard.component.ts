@@ -55,6 +55,7 @@ export class DashboardComponent {
 
     public quantidadeDigitalizas: number;
     public quantidadeIntegradas: number;
+    public quantidadeErros: number;
     public percentualIntegracao: number;
 
     public quantidadeDistribuida: number;
@@ -155,6 +156,7 @@ export class DashboardComponent {
 
         this.quantidadeDigitalizas = dados.producaoTotais.digitalizadasQtde;
         this.quantidadeIntegradas = dados.producaoTotais.integradasQtde;
+        this.quantidadeErros = dados.producaoTotais.erroCodigoBarrasQtde + dados.producaoTotais.erroQualidadeImagemQtde;
         this.percentualIntegracao = dados.producaoTotais.integradasPerc;
 
         this.quantidadeDistribuida = dados.utilizacaoTotais.distribuidasQtde;

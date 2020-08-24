@@ -26,6 +26,7 @@ import { GraficoPercentualComponent } from "./componentes/grafico-percentual.com
 import { CardPercentualComponent } from "./componentes/card-percentual.component";
 import { CardPercentualTextoComponent } from "./componentes/card-percentual-texto.component";
 import { CardNumericoBasicoComponent } from "./componentes/card-numerico-basico.component";
+import { CardPercentual3LinhasComponent } from "./componentes/card-percentual-3linhas.component";
 
 
 import { GraficoAreaComponent } from "./componentes/grafico-area.component";
@@ -46,7 +47,8 @@ export function createTranslateLoader(http: HttpClient) {
         GraficoAreaComponent,
         CardPercentualComponent,
         CardPercentualTextoComponent,
-        CardNumericoBasicoComponent
+        CardNumericoBasicoComponent,
+        CardPercentual3LinhasComponent
     ],
     imports: [
         AppRoutingModule,
