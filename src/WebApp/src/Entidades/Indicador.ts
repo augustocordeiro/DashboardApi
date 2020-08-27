@@ -9,4 +9,7 @@ export interface Indicador {
     laminasPorHoraValorMinimo: number;
     tempoDigitalizacaoMelhorHistorico: number;
     laminasPorHoraMelhorHistorico: number;
+    areaDigitalizacaoValorMedio: number;
+    laminasPorHoraValorMedioAjustado: number;
+
 }

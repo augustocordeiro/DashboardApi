@@ -64,6 +64,8 @@ export class DashboardComponent {
 
     public indicadoresTempoDigitalizacaoValorMedio: number;
     public indicadoresLaminasPorHoraValorMedio: number;
+    public indicadoresAreaDigitalizacaoValorMedio: number;
+    public indicadoresLaminasPorHoraValorMedioAjustado: number;
 
     public ultilizacoes: Utilizacao[];
 
@@ -190,6 +192,8 @@ export class DashboardComponent {
         this.engajamentoPatologistasDescricaoEixoX = dados.graficoEngajamentoPatologistas.descricaoEixoX;
     
         this.indicadoresTempoDigitalizacaoValorMedio = dados.indicadoresTotais.tempoDigitalizacaoValorMedio;
-        this.indicadoresLaminasPorHoraValorMedio = dados.indicadoresTotais.laminasPorHoraValorMedio;        
+        this.indicadoresLaminasPorHoraValorMedio = dados.indicadoresTotais.laminasPorHoraValorMedio;
+        this.indicadoresAreaDigitalizacaoValorMedio = dados.indicadoresTotais.areaDigitalizacaoValorMedio;
+        this.indicadoresLaminasPorHoraValorMedioAjustado = dados.indicadoresTotais.laminasPorHoraValorMedioAjustado;        
     }
 }
