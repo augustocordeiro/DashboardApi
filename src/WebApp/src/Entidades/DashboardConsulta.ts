@@ -7,15 +7,16 @@ import { ProducaoTotais } from './ProducaoTotais';
 import { RecursosTotais } from './RecursosTotais';
 import { UtilizacaoTotais } from './UtilizacaoTotais';
 import { Utilizacao } from './Utilizacao';
+import { ExameAreasTotais } from './ExameAreasTotais';
 export interface DashboardConsulta {
     processadoEm: string;
     subtitulo: string;
     titulo: string;
     local: string;
     dataObservacao: Date;
-    recursosTotais:    RecursosTotais;    
-    producaoTotais:    ProducaoTotais;
-    utilizacaoTotais:  UtilizacaoTotais;
+    recursosTotais: RecursosTotais;
+    producaoTotais: ProducaoTotais;
+    utilizacaoTotais: UtilizacaoTotais;
     indicadoresTotais: IndicadoresTotais;
     recursos: Recurso[];
     producoes: Producao[];
@@ -27,6 +28,5 @@ export interface DashboardConsulta {
     graficoEngajamentoPatologistas: Grafico;
     graficoPerformanceScanners: Grafico;
     graficoAreaDigitalizacao: Grafico;
+    exameAreasTotais: ExameAreasTotais;
 }
-
-

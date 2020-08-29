@@ -10,12 +10,13 @@
         <p class="h4">{{subtitulo}}</p>
     </div>
 
-    <div class="col-sm text-sm-right p-0 p-sm-1">
 
-    </div>
-
-    
     <div class="col-sm text-sm-right p-0 p-sm-3">
+
+        <div class="col-sm text-sm-right p-0 p-sm-2">
+            <p>Processado em: {{processadoEm}}</p>
+        </div>
+
         <kendo-buttongroup [selection]="'single'">
             <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
                 (click)="carregarDados(0, 'MG')">
@@ -54,10 +55,18 @@
                 (click)="carregarDados(5,'')">
                 12 meses
             </button>
+
+            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
+                (click)="carregarDados(6,'')">
+                Período
+            </button>
+
         </kendo-buttongroup>
-        <div class="col-sm text-sm-right p-0 p-sm-2">
-            <p>Processado em: {{processadoEm}}</p>
-        </div>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+        <kendo-dropdownlist  [disabled]="periodoSelecionado==false" style="width: 120px;" [data]="meses" [value]="'Selecione'"
+            (valueChange)="periodoAlterado($event)">
+        </kendo-dropdownlist>
     </div>
 </div>
 
@@ -73,9 +82,9 @@
 
     <div class="k-card" style="color: darkgreen; min-height: 200px; width: 300px;">
         <div class="k-card-body">
-            <app-card-percentual-3linhas [valorPercentual]="percentualIntegracao" titulo="Integração" 
-                subTitulo1="Digitalizadas" subTitulo2="Integradas" subTitulo3="Erros" 
-                [valor1]="quantidadeDigitalizas" [valor2]="quantidadeIntegradas" [valor3]="quantidadeErros">
+            <app-card-percentual-3linhas [valorPercentual]="percentualIntegracao" titulo="Integração"
+                subTitulo1="Digitalizadas" subTitulo2="Integradas" subTitulo3="Erros" [valor1]="quantidadeDigitalizas"
+                [valor2]="quantidadeIntegradas" [valor3]="quantidadeErros">
             </app-card-percentual-3linhas>
         </div>
     </div>
@@ -91,11 +100,37 @@
     <div class="k-card" style="color: midnightblue; min-height: 200px; width: 300px;">
         <div class="k-card-body">
             <app-card-numerico-basico [valorPrincipal]="indicadoresLaminasPorHoraValorMedio" titulo="Lâminas/hora"
-                subTitulo="Tempo de digitalização" [valor]="indicadoresTempoDigitalizacaoValorMedio" unidadeMedida="segundos"
-                subTitulo2="Área de digitalização" [valor2]="indicadoresAreaDigitalizacaoValorMedio" unidadeMedida2="mm&sup2;">
+                subTitulo="Tempo de digitalização" [valor]="indicadoresTempoDigitalizacaoValorMedio"
+                unidadeMedida="segundos" subTitulo2="Área de digitalização"
+                [valor2]="indicadoresAreaDigitalizacaoValorMedio" unidadeMedida2="mm&sup2;">
             </app-card-numerico-basico>
         </div>
     </div>
+
+    <div class="k-card" style="color: gray; min-height: 200px; width: 300px;">
+        <div class="k-card-body">
+            <span class="comp-label">
+                <div class="issues-count" style="font-size: 80px;">
+                    <label>{{areaDigitalizacaoValorMedio}}</label><label style="font-size: 30px;">mm
+                        <sup>2</sup></label>
+
+                </div>
+                <div class="issues-label" style="font-size: 18px;">Área de digitalização</div>
+            </span>
+            <p class="m-0 medium text-muted">
+                Valor máximo:
+                {{areaDigitalizacaoValorMaximo}}
+                <label>mm<sup>2</sup></label>
+            </p>
+            <p class="m-0 medium text-muted">
+                Valor mínimo:
+                {{areaDigitalizacaoValorMinimo}}
+                <label>mm<sup>2</sup></label>
+            </p>
+
+        </div>
+    </div>
+
 </div>
 
 <div class="k-card-deck" style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
@@ -103,8 +138,9 @@
     <div class="k-card" style="width: 600px;">
         <div class="k-card-body">
 
-            <app-grafico-percentual *ngIf="apresentacaoRecursos == 'historico'" [serie]="espacoLivreSeries" [titulo]="espacoLivreTitulo"
-                [categorias]="espacoLivreCategorias" [descricaoEixoX]="espacoLivreDescricaoEixoX" tipo="column">
+            <app-grafico-percentual *ngIf="apresentacaoRecursos == 'historico'" [serie]="espacoLivreSeries"
+                [titulo]="espacoLivreTitulo" [categorias]="espacoLivreCategorias"
+                [descricaoEixoX]="espacoLivreDescricaoEixoX" tipo="column">
             </app-grafico-percentual>
 
             <kendo-chart *ngIf="apresentacaoRecursos == 'previsao'" [title]="{text:previsaoRecursosTitulo}">
@@ -151,7 +187,7 @@
         </kendo-card-actions>
     </div>
 
-   
+
 
 
     <div class="k-card" style="width: 600px;">

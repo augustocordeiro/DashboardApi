@@ -27,7 +27,7 @@ export class DashboardComponent {
     public graficoAreaDigitalizacaoTitulo: string;
     public graficoAreaDigitalizacaoSeries: Serie[];
     public graficoAreaDigitalizacaoCategorias: string[];
-    public graficoAreaDigitalizacaoDescricaoEixoX: string;    
+    public graficoAreaDigitalizacaoDescricaoEixoX: string;
 
     public titulo: string;
     public subtitulo: string;
@@ -68,6 +68,10 @@ export class DashboardComponent {
     public quantidadeVisualizada: number;
     public percentualVisualizacao: number;
 
+    public areaDigitalizacaoValorMedio: number;
+    public areaDigitalizacaoValorMaximo: number;
+    public areaDigitalizacaoValorMinimo: number;
+
     public indicadoresTempoDigitalizacaoValorMedio: number;
     public indicadoresLaminasPorHoraValorMedio: number;
     public indicadoresAreaDigitalizacaoValorMedio: number;
@@ -75,13 +79,16 @@ export class DashboardComponent {
 
     public ultilizacoes: Utilizacao[];
 
+    public meses: string[];
+
     public apresentacaoPatologistas: string;
     public apresentacaoRecursos: string;
 
 
     public tipoConsulta: number;
-    public localConsulta: string;     
+    public localConsulta: string;
     public dadosLocal: DashboardRaiz;
+    public periodoSelecionado: boolean;
 
     constructor(public dashboardService: DashboardService) {
 
@@ -89,12 +96,12 @@ export class DashboardComponent {
         this.apresentacaoPatologistas = "grafico";
         this.localConsulta = "geral";
         this.apresentacaoRecursos = 'historico';
+        this.periodoSelecionado = false;
     }
 
     ngOnInit() {
 
         this.carregarDados(this.tipoConsulta, this.localConsulta);
-
         interval(30000).subscribe(
             () => {
                 this.carregarDados(this.tipoConsulta, this.localConsulta);
@@ -106,12 +113,15 @@ export class DashboardComponent {
         this.apresentacaoPatologistas = apresentacao;
     }
 
-    
+
     alterarVisaoRecursos(apresentacao: string) {
         this.apresentacaoRecursos = apresentacao;
     }
 
     carregarDados(tipoConsulta: number, local: string) {
+
+        this.periodoSelecionado = false;
+
         if (local != '') {
             this.localConsulta = local;
         }
@@ -129,8 +139,12 @@ export class DashboardComponent {
 
             this.carregarDashboard(consulta);
         }
+        else if (tipoConsulta == 6) {
+            this.periodoSelecionado = true;
+        }
+
         else {
-            this.tipoConsulta=tipoConsulta;
+            this.tipoConsulta = tipoConsulta;
             this.dashboardService
                 .obterDados(tipoConsulta)
                 .subscribe(dados => {
@@ -145,16 +159,23 @@ export class DashboardComponent {
                     }
 
                     this.dadosLocal = dados;
+                    this.meses = dados.meses
+
                     this.carregarDashboard(consulta);
                 });
         }
+    }
+
+    public periodoAlterado(periodo: string) {
+
+        console.log(periodo);
     }
 
     public carregarDashboard(dados: DashboardConsulta) {
 
         this.ultilizacoes = dados.utilizacoes.sort((a, b) => { return a.visualizadasPerc > b.visualizadasPerc ? -1 : 1 });
 
-        this.titulo = dados.titulo;        
+        this.titulo = dados.titulo;
         this.subtitulo = dados.subtitulo;
         this.processadoEm = dados.processadoEm;
 
@@ -200,10 +221,14 @@ export class DashboardComponent {
         this.engajamentoPatologistasCategorias = dados.graficoEngajamentoPatologistas.categorias;
         this.engajamentoPatologistasTitulo = dados.graficoEngajamentoPatologistas.titulo;
         this.engajamentoPatologistasDescricaoEixoX = dados.graficoEngajamentoPatologistas.descricaoEixoX;
-    
+
         this.indicadoresTempoDigitalizacaoValorMedio = dados.indicadoresTotais.tempoDigitalizacaoValorMedio;
         this.indicadoresLaminasPorHoraValorMedio = dados.indicadoresTotais.laminasPorHoraValorMedio;
         this.indicadoresAreaDigitalizacaoValorMedio = dados.indicadoresTotais.areaDigitalizacaoValorMedio;
-        this.indicadoresLaminasPorHoraValorMedioAjustado = dados.indicadoresTotais.laminasPorHoraValorMedioAjustado;        
+        this.indicadoresLaminasPorHoraValorMedioAjustado = dados.indicadoresTotais.laminasPorHoraValorMedioAjustado;
+
+        this.areaDigitalizacaoValorMedio = dados.exameAreasTotais.areaDigitalizacaoValorMedio;
+        this.areaDigitalizacaoValorMaximo = dados.exameAreasTotais.areaDigitalizacaoValorMaximo;
+        this.areaDigitalizacaoValorMinimo = dados.exameAreasTotais.areaDigitalizacaoValorMinimo;
     }
 }

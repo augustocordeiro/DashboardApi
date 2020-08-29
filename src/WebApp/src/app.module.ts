@@ -33,6 +33,8 @@ import { GraficoAreaComponent } from "./componentes/grafico-area.component";
 
 // environment
 import { environment } from "../environments/environment";
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+
 
 Config.PLATFORM_TARGET = Config.PLATFORMS.WEB;
 
@@ -71,6 +73,7 @@ export function createTranslateLoader(http: HttpClient) {
             }
         }),
         RippleModule,
+        DropDownsModule,
     ],
     providers: [],
     bootstrap: [DashboardComponent]
