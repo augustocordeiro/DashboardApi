@@ -26,6 +26,7 @@ export interface DashboardConsulta {
     graficoProducaoScanners: Grafico;
     graficoEngajamentoPatologistas: Grafico;
     graficoPerformanceScanners: Grafico;
+    graficoAreaDigitalizacao: Grafico;
 }
 
 
