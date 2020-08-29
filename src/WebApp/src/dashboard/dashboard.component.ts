@@ -23,6 +23,12 @@ export class DashboardComponent {
     public performanceScannersSeries: Serie[];
     public performanceScannersCategorias: string[];
     public performanceScannersDescricaoEixoX: string;
+
+    public graficoAreaDigitalizacaoTitulo: string;
+    public graficoAreaDigitalizacaoSeries: Serie[];
+    public graficoAreaDigitalizacaoCategorias: string[];
+    public graficoAreaDigitalizacaoDescricaoEixoX: string;    
+
     public titulo: string;
     public subtitulo: string;
     public processadoEm: string;
@@ -178,9 +184,13 @@ export class DashboardComponent {
 
         this.performanceScannersTitulo = dados.graficoPerformanceScanners.titulo;
         this.performanceScannersSeries = dados.graficoPerformanceScanners.series;
-
         this.performanceScannersCategorias = dados.graficoPerformanceScanners.categorias;
         this.performanceScannersDescricaoEixoX = dados.graficoPerformanceScanners.descricaoEixoX;
+
+        this.graficoAreaDigitalizacaoTitulo = dados.graficoAreaDigitalizacao.titulo;
+        this.graficoAreaDigitalizacaoSeries = dados.graficoAreaDigitalizacao.series;
+        this.graficoAreaDigitalizacaoCategorias = dados.graficoAreaDigitalizacao.categorias;
+        this.graficoAreaDigitalizacaoDescricaoEixoX = dados.graficoAreaDigitalizacao.descricaoEixoX;
 
         this.engajamentoPatologistasSeries = dados.graficoEngajamentoPatologistas.series;
         this.engajamentoPatologistasCategorias = dados.graficoEngajamentoPatologistas.categorias;

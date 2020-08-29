@@ -14,6 +14,7 @@
 
     </div>
 
+    
     <div class="col-sm text-sm-right p-0 p-sm-3">
         <kendo-buttongroup [selection]="'single'">
             <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
@@ -230,6 +231,33 @@
                 </kendo-chart-category-axis>
                 <kendo-chart-series>
                     <kendo-chart-series-item *ngFor="let item of performanceScannersSeries" [data]="item.dados"
+                        [name]="item.nome" field="valor" categoryField="categoria" [color]="item.cor" type="line">
+                        <kendo-chart-series-item-tooltip>
+                            <ng-template let-dataItem="dataItem">
+                                {{item.nome}}
+                                |
+                                {{dataItem.valor | number}}
+                            </ng-template>
+                        </kendo-chart-series-item-tooltip>
+                    </kendo-chart-series-item>
+                </kendo-chart-series>
+            </kendo-chart>
+        </div>
+    </div>
+
+    <div class="k-card" style="width: 600px;">
+        <div class="k-card-body">
+
+            <kendo-chart [title]="{text:graficoAreaDigitalizacaoTitulo}">
+                <kendo-chart-axis-defaults>
+                    <kendo-chart-axis-defaults-labels format="N0"></kendo-chart-axis-defaults-labels>
+                </kendo-chart-axis-defaults>
+                <kendo-chart-category-axis>
+                    <kendo-chart-category-axis-item [categories]="graficoAreaDigitalizacaoCategorias"
+                        [title]="{ text: graficoAreaDigitalizacaoDescricaoEixoX }"></kendo-chart-category-axis-item>
+                </kendo-chart-category-axis>
+                <kendo-chart-series>
+                    <kendo-chart-series-item *ngFor="let item of graficoAreaDigitalizacaoSeries" [data]="item.dados"
                         [name]="item.nome" field="valor" categoryField="categoria" [color]="item.cor" type="line">
                         <kendo-chart-series-item-tooltip>
                             <ng-template let-dataItem="dataItem">
