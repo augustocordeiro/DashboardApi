@@ -1563,8 +1563,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-//const baseUrl = 'http://dgkdiagsystem:5005/api/dashboard';
-var baseUrl = 'http://localhost:5000/api/dashboard';
+var baseUrl = 'http://dgkdiagsystem:5005/api/dashboard';
+//const baseUrl = 'http://localhost:5000/api/dashboard'; 
 //const baseUrl = 'https://demo5010569.mockable.io/api/dashboard';
 //const baseUrl = 'https://demo5010569.mockable.io/api/dashboard';
 var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({ 'Content-Type': "application/json" });
