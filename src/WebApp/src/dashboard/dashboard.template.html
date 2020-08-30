@@ -56,15 +56,14 @@
                 12 meses
             </button>
 
-            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true"
-                (click)="carregarDados(6,'')">
+            <button kendoRippleContainer="kendoRippleContainer" kendoButton="kendoButton" [togglable]="true" (click)="carregarPorPeriodo()">
                 Período
             </button>
 
         </kendo-buttongroup>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
-        <kendo-dropdownlist  [disabled]="periodoSelecionado==false" style="width: 120px;" [data]="meses" [value]="'Selecione'"
+        <kendo-dropdownlist [popupSettings]="{width:80}" style="text-align: center; width:120px;"  [disabled]="periodoSelecionado==false" style="width: 120px;" [data]="meses" [value]="valorPeriodoSelecionado"
             (valueChange)="periodoAlterado($event)">
         </kendo-dropdownlist>
     </div>

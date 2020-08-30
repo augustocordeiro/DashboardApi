@@ -89,6 +89,7 @@ export class DashboardComponent {
     public localConsulta: string;
     public dadosLocal: DashboardRaiz;
     public periodoSelecionado: boolean;
+    public valorPeriodoSelecionado: string;
 
     constructor(public dashboardService: DashboardService) {
 
@@ -97,6 +98,7 @@ export class DashboardComponent {
         this.localConsulta = "geral";
         this.apresentacaoRecursos = 'historico';
         this.periodoSelecionado = false;
+        this.valorPeriodoSelecionado = 'Selecione';
     }
 
     ngOnInit() {
@@ -120,13 +122,13 @@ export class DashboardComponent {
 
     carregarDados(tipoConsulta: number, local: string) {
 
-        this.periodoSelecionado = false;
-
         if (local != '') {
             this.localConsulta = local;
         }
 
         if (tipoConsulta == 0) {
+
+            this.periodoSelecionado = false;
 
             var consulta = null;
             if (this.localConsulta === 'geral') {
@@ -141,12 +143,34 @@ export class DashboardComponent {
         }
         else if (tipoConsulta == 6) {
             this.periodoSelecionado = true;
-        }
 
-        else {
             this.tipoConsulta = tipoConsulta;
             this.dashboardService
-                .obterDados(tipoConsulta)
+                .obterDados(tipoConsulta, this.valorPeriodoSelecionado)
+                .subscribe(dados => {
+
+                    var consulta = null;
+                    if (this.localConsulta === 'geral') {
+
+                        consulta = dados.geral;
+                    }
+                    else {
+                        consulta = dados.locais.filter(local => local.local === this.localConsulta)[0];
+                    }
+
+                    this.dadosLocal = dados;
+                    this.meses = dados.meses
+
+                    this.carregarDashboard(consulta);
+                });
+
+        }
+        else {
+            this.valorPeriodoSelecionado = 'Selecione';
+            this.periodoSelecionado = false;
+            this.tipoConsulta = tipoConsulta;
+            this.dashboardService
+                .obterDados(tipoConsulta, '')
                 .subscribe(dados => {
 
                     var consulta = null;
@@ -169,6 +193,13 @@ export class DashboardComponent {
     public periodoAlterado(periodo: string) {
 
         console.log(periodo);
+        console.log(this.periodoSelecionado);
+        this.valorPeriodoSelecionado = periodo;        
+        this.carregarDados(6, '');
+    }
+
+    public carregarPorPeriodo(){
+        this.periodoSelecionado = true;
     }
 
     public carregarDashboard(dados: DashboardConsulta) {
