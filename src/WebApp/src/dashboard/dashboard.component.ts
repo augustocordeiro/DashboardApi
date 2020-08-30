@@ -6,6 +6,7 @@ import { Utilizacao } from 'src/entidades/Utilizacao';
 import { interval } from 'rxjs';
 import { DashboardConsulta } from 'src/entidades/DashboardConsulta';
 import { DashboardRaiz } from 'src/entidades/DashboardRaiz';
+import { IntlService } from '@progress/kendo-angular-intl';
 
 @Component({
     selector: 'app-dashboard',
@@ -23,11 +24,13 @@ export class DashboardComponent {
     public performanceScannersSeries: Serie[];
     public performanceScannersCategorias: string[];
     public performanceScannersDescricaoEixoX: string;
+    public performanceScannersDescricaoEixoY: string;
 
     public graficoAreaDigitalizacaoTitulo: string;
     public graficoAreaDigitalizacaoSeries: Serie[];
     public graficoAreaDigitalizacaoCategorias: string[];
     public graficoAreaDigitalizacaoDescricaoEixoX: string;
+    public graficoAreaDigitalizacaoDescricaoEixoY: string;
 
     public titulo: string;
     public subtitulo: string;
@@ -49,6 +52,7 @@ export class DashboardComponent {
     public producaoScannersSeries: Serie[];
     public producaoScannersCategorias: string[];
     public producaoScannersDescricaoEixoX: string;
+    public producaoScannersDescricaoEixoY: string;
 
     public engajamentoPatologistasTitulo: string;
     public engajamentoPatologistasSeries: Serie[];
@@ -60,6 +64,7 @@ export class DashboardComponent {
     public espacoLivrePercentual: number;
 
     public quantidadeDigitalizas: number;
+    public quantidadeDigitalizadaFormatada: string;
     public quantidadeIntegradas: number;
     public quantidadeErros: number;
     public percentualIntegracao: number;
@@ -237,16 +242,19 @@ export class DashboardComponent {
         this.producaoScannersSeries = dados.graficoProducaoScanners.series;
         this.producaoScannersCategorias = dados.graficoProducaoScanners.categorias;
         this.producaoScannersDescricaoEixoX = dados.graficoProducaoScanners.descricaoEixoX;
+        this.producaoScannersDescricaoEixoY = dados.graficoProducaoScanners.descricaoEixoY;
 
         this.performanceScannersTitulo = dados.graficoPerformanceScanners.titulo;
         this.performanceScannersSeries = dados.graficoPerformanceScanners.series;
         this.performanceScannersCategorias = dados.graficoPerformanceScanners.categorias;
         this.performanceScannersDescricaoEixoX = dados.graficoPerformanceScanners.descricaoEixoX;
+        this.performanceScannersDescricaoEixoY = dados.graficoPerformanceScanners.descricaoEixoY;
 
         this.graficoAreaDigitalizacaoTitulo = dados.graficoAreaDigitalizacao.titulo;
         this.graficoAreaDigitalizacaoSeries = dados.graficoAreaDigitalizacao.series;
         this.graficoAreaDigitalizacaoCategorias = dados.graficoAreaDigitalizacao.categorias;
         this.graficoAreaDigitalizacaoDescricaoEixoX = dados.graficoAreaDigitalizacao.descricaoEixoX;
+        this.graficoAreaDigitalizacaoDescricaoEixoY = "MM2";
 
         this.engajamentoPatologistasSeries = dados.graficoEngajamentoPatologistas.series;
         this.engajamentoPatologistasCategorias = dados.graficoEngajamentoPatologistas.categorias;

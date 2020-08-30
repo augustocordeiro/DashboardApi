@@ -186,12 +186,9 @@
         </kendo-card-actions>
     </div>
 
-
-
-
     <div class="k-card" style="width: 600px;">
         <div class="k-card-body">
-            <app-grafico-area [serie]="producaoScannersSeries" [titulo]="producaoScannersTitulo"
+            <app-grafico-area [serie]="producaoScannersSeries" [titulo]="producaoScannersTitulo" [descricaoEixoY]="producaoScannersDescricaoEixoY"
                 [categorias]="producaoScannersCategorias" [descricaoEixoX]="producaoScannersDescricaoEixoX">
             </app-grafico-area>
         </div>
@@ -260,6 +257,10 @@
                 <kendo-chart-axis-defaults>
                     <kendo-chart-axis-defaults-labels format="N0"></kendo-chart-axis-defaults-labels>
                 </kendo-chart-axis-defaults>
+                <kendo-chart-value-axis>
+                    <kendo-chart-value-axis-item [title]="{text: performanceScannersDescricaoEixoY }">
+                    </kendo-chart-value-axis-item>
+                </kendo-chart-value-axis>
                 <kendo-chart-category-axis>
                     <kendo-chart-category-axis-item [categories]="performanceScannersCategorias"
                         [title]="{ text: performanceScannersDescricaoEixoX }"></kendo-chart-category-axis-item>
@@ -287,9 +288,14 @@
                 <kendo-chart-axis-defaults>
                     <kendo-chart-axis-defaults-labels format="N0"></kendo-chart-axis-defaults-labels>
                 </kendo-chart-axis-defaults>
+                <kendo-chart-value-axis>
+                    <kendo-chart-value-axis-item [title]="{text: graficoAreaDigitalizacaoDescricaoEixoY }">
+                    </kendo-chart-value-axis-item>
+                </kendo-chart-value-axis>
                 <kendo-chart-category-axis>
                     <kendo-chart-category-axis-item [categories]="graficoAreaDigitalizacaoCategorias"
-                        [title]="{ text: graficoAreaDigitalizacaoDescricaoEixoX }"></kendo-chart-category-axis-item>
+                        [title]="{ text: graficoAreaDigitalizacaoDescricaoEixoX }">
+                    </kendo-chart-category-axis-item>
                 </kendo-chart-category-axis>
                 <kendo-chart-series>
                     <kendo-chart-series-item *ngFor="let item of graficoAreaDigitalizacaoSeries" [data]="item.dados"

@@ -8,7 +8,11 @@ import es from '@angular/common/locales/es';
     <kendo-chart [title]="{text: titulo}">
     <kendo-chart-axis-defaults>
         <kendo-chart-axis-defaults-labels format="N0"></kendo-chart-axis-defaults-labels>
-    </kendo-chart-axis-defaults>
+    </kendo-chart-axis-defaults>   
+    <kendo-chart-value-axis>
+        <kendo-chart-value-axis-item [title]="{text: descricaoEixoY }">
+        </kendo-chart-value-axis-item>
+    </kendo-chart-value-axis>
     <kendo-chart-category-axis>
         <kendo-chart-category-axis-item
             [categories]="categorias"
@@ -39,6 +43,7 @@ export class GraficoAreaComponent {
     @Input() public titulo;
     @Input() public categorias;
     @Input() public descricaoEixoX;
+    @Input() public descricaoEixoY;
     @Input() public serie;
 
 

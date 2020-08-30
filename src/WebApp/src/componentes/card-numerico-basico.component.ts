@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 
+
+
 @Component({
     selector: 'app-card-numerico-basico',
     template: `
@@ -22,6 +24,7 @@ import { Component, Input } from '@angular/core';
 
 
 export class CardNumericoBasicoComponent {
+    
     @Input() public valorPrincipal;
     @Input() public titulo;
     @Input() public subTitulo;
@@ -30,4 +33,5 @@ export class CardNumericoBasicoComponent {
     @Input() public subTitulo2;
     @Input() public valor2;
     @Input() public unidadeMedida2;
+    
 }
