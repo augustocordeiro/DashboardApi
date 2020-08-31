@@ -732,7 +732,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function GraficoAreaComponent_kendo_chart_series_item_6_ng_template_2_Template(rf, ctx) { if (rf & 1) {
+function GraficoAreaComponent_kendo_chart_series_item_8_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](1, "number");
 } if (rf & 2) {
@@ -740,10 +740,10 @@ function GraficoAreaComponent_kendo_chart_series_item_6_ng_template_2_Template(r
     var item_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"](" ", item_r1.nome, " | ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind3"](1, 2, dataItem_r3.valor, "", "es"), " ");
 } }
-function GraficoAreaComponent_kendo_chart_series_item_6_Template(rf, ctx) { if (rf & 1) {
+function GraficoAreaComponent_kendo_chart_series_item_8_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "kendo-chart-series-item", 4);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "kendo-chart-series-item-tooltip");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, GraficoAreaComponent_kendo_chart_series_item_6_ng_template_2_Template, 2, 6, "ng-template");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, GraficoAreaComponent_kendo_chart_series_item_8_ng_template_2_Template, 2, 6, "ng-template");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -758,25 +758,30 @@ var GraficoAreaComponent = /** @class */ (function () {
         Object(_angular_common__WEBPACK_IMPORTED_MODULE_1__["registerLocaleData"])(_angular_common_locales_es__WEBPACK_IMPORTED_MODULE_2___default.a);
     };
     GraficoAreaComponent.ɵfac = function GraficoAreaComponent_Factory(t) { return new (t || GraficoAreaComponent)(); };
-    GraficoAreaComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: GraficoAreaComponent, selectors: [["app-grafico-area"]], inputs: { titulo: "titulo", categorias: "categorias", descricaoEixoX: "descricaoEixoX", serie: "serie" }, decls: 7, vars: 8, consts: [[3, "title"], ["format", "N0"], [3, "categories", "title"], ["field", "valor", "categoryField", "categoria", "type", "area", 3, "stack", "data", "name", 4, "ngFor", "ngForOf"], ["field", "valor", "categoryField", "categoria", "type", "area", 3, "stack", "data", "name"]], template: function GraficoAreaComponent_Template(rf, ctx) { if (rf & 1) {
+    GraficoAreaComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: GraficoAreaComponent, selectors: [["app-grafico-area"]], inputs: { titulo: "titulo", categorias: "categorias", descricaoEixoX: "descricaoEixoX", descricaoEixoY: "descricaoEixoY", serie: "serie" }, decls: 9, vars: 11, consts: [[3, "title"], ["format", "N0"], [3, "categories", "title"], ["field", "valor", "categoryField", "categoria", "type", "area", 3, "stack", "data", "name", 4, "ngFor", "ngForOf"], ["field", "valor", "categoryField", "categoria", "type", "area", 3, "stack", "data", "name"]], template: function GraficoAreaComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "kendo-chart", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "kendo-chart-axis-defaults");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "kendo-chart-axis-defaults-labels", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "kendo-chart-category-axis");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "kendo-chart-category-axis-item", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "kendo-chart-value-axis");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "kendo-chart-value-axis-item", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "kendo-chart-series");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, GraficoAreaComponent_kendo_chart_series_item_6_Template, 3, 3, "kendo-chart-series-item", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "kendo-chart-category-axis");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "kendo-chart-category-axis-item", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "kendo-chart-series");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, GraficoAreaComponent_kendo_chart_series_item_8_Template, 3, 3, "kendo-chart-series-item", 3);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         } if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](4, _c0, ctx.titulo));
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](5, _c0, ctx.titulo));
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("categories", ctx.categorias)("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](6, _c0, ctx.descricaoEixoX));
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](7, _c0, ctx.descricaoEixoY));
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("categories", ctx.categorias)("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](9, _c0, ctx.descricaoEixoX));
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.serie);
-        } }, directives: [_progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["ChartComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["AxisDefaultsComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["AxisDefaultsLabelsComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["CategoryAxisComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["CategoryAxisItemComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["SeriesComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["SeriesItemComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["SeriesTooltipComponent"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["DecimalPipe"]], encapsulation: 2 });
+        } }, directives: [_progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["ChartComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["AxisDefaultsComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["AxisDefaultsLabelsComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["ValueAxisComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["ValueAxisItemComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["CategoryAxisComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["CategoryAxisItemComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["SeriesComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["SeriesItemComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_3__["SeriesTooltipComponent"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["DecimalPipe"]], encapsulation: 2 });
     return GraficoAreaComponent;
 }());
 
@@ -784,13 +789,15 @@ var GraficoAreaComponent = /** @class */ (function () {
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
                 selector: 'app-grafico-area',
-                template: "\n    <kendo-chart [title]=\"{text: titulo}\">\n    <kendo-chart-axis-defaults>\n        <kendo-chart-axis-defaults-labels format=\"N0\"></kendo-chart-axis-defaults-labels>\n    </kendo-chart-axis-defaults>\n    <kendo-chart-category-axis>\n        <kendo-chart-category-axis-item\n            [categories]=\"categorias\"\n            [title]=\"{ text: descricaoEixoX }\"></kendo-chart-category-axis-item>\n    </kendo-chart-category-axis>\n    <kendo-chart-series>\n        <kendo-chart-series-item\n            *ngFor=\"let item of serie\"\n            [stack]=\"true\"\n            [data]=\"item.dados\"\n            [name]=\"item.nome\"\n            field=\"valor\"\n            categoryField=\"categoria\"\n            type=\"area\">\n            <kendo-chart-series-item-tooltip>\n                <ng-template let-dataItem=\"dataItem\">\n                    {{item.nome}}\n                    |\n                    {{dataItem.valor | number:'':'es'}}\n                </ng-template>\n            </kendo-chart-series-item-tooltip>\n        </kendo-chart-series-item>\n    </kendo-chart-series>\n</kendo-chart>"
+                template: "\n    <kendo-chart [title]=\"{text: titulo}\">\n    <kendo-chart-axis-defaults>\n        <kendo-chart-axis-defaults-labels format=\"N0\"></kendo-chart-axis-defaults-labels>\n    </kendo-chart-axis-defaults>   \n    <kendo-chart-value-axis>\n        <kendo-chart-value-axis-item [title]=\"{text: descricaoEixoY }\">\n        </kendo-chart-value-axis-item>\n    </kendo-chart-value-axis>\n    <kendo-chart-category-axis>\n        <kendo-chart-category-axis-item\n            [categories]=\"categorias\"\n            [title]=\"{ text: descricaoEixoX }\"></kendo-chart-category-axis-item>\n    </kendo-chart-category-axis>\n    <kendo-chart-series>\n        <kendo-chart-series-item\n            *ngFor=\"let item of serie\"\n            [stack]=\"true\"\n            [data]=\"item.dados\"\n            [name]=\"item.nome\"\n            field=\"valor\"\n            categoryField=\"categoria\"\n            type=\"area\">\n            <kendo-chart-series-item-tooltip>\n                <ng-template let-dataItem=\"dataItem\">\n                    {{item.nome}}\n                    |\n                    {{dataItem.valor | number:'':'es'}}\n                </ng-template>\n            </kendo-chart-series-item-tooltip>\n        </kendo-chart-series-item>\n    </kendo-chart-series>\n</kendo-chart>"
             }]
     }], null, { titulo: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }], categorias: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }], descricaoEixoX: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], descricaoEixoY: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }], serie: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
@@ -1059,7 +1066,7 @@ function DashboardComponent_button_92_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, " Ver Tabela ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
-function DashboardComponent_kendo_chart_series_item_101_ng_template_2_Template(rf, ctx) { if (rf & 1) {
+function DashboardComponent_kendo_chart_series_item_103_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](1, "number");
 } if (rf & 2) {
@@ -1067,17 +1074,17 @@ function DashboardComponent_kendo_chart_series_item_101_ng_template_2_Template(r
     var item_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"](" ", item_r26.nome, " | ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](1, 2, dataItem_r28.valor), " ");
 } }
-function DashboardComponent_kendo_chart_series_item_101_Template(rf, ctx) { if (rf & 1) {
+function DashboardComponent_kendo_chart_series_item_103_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "kendo-chart-series-item", 44);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "kendo-chart-series-item-tooltip");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, DashboardComponent_kendo_chart_series_item_101_ng_template_2_Template, 2, 4, "ng-template");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, DashboardComponent_kendo_chart_series_item_103_ng_template_2_Template, 2, 4, "ng-template");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     var item_r26 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("data", item_r26.dados)("name", item_r26.nome)("color", item_r26.cor);
 } }
-function DashboardComponent_kendo_chart_series_item_110_ng_template_2_Template(rf, ctx) { if (rf & 1) {
+function DashboardComponent_kendo_chart_series_item_114_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](1, "number");
 } if (rf & 2) {
@@ -1085,10 +1092,10 @@ function DashboardComponent_kendo_chart_series_item_110_ng_template_2_Template(r
     var item_r30 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"](" ", item_r30.nome, " | ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](1, 2, dataItem_r32.valor), " ");
 } }
-function DashboardComponent_kendo_chart_series_item_110_Template(rf, ctx) { if (rf & 1) {
+function DashboardComponent_kendo_chart_series_item_114_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "kendo-chart-series-item", 44);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "kendo-chart-series-item-tooltip");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, DashboardComponent_kendo_chart_series_item_110_ng_template_2_Template, 2, 4, "ng-template");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, DashboardComponent_kendo_chart_series_item_114_ng_template_2_Template, 2, 4, "ng-template");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -1220,14 +1227,17 @@ var DashboardComponent = /** @class */ (function () {
         this.producaoScannersSeries = dados.graficoProducaoScanners.series;
         this.producaoScannersCategorias = dados.graficoProducaoScanners.categorias;
         this.producaoScannersDescricaoEixoX = dados.graficoProducaoScanners.descricaoEixoX;
+        this.producaoScannersDescricaoEixoY = dados.graficoProducaoScanners.descricaoEixoY;
         this.performanceScannersTitulo = dados.graficoPerformanceScanners.titulo;
         this.performanceScannersSeries = dados.graficoPerformanceScanners.series;
         this.performanceScannersCategorias = dados.graficoPerformanceScanners.categorias;
         this.performanceScannersDescricaoEixoX = dados.graficoPerformanceScanners.descricaoEixoX;
+        this.performanceScannersDescricaoEixoY = dados.graficoPerformanceScanners.descricaoEixoY;
         this.graficoAreaDigitalizacaoTitulo = dados.graficoAreaDigitalizacao.titulo;
         this.graficoAreaDigitalizacaoSeries = dados.graficoAreaDigitalizacao.series;
         this.graficoAreaDigitalizacaoCategorias = dados.graficoAreaDigitalizacao.categorias;
         this.graficoAreaDigitalizacaoDescricaoEixoX = dados.graficoAreaDigitalizacao.descricaoEixoX;
+        this.graficoAreaDigitalizacaoDescricaoEixoY = "MM2";
         this.engajamentoPatologistasSeries = dados.graficoEngajamentoPatologistas.series;
         this.engajamentoPatologistasCategorias = dados.graficoEngajamentoPatologistas.categorias;
         this.engajamentoPatologistasTitulo = dados.graficoEngajamentoPatologistas.titulo;
@@ -1244,7 +1254,7 @@ var DashboardComponent = /** @class */ (function () {
     DashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DashboardComponent, selectors: [["app-dashboard"]], hostVars: 3, hostBindings: function DashboardComponent_HostBindings(rf, ctx) { if (rf & 2) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵattribute"]("id", ctx.get_id);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx.get_class);
-        } }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([_servicos_dashboard_service__WEBPACK_IMPORTED_MODULE_1__["DashboardService"]])], decls: 111, vars: 65, consts: [[1, "imagens-topo"], ["src", "assets/logodk.png", 1, "logo"], ["src", "assets/logohp.png", 1, "logo"], ["id", "header", 1, "row", "justify-content-md-center"], [1, "col-sm", "text-sm-left", "p-0", "p-sm-3"], [1, "h1", 2, "color", "seagreen", "font-size", "25px"], [1, "h4"], [1, "col-sm", "text-sm-right", "p-0", "p-sm-3"], [1, "col-sm", "text-sm-right", "p-0", "p-sm-2"], [3, "selection"], ["kendoRippleContainer", "kendoRippleContainer", "kendoButton", "kendoButton", 3, "togglable", "click"], ["kendoRippleContainer", "kendoRippleContainer", "kendoButton", "kendoButton", 3, "togglable", "selected", "click"], [2, "width", "120px", 3, "popupSettings", "disabled", "data", "value", "valueChange"], [1, "k-card-deck", 2, "display", "flex", "flex-wrap", "wrap", "justify-content", "space-evenly"], [1, "k-card", 2, "color", "orangered", "min-height", "200px", "width", "300px"], [1, "k-card-body"], ["titulo", "Espa\u00E7o Livre", "subTitulo1", "Espa\u00E7o Total", "subTitulo2", "Espa\u00E7o Livre", 3, "valorPercentual", "texto1", "texto2"], [1, "k-card", 2, "color", "darkgreen", "min-height", "200px", "width", "300px"], ["titulo", "Integra\u00E7\u00E3o", "subTitulo1", "Digitalizadas", "subTitulo2", "Integradas", "subTitulo3", "Erros", 3, "valorPercentual", "valor1", "valor2", "valor3"], [1, "k-card", 2, "color", "saddlebrown", "min-height", "200px", "width", "300px"], ["titulo", "Visualiza\u00E7\u00E3o", "subTitulo1", "Distribu\u00EDdas", "subTitulo2", "Visualizadas", 3, "valorPercentual", "valor1", "valor2"], [1, "k-card", 2, "color", "midnightblue", "min-height", "200px", "width", "300px"], ["titulo", "L\u00E2minas/hora", "subTitulo", "Tempo de digitaliza\u00E7\u00E3o", "unidadeMedida", "segundos", "subTitulo2", "\u00C1rea de digitaliza\u00E7\u00E3o", "unidadeMedida2", "mm&sup2;", 3, "valorPrincipal", "valor", "valor2"], [1, "k-card", 2, "color", "gray", "min-height", "200px", "width", "300px"], [1, "comp-label"], [1, "issues-count", 2, "font-size", "80px"], [2, "font-size", "30px"], [1, "issues-label", 2, "font-size", "18px"], [1, "m-0", "medium", "text-muted"], [1, "k-card", 2, "width", "600px"], ["tipo", "column", 3, "serie", "titulo", "categorias", "descricaoEixoX", 4, "ngIf"], [3, "title", 4, "ngIf"], ["orientation", "horizontal", "layout", "end"], ["class", "k-button k-primary k-flat", 3, "click", 4, "ngIf"], [3, "serie", "titulo", "categorias", "descricaoEixoX"], ["tipo", "line", 3, "serie", "titulo", "categorias", "descricaoEixoX", 4, "ngIf"], ["style", "height: 400px;", 3, "scrollable", "data", 4, "ngIf"], [3, "title"], ["format", "N0"], [3, "categories", "title"], ["field", "valor", "categoryField", "categoria", "type", "line", 3, "data", "name", "color", 4, "ngFor", "ngForOf"], ["tipo", "column", 3, "serie", "titulo", "categorias", "descricaoEixoX"], ["format", "P0"], ["min", "0", "max", "1"], ["field", "valor", "categoryField", "categoria", "type", "line", 3, "data", "name", "color"], [1, "k-button", "k-primary", "k-flat", 3, "click"], [1, "k-icon"], ["tipo", "line", 3, "serie", "titulo", "categorias", "descricaoEixoX"], [2, "height", "400px", 3, "scrollable", "data"], ["kendoGridToolbarTemplate", "kendoGridToolbarTemplate"], ["field", "nomPatologista", "title", "Patologista", 1, "price-col", 3, "width"], ["field", "visualizadasPerc", "title", "%", 1, "price-col", 3, "width"], ["kendoGridCellTemplate", ""], ["fileName", "dashboard-engajamento-patologistas.xlsx"], ["field", "codPatologista", "title", "C\u00F3digo"], ["field", "nomPatologista", "title", "Nome"], ["field", "distribuidasQtde", "title", "Distribuidas"], ["field", "visualizadasQtde", "title", "Visualizadas"], ["field", "visualizadasPerc", "title", "Visualizadas %"], ["type", "button", "kendoGridExcelCommand", "kendoGridExcelCommand", "icon", "file-excel"]], template: function DashboardComponent_Template(rf, ctx) { if (rf & 1) {
+        } }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([_servicos_dashboard_service__WEBPACK_IMPORTED_MODULE_1__["DashboardService"]])], decls: 115, vars: 72, consts: [[1, "imagens-topo"], ["src", "assets/logodk.png", 1, "logo"], ["src", "assets/logohp.png", 1, "logo"], ["id", "header", 1, "row", "justify-content-md-center"], [1, "col-sm", "text-sm-left", "p-0", "p-sm-3"], [1, "h1", 2, "color", "seagreen", "font-size", "25px"], [1, "h4"], [1, "col-sm", "text-sm-right", "p-0", "p-sm-3"], [1, "col-sm", "text-sm-right", "p-0", "p-sm-2"], [3, "selection"], ["kendoRippleContainer", "kendoRippleContainer", "kendoButton", "kendoButton", 3, "togglable", "click"], ["kendoRippleContainer", "kendoRippleContainer", "kendoButton", "kendoButton", 3, "togglable", "selected", "click"], [2, "width", "120px", 3, "popupSettings", "disabled", "data", "value", "valueChange"], [1, "k-card-deck", 2, "display", "flex", "flex-wrap", "wrap", "justify-content", "space-evenly"], [1, "k-card", 2, "color", "orangered", "min-height", "200px", "width", "300px"], [1, "k-card-body"], ["titulo", "Espa\u00E7o Livre", "subTitulo1", "Espa\u00E7o Total", "subTitulo2", "Espa\u00E7o Livre", 3, "valorPercentual", "texto1", "texto2"], [1, "k-card", 2, "color", "darkgreen", "min-height", "200px", "width", "300px"], ["titulo", "Integra\u00E7\u00E3o", "subTitulo1", "Digitalizadas", "subTitulo2", "Integradas", "subTitulo3", "Erros", 3, "valorPercentual", "valor1", "valor2", "valor3"], [1, "k-card", 2, "color", "saddlebrown", "min-height", "200px", "width", "300px"], ["titulo", "Visualiza\u00E7\u00E3o", "subTitulo1", "Distribu\u00EDdas", "subTitulo2", "Visualizadas", 3, "valorPercentual", "valor1", "valor2"], [1, "k-card", 2, "color", "midnightblue", "min-height", "200px", "width", "300px"], ["titulo", "L\u00E2minas/hora", "subTitulo", "Tempo de digitaliza\u00E7\u00E3o", "unidadeMedida", "segundos", "subTitulo2", "\u00C1rea de digitaliza\u00E7\u00E3o", "unidadeMedida2", "mm&sup2;", 3, "valorPrincipal", "valor", "valor2"], [1, "k-card", 2, "color", "gray", "min-height", "200px", "width", "300px"], [1, "comp-label"], [1, "issues-count", 2, "font-size", "80px"], [2, "font-size", "30px"], [1, "issues-label", 2, "font-size", "18px"], [1, "m-0", "medium", "text-muted"], [1, "k-card", 2, "width", "600px"], ["tipo", "column", 3, "serie", "titulo", "categorias", "descricaoEixoX", 4, "ngIf"], [3, "title", 4, "ngIf"], ["orientation", "horizontal", "layout", "end"], ["class", "k-button k-primary k-flat", 3, "click", 4, "ngIf"], [3, "serie", "titulo", "descricaoEixoY", "categorias", "descricaoEixoX"], ["tipo", "line", 3, "serie", "titulo", "categorias", "descricaoEixoX", 4, "ngIf"], ["style", "height: 400px;", 3, "scrollable", "data", 4, "ngIf"], [3, "title"], ["format", "N0"], [3, "categories", "title"], ["field", "valor", "categoryField", "categoria", "type", "line", 3, "data", "name", "color", 4, "ngFor", "ngForOf"], ["tipo", "column", 3, "serie", "titulo", "categorias", "descricaoEixoX"], ["format", "P0"], ["min", "0", "max", "1"], ["field", "valor", "categoryField", "categoria", "type", "line", 3, "data", "name", "color"], [1, "k-button", "k-primary", "k-flat", 3, "click"], [1, "k-icon"], ["tipo", "line", 3, "serie", "titulo", "categorias", "descricaoEixoX"], [2, "height", "400px", 3, "scrollable", "data"], ["kendoGridToolbarTemplate", "kendoGridToolbarTemplate"], ["field", "nomPatologista", "title", "Patologista", 1, "price-col", 3, "width"], ["field", "visualizadasPerc", "title", "%", 1, "price-col", 3, "width"], ["kendoGridCellTemplate", ""], ["fileName", "dashboard-engajamento-patologistas.xlsx"], ["field", "codPatologista", "title", "C\u00F3digo"], ["field", "nomPatologista", "title", "Nome"], ["field", "distribuidasQtde", "title", "Distribuidas"], ["field", "visualizadasQtde", "title", "Visualizadas"], ["field", "visualizadasPerc", "title", "Visualizadas %"], ["type", "button", "kendoGridExcelCommand", "kendoGridExcelCommand", "icon", "file-excel"]], template: function DashboardComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "img", 2);
@@ -1407,26 +1417,32 @@ var DashboardComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](96, "kendo-chart-axis-defaults");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](97, "kendo-chart-axis-defaults-labels", 38);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](98, "kendo-chart-category-axis");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](99, "kendo-chart-category-axis-item", 39);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](98, "kendo-chart-value-axis");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](99, "kendo-chart-value-axis-item", 37);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](100, "kendo-chart-series");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](101, DashboardComponent_kendo_chart_series_item_101_Template, 3, 3, "kendo-chart-series-item", 40);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](100, "kendo-chart-category-axis");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](101, "kendo-chart-category-axis-item", 39);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](102, "kendo-chart-series");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](103, DashboardComponent_kendo_chart_series_item_103_Template, 3, 3, "kendo-chart-series-item", 40);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](102, "div", 29);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](103, "div", 15);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](104, "kendo-chart", 37);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](105, "kendo-chart-axis-defaults");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](106, "kendo-chart-axis-defaults-labels", 38);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](104, "div", 29);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](105, "div", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](106, "kendo-chart", 37);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](107, "kendo-chart-axis-defaults");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](108, "kendo-chart-axis-defaults-labels", 38);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](107, "kendo-chart-category-axis");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](108, "kendo-chart-category-axis-item", 39);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](109, "kendo-chart-value-axis");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](110, "kendo-chart-value-axis-item", 37);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](109, "kendo-chart-series");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](110, DashboardComponent_kendo_chart_series_item_110_Template, 3, 3, "kendo-chart-series-item", 40);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](111, "kendo-chart-category-axis");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](112, "kendo-chart-category-axis-item", 39);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](113, "kendo-chart-series");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](114, DashboardComponent_kendo_chart_series_item_114_Template, 3, 3, "kendo-chart-series-item", 40);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -1462,7 +1478,7 @@ var DashboardComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("togglable", true);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("popupSettings", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](56, _c1))("disabled", ctx.periodoSelecionado == false)("data", ctx.meses)("value", ctx.valorPeriodoSelecionado);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("popupSettings", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](59, _c1))("disabled", ctx.periodoSelecionado == false)("data", ctx.meses)("value", ctx.valorPeriodoSelecionado);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("valorPercentual", ctx.espacoLivrePercentual)("texto1", ctx.espacoTotal)("texto2", ctx.espacoLivre);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
@@ -1486,7 +1502,7 @@ var DashboardComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.apresentacaoRecursos === "historico");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("serie", ctx.producaoScannersSeries)("titulo", ctx.producaoScannersTitulo)("categorias", ctx.producaoScannersCategorias)("descricaoEixoX", ctx.producaoScannersDescricaoEixoX);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("serie", ctx.producaoScannersSeries)("titulo", ctx.producaoScannersTitulo)("descricaoEixoY", ctx.producaoScannersDescricaoEixoY)("categorias", ctx.producaoScannersCategorias)("descricaoEixoX", ctx.producaoScannersDescricaoEixoX);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.apresentacaoPatologistas == "grafico");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
@@ -1496,18 +1512,22 @@ var DashboardComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.apresentacaoPatologistas === "grafico");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](57, _c0, ctx.performanceScannersTitulo));
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](60, _c0, ctx.performanceScannersTitulo));
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("categories", ctx.performanceScannersCategorias)("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](59, _c0, ctx.performanceScannersDescricaoEixoX));
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](62, _c0, ctx.performanceScannersDescricaoEixoY));
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("categories", ctx.performanceScannersCategorias)("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](64, _c0, ctx.performanceScannersDescricaoEixoX));
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.performanceScannersSeries);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](61, _c0, ctx.graficoAreaDigitalizacaoTitulo));
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](66, _c0, ctx.graficoAreaDigitalizacaoTitulo));
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("categories", ctx.graficoAreaDigitalizacaoCategorias)("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](63, _c0, ctx.graficoAreaDigitalizacaoDescricaoEixoX));
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](68, _c0, ctx.graficoAreaDigitalizacaoDescricaoEixoY));
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("categories", ctx.graficoAreaDigitalizacaoCategorias)("title", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](70, _c0, ctx.graficoAreaDigitalizacaoDescricaoEixoX));
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.graficoAreaDigitalizacaoSeries);
-        } }, directives: [_progress_kendo_angular_buttons__WEBPACK_IMPORTED_MODULE_4__["ButtonGroup"], _progress_kendo_angular_buttons__WEBPACK_IMPORTED_MODULE_4__["Button"], _progress_kendo_angular_ripple__WEBPACK_IMPORTED_MODULE_5__["RippleContainerDirective"], _progress_kendo_angular_dropdowns__WEBPACK_IMPORTED_MODULE_6__["DropDownListComponent"], _componentes_card_percentual_texto_component__WEBPACK_IMPORTED_MODULE_7__["CardPercentualTextoComponent"], _componentes_card_percentual_3linhas_component__WEBPACK_IMPORTED_MODULE_8__["CardPercentual3LinhasComponent"], _componentes_card_percentual_component__WEBPACK_IMPORTED_MODULE_9__["CardPercentualComponent"], _componentes_card_numerico_basico_component__WEBPACK_IMPORTED_MODULE_10__["CardNumericoBasicoComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["NgIf"], _progress_kendo_angular_layout__WEBPACK_IMPORTED_MODULE_12__["CardActionsComponent"], _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_13__["GraficoAreaComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["ChartComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["AxisDefaultsComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["AxisDefaultsLabelsComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["CategoryAxisComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["CategoryAxisItemComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["SeriesComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["NgForOf"], _componentes_grafico_percentual_component__WEBPACK_IMPORTED_MODULE_15__["GraficoPercentualComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["ValueAxisComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["ValueAxisItemComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["SeriesItemComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["SeriesTooltipComponent"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_16__["GridComponent"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_16__["ToolbarTemplateDirective"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_16__["ColumnComponent"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_16__["CellTemplateDirective"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_16__["ExcelComponent"], _progress_kendo_angular_excel_export__WEBPACK_IMPORTED_MODULE_17__["ColumnComponent"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_16__["ExcelCommandDirective"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_11__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["PercentPipe"]], encapsulation: 2 });
+        } }, directives: [_progress_kendo_angular_buttons__WEBPACK_IMPORTED_MODULE_4__["ButtonGroup"], _progress_kendo_angular_buttons__WEBPACK_IMPORTED_MODULE_4__["Button"], _progress_kendo_angular_ripple__WEBPACK_IMPORTED_MODULE_5__["RippleContainerDirective"], _progress_kendo_angular_dropdowns__WEBPACK_IMPORTED_MODULE_6__["DropDownListComponent"], _componentes_card_percentual_texto_component__WEBPACK_IMPORTED_MODULE_7__["CardPercentualTextoComponent"], _componentes_card_percentual_3linhas_component__WEBPACK_IMPORTED_MODULE_8__["CardPercentual3LinhasComponent"], _componentes_card_percentual_component__WEBPACK_IMPORTED_MODULE_9__["CardPercentualComponent"], _componentes_card_numerico_basico_component__WEBPACK_IMPORTED_MODULE_10__["CardNumericoBasicoComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["NgIf"], _progress_kendo_angular_layout__WEBPACK_IMPORTED_MODULE_12__["CardActionsComponent"], _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_13__["GraficoAreaComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["ChartComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["AxisDefaultsComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["AxisDefaultsLabelsComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["ValueAxisComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["ValueAxisItemComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["CategoryAxisComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["CategoryAxisItemComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["SeriesComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["NgForOf"], _componentes_grafico_percentual_component__WEBPACK_IMPORTED_MODULE_15__["GraficoPercentualComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["SeriesItemComponent"], _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_14__["SeriesTooltipComponent"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_16__["GridComponent"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_16__["ToolbarTemplateDirective"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_16__["ColumnComponent"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_16__["CellTemplateDirective"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_16__["ExcelComponent"], _progress_kendo_angular_excel_export__WEBPACK_IMPORTED_MODULE_17__["ColumnComponent"], _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_16__["ExcelCommandDirective"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_11__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["PercentPipe"]], encapsulation: 2 });
     return DashboardComponent;
 }());
 
