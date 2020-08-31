@@ -35,6 +35,7 @@ import { GraficoAreaComponent } from "./componentes/grafico-area.component";
 import { environment } from "../environments/environment";
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 
+import { ExponentialStrengthPipe } from './componentes/number-format.pipes';
 
 Config.PLATFORM_TARGET = Config.PLATFORMS.WEB;
 
@@ -50,7 +51,8 @@ export function createTranslateLoader(http: HttpClient) {
         CardPercentualComponent,
         CardPercentualTextoComponent,
         CardNumericoBasicoComponent,
-        CardPercentual3LinhasComponent
+        CardPercentual3LinhasComponent,
+        ExponentialStrengthPipe
     ],
     imports: [
         AppRoutingModule,
@@ -75,7 +77,10 @@ export function createTranslateLoader(http: HttpClient) {
         RippleModule,
         DropDownsModule,
     ],
-    providers: [],
+    exports:[
+        
+    ],
+    providers: [ExponentialStrengthPipe],
     bootstrap: [DashboardComponent]
 })
 export class AppModule {

@@ -1,27 +1,16 @@
-import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
-import { formatNumber } from '@angular/common';
-@Pipe({
-  name: 'ptBrNumberFormat'
-})
-export class ptBrNumberformatComponent implements PipeTransform {
-
-  constructor() { }
-
-   transform(number : any){
-    let hasMinus = String(number).charAt(0) === '-' ? true:false;
-    number =  String(number).charAt(0) === '-' ?
-            + String(number).substring(1, number.length)  : number;
-
-        var strNumber = formatNumber(number, "", "0");
-        strNumber = strNumber.replace(".", "#");
-        strNumber = strNumber.replace(",", ".");
-        strNumber = strNumber.replace("#", ",");
-
-        if(hasMinus){
-          return '-'+ strNumber;
-        }else
-        {
-          return strNumber;
-        }
-    }
+import { Pipe, PipeTransform } from '@angular/core';
+/*
+ * Raise the value exponentially
+ * Takes an exponent argument that defaults to 1.
+ * Usage:
+ *   value | exponentialStrength:exponent
+ * Example:
+ *   {{ 2 | exponentialStrength:10 }}
+ *   formats to: 1024
+*/
+@Pipe({name: 'exponentialStrength'})
+export class ExponentialStrengthPipe implements PipeTransform {
+  transform(value: number, exponent?: number): number {
+    return Math.pow(value, isNaN(exponent) ? 1 : exponent);
+  }
 }
