@@ -125,44 +125,44 @@ var AppRoutingModule = /** @class */ (function () {
 /*!***************************!*\
   !*** ./src/app.module.ts ***!
   \***************************/
-/*! exports provided: createTranslateLoader, AppModule */
+/*! exports provided: AppModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createTranslateLoader", function() { return createTranslateLoader; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js");
 /* harmony import */ var _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/service-worker */ "./node_modules/@angular/service-worker/__ivy_ngcc__/fesm2015/service-worker.js");
-/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/__ivy_ngcc__/fesm2015/ngx-translate-core.js");
-/* harmony import */ var _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngx-translate/http-loader */ "./node_modules/@ngx-translate/http-loader/__ivy_ngcc__/fesm2015/ngx-translate-http-loader.js");
-/* harmony import */ var _common_index__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./common/index */ "./src/common/index.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app-routing.module.ts");
-/* harmony import */ var _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @progress/kendo-angular-grid */ "./node_modules/@progress/kendo-angular-grid/__ivy_ngcc__/dist/fesm2015/index.js");
-/* harmony import */ var _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @progress/kendo-angular-charts */ "./node_modules/@progress/kendo-angular-charts/__ivy_ngcc__/dist/fesm2015/index.js");
-/* harmony import */ var _progress_kendo_angular_dialog__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @progress/kendo-angular-dialog */ "./node_modules/@progress/kendo-angular-dialog/__ivy_ngcc__/dist/fesm2015/index.js");
-/* harmony import */ var _progress_kendo_angular_inputs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @progress/kendo-angular-inputs */ "./node_modules/@progress/kendo-angular-inputs/__ivy_ngcc__/dist/fesm2015/index.js");
-/* harmony import */ var _progress_kendo_angular_buttons__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @progress/kendo-angular-buttons */ "./node_modules/@progress/kendo-angular-buttons/__ivy_ngcc__/dist/fesm2015/index.js");
-/* harmony import */ var _progress_kendo_angular_layout__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @progress/kendo-angular-layout */ "./node_modules/@progress/kendo-angular-layout/__ivy_ngcc__/dist/fesm2015/index.js");
-/* harmony import */ var _progress_kendo_angular_ripple__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @progress/kendo-angular-ripple */ "./node_modules/@progress/kendo-angular-ripple/__ivy_ngcc__/dist/fesm2015/index.js");
-/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/dashboard/dashboard.component.ts");
-/* harmony import */ var _componentes_grafico_percentual_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./componentes/grafico-percentual.component */ "./src/componentes/grafico-percentual.component.ts");
-/* harmony import */ var _componentes_card_percentual_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./componentes/card-percentual.component */ "./src/componentes/card-percentual.component.ts");
-/* harmony import */ var _componentes_card_percentual_texto_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./componentes/card-percentual-texto.component */ "./src/componentes/card-percentual-texto.component.ts");
-/* harmony import */ var _componentes_card_numerico_basico_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./componentes/card-numerico-basico.component */ "./src/componentes/card-numerico-basico.component.ts");
-/* harmony import */ var _componentes_card_percentual_3linhas_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./componentes/card-percentual-3linhas.component */ "./src/componentes/card-percentual-3linhas.component.ts");
-/* harmony import */ var _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./componentes/grafico-area.component */ "./src/componentes/grafico-area.component.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../environments/environment */ "./environments/environment.ts");
-/* harmony import */ var _progress_kendo_angular_dropdowns__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @progress/kendo-angular-dropdowns */ "./node_modules/@progress/kendo-angular-dropdowns/__ivy_ngcc__/dist/fesm2015/index.js");
+/* harmony import */ var _common_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./common/index */ "./src/common/index.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app-routing.module.ts");
+/* harmony import */ var _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @progress/kendo-angular-grid */ "./node_modules/@progress/kendo-angular-grid/__ivy_ngcc__/dist/fesm2015/index.js");
+/* harmony import */ var _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @progress/kendo-angular-charts */ "./node_modules/@progress/kendo-angular-charts/__ivy_ngcc__/dist/fesm2015/index.js");
+/* harmony import */ var _progress_kendo_angular_dialog__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @progress/kendo-angular-dialog */ "./node_modules/@progress/kendo-angular-dialog/__ivy_ngcc__/dist/fesm2015/index.js");
+/* harmony import */ var _progress_kendo_angular_inputs__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @progress/kendo-angular-inputs */ "./node_modules/@progress/kendo-angular-inputs/__ivy_ngcc__/dist/fesm2015/index.js");
+/* harmony import */ var _progress_kendo_angular_buttons__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @progress/kendo-angular-buttons */ "./node_modules/@progress/kendo-angular-buttons/__ivy_ngcc__/dist/fesm2015/index.js");
+/* harmony import */ var _progress_kendo_angular_layout__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @progress/kendo-angular-layout */ "./node_modules/@progress/kendo-angular-layout/__ivy_ngcc__/dist/fesm2015/index.js");
+/* harmony import */ var _progress_kendo_angular_ripple__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @progress/kendo-angular-ripple */ "./node_modules/@progress/kendo-angular-ripple/__ivy_ngcc__/dist/fesm2015/index.js");
+/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/dashboard/dashboard.component.ts");
+/* harmony import */ var _componentes_grafico_percentual_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./componentes/grafico-percentual.component */ "./src/componentes/grafico-percentual.component.ts");
+/* harmony import */ var _componentes_card_percentual_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./componentes/card-percentual.component */ "./src/componentes/card-percentual.component.ts");
+/* harmony import */ var _componentes_card_percentual_texto_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./componentes/card-percentual-texto.component */ "./src/componentes/card-percentual-texto.component.ts");
+/* harmony import */ var _componentes_card_numerico_basico_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./componentes/card-numerico-basico.component */ "./src/componentes/card-numerico-basico.component.ts");
+/* harmony import */ var _componentes_card_percentual_3linhas_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./componentes/card-percentual-3linhas.component */ "./src/componentes/card-percentual-3linhas.component.ts");
+/* harmony import */ var _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./componentes/grafico-area.component */ "./src/componentes/grafico-area.component.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../environments/environment */ "./environments/environment.ts");
+/* harmony import */ var _progress_kendo_angular_dropdowns__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @progress/kendo-angular-dropdowns */ "./node_modules/@progress/kendo-angular-dropdowns/__ivy_ngcc__/dist/fesm2015/index.js");
+/* harmony import */ var _progress_kendo_angular_intl__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @progress/kendo-angular-intl */ "./node_modules/@progress/kendo-angular-intl/__ivy_ngcc__/dist/fesm2015/index.js");
+/* harmony import */ var _progress_kendo_angular_intl_locales_pt_all__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @progress/kendo-angular-intl/locales/pt/all */ "./node_modules/@progress/kendo-angular-intl/locales/pt/all.js");
+/* harmony import */ var _progress_kendo_angular_intl_locales_pt_all__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_progress_kendo_angular_intl_locales_pt_all__WEBPACK_IMPORTED_MODULE_24__);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_common_locales_pt__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/common/locales/pt */ "./node_modules/@angular/common/locales/pt.js");
+/* harmony import */ var _angular_common_locales_pt__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(_angular_common_locales_pt__WEBPACK_IMPORTED_MODULE_26__);
 
 
 
-
-
-// vendor dependencies
 
 
 // app
@@ -190,94 +190,90 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-_common_index__WEBPACK_IMPORTED_MODULE_7__["Config"].PLATFORM_TARGET = _common_index__WEBPACK_IMPORTED_MODULE_7__["Config"].PLATFORMS.WEB;
-function createTranslateLoader(http) {
-    return new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_6__["TranslateHttpLoader"](http, "./assets/i18n/", ".json");
-}
+
+
+
+Object(_angular_common__WEBPACK_IMPORTED_MODULE_25__["registerLocaleData"])(_angular_common_locales_pt__WEBPACK_IMPORTED_MODULE_26___default.a);
+_common_index__WEBPACK_IMPORTED_MODULE_5__["Config"].PLATFORM_TARGET = _common_index__WEBPACK_IMPORTED_MODULE_5__["Config"].PLATFORMS.WEB;
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
-    AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_16__["DashboardComponent"]] });
-    AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [], imports: [[
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
-                _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__["ServiceWorkerModule"].register("ngsw-worker.js", { enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_23__["environment"].production }),
+    AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_14__["DashboardComponent"]] });
+    AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [
+            { provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"], useValue: 'pt' },
+        ], imports: [[
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
+                _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__["ServiceWorkerModule"].register("ngsw-worker.js", { enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_21__["environment"].production }),
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_10__["ChartsModule"],
-                _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_9__["GridModule"],
-                _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_9__["ExcelModule"],
-                _progress_kendo_angular_dialog__WEBPACK_IMPORTED_MODULE_11__["DialogModule"],
-                _progress_kendo_angular_inputs__WEBPACK_IMPORTED_MODULE_12__["InputsModule"],
-                _progress_kendo_angular_buttons__WEBPACK_IMPORTED_MODULE_13__["ButtonsModule"],
-                _progress_kendo_angular_layout__WEBPACK_IMPORTED_MODULE_14__["LayoutModule"],
+                _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_8__["ChartsModule"],
+                _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_7__["GridModule"],
+                _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_7__["ExcelModule"],
+                _progress_kendo_angular_dialog__WEBPACK_IMPORTED_MODULE_9__["DialogModule"],
+                _progress_kendo_angular_inputs__WEBPACK_IMPORTED_MODULE_10__["InputsModule"],
+                _progress_kendo_angular_buttons__WEBPACK_IMPORTED_MODULE_11__["ButtonsModule"],
+                _progress_kendo_angular_layout__WEBPACK_IMPORTED_MODULE_12__["LayoutModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
-                _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateModule"].forRoot({
-                    loader: {
-                        provide: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateLoader"],
-                        useFactory: (createTranslateLoader),
-                        deps: [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"]]
-                    }
-                }),
-                _progress_kendo_angular_ripple__WEBPACK_IMPORTED_MODULE_15__["RippleModule"],
-                _progress_kendo_angular_dropdowns__WEBPACK_IMPORTED_MODULE_24__["DropDownsModule"],
+                _progress_kendo_angular_ripple__WEBPACK_IMPORTED_MODULE_13__["RippleModule"],
+                _progress_kendo_angular_dropdowns__WEBPACK_IMPORTED_MODULE_22__["DropDownsModule"],
+                _progress_kendo_angular_intl__WEBPACK_IMPORTED_MODULE_23__["IntlModule"],
             ]] });
     return AppModule;
 }());
 
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_16__["DashboardComponent"],
-        _componentes_grafico_percentual_component__WEBPACK_IMPORTED_MODULE_17__["GraficoPercentualComponent"],
-        _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_22__["GraficoAreaComponent"],
-        _componentes_card_percentual_component__WEBPACK_IMPORTED_MODULE_18__["CardPercentualComponent"],
-        _componentes_card_percentual_texto_component__WEBPACK_IMPORTED_MODULE_19__["CardPercentualTextoComponent"],
-        _componentes_card_numerico_basico_component__WEBPACK_IMPORTED_MODULE_20__["CardNumericoBasicoComponent"],
-        _componentes_card_percentual_3linhas_component__WEBPACK_IMPORTED_MODULE_21__["CardPercentual3LinhasComponent"]], imports: [_app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__["ServiceWorkerModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-        _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_10__["ChartsModule"],
-        _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_9__["GridModule"],
-        _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_9__["ExcelModule"],
-        _progress_kendo_angular_dialog__WEBPACK_IMPORTED_MODULE_11__["DialogModule"],
-        _progress_kendo_angular_inputs__WEBPACK_IMPORTED_MODULE_12__["InputsModule"],
-        _progress_kendo_angular_buttons__WEBPACK_IMPORTED_MODULE_13__["ButtonsModule"],
-        _progress_kendo_angular_layout__WEBPACK_IMPORTED_MODULE_14__["LayoutModule"],
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_14__["DashboardComponent"],
+        _componentes_grafico_percentual_component__WEBPACK_IMPORTED_MODULE_15__["GraficoPercentualComponent"],
+        _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_20__["GraficoAreaComponent"],
+        _componentes_card_percentual_component__WEBPACK_IMPORTED_MODULE_16__["CardPercentualComponent"],
+        _componentes_card_percentual_texto_component__WEBPACK_IMPORTED_MODULE_17__["CardPercentualTextoComponent"],
+        _componentes_card_numerico_basico_component__WEBPACK_IMPORTED_MODULE_18__["CardNumericoBasicoComponent"],
+        _componentes_card_percentual_3linhas_component__WEBPACK_IMPORTED_MODULE_19__["CardPercentual3LinhasComponent"]], imports: [_app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__["ServiceWorkerModule"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+        _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_8__["ChartsModule"],
+        _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_7__["GridModule"],
+        _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_7__["ExcelModule"],
+        _progress_kendo_angular_dialog__WEBPACK_IMPORTED_MODULE_9__["DialogModule"],
+        _progress_kendo_angular_inputs__WEBPACK_IMPORTED_MODULE_10__["InputsModule"],
+        _progress_kendo_angular_buttons__WEBPACK_IMPORTED_MODULE_11__["ButtonsModule"],
+        _progress_kendo_angular_layout__WEBPACK_IMPORTED_MODULE_12__["LayoutModule"],
         _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
-        _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateModule"], _progress_kendo_angular_ripple__WEBPACK_IMPORTED_MODULE_15__["RippleModule"],
-        _progress_kendo_angular_dropdowns__WEBPACK_IMPORTED_MODULE_24__["DropDownsModule"]] }); })();
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
+        _progress_kendo_angular_ripple__WEBPACK_IMPORTED_MODULE_13__["RippleModule"],
+        _progress_kendo_angular_dropdowns__WEBPACK_IMPORTED_MODULE_22__["DropDownsModule"],
+        _progress_kendo_angular_intl__WEBPACK_IMPORTED_MODULE_23__["IntlModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
                 declarations: [
-                    _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_16__["DashboardComponent"],
-                    _componentes_grafico_percentual_component__WEBPACK_IMPORTED_MODULE_17__["GraficoPercentualComponent"],
-                    _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_22__["GraficoAreaComponent"],
-                    _componentes_card_percentual_component__WEBPACK_IMPORTED_MODULE_18__["CardPercentualComponent"],
-                    _componentes_card_percentual_texto_component__WEBPACK_IMPORTED_MODULE_19__["CardPercentualTextoComponent"],
-                    _componentes_card_numerico_basico_component__WEBPACK_IMPORTED_MODULE_20__["CardNumericoBasicoComponent"],
-                    _componentes_card_percentual_3linhas_component__WEBPACK_IMPORTED_MODULE_21__["CardPercentual3LinhasComponent"]
+                    _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_14__["DashboardComponent"],
+                    _componentes_grafico_percentual_component__WEBPACK_IMPORTED_MODULE_15__["GraficoPercentualComponent"],
+                    _componentes_grafico_area_component__WEBPACK_IMPORTED_MODULE_20__["GraficoAreaComponent"],
+                    _componentes_card_percentual_component__WEBPACK_IMPORTED_MODULE_16__["CardPercentualComponent"],
+                    _componentes_card_percentual_texto_component__WEBPACK_IMPORTED_MODULE_17__["CardPercentualTextoComponent"],
+                    _componentes_card_numerico_basico_component__WEBPACK_IMPORTED_MODULE_18__["CardNumericoBasicoComponent"],
+                    _componentes_card_percentual_3linhas_component__WEBPACK_IMPORTED_MODULE_19__["CardPercentual3LinhasComponent"]
                 ],
                 imports: [
-                    _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
-                    _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__["ServiceWorkerModule"].register("ngsw-worker.js", { enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_23__["environment"].production }),
+                    _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
+                    _angular_service_worker__WEBPACK_IMPORTED_MODULE_4__["ServiceWorkerModule"].register("ngsw-worker.js", { enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_21__["environment"].production }),
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                    _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_10__["ChartsModule"],
-                    _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_9__["GridModule"],
-                    _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_9__["ExcelModule"],
-                    _progress_kendo_angular_dialog__WEBPACK_IMPORTED_MODULE_11__["DialogModule"],
-                    _progress_kendo_angular_inputs__WEBPACK_IMPORTED_MODULE_12__["InputsModule"],
-                    _progress_kendo_angular_buttons__WEBPACK_IMPORTED_MODULE_13__["ButtonsModule"],
-                    _progress_kendo_angular_layout__WEBPACK_IMPORTED_MODULE_14__["LayoutModule"],
+                    _progress_kendo_angular_charts__WEBPACK_IMPORTED_MODULE_8__["ChartsModule"],
+                    _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_7__["GridModule"],
+                    _progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_7__["ExcelModule"],
+                    _progress_kendo_angular_dialog__WEBPACK_IMPORTED_MODULE_9__["DialogModule"],
+                    _progress_kendo_angular_inputs__WEBPACK_IMPORTED_MODULE_10__["InputsModule"],
+                    _progress_kendo_angular_buttons__WEBPACK_IMPORTED_MODULE_11__["ButtonsModule"],
+                    _progress_kendo_angular_layout__WEBPACK_IMPORTED_MODULE_12__["LayoutModule"],
                     _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
                     _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
-                    _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateModule"].forRoot({
-                        loader: {
-                            provide: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateLoader"],
-                            useFactory: (createTranslateLoader),
-                            deps: [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"]]
-                        }
-                    }),
-                    _progress_kendo_angular_ripple__WEBPACK_IMPORTED_MODULE_15__["RippleModule"],
-                    _progress_kendo_angular_dropdowns__WEBPACK_IMPORTED_MODULE_24__["DropDownsModule"],
+                    _progress_kendo_angular_ripple__WEBPACK_IMPORTED_MODULE_13__["RippleModule"],
+                    _progress_kendo_angular_dropdowns__WEBPACK_IMPORTED_MODULE_22__["DropDownsModule"],
+                    _progress_kendo_angular_intl__WEBPACK_IMPORTED_MODULE_23__["IntlModule"],
                 ],
-                providers: [],
-                bootstrap: [_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_16__["DashboardComponent"]]
+                exports: [],
+                providers: [
+                    { provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__["LOCALE_ID"], useValue: 'pt' },
+                ],
+                bootstrap: [_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_14__["DashboardComponent"]]
             }]
     }], null, null); })();
 
@@ -942,13 +938,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function DashboardComponent_app_grafico_percentual_78_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-grafico-percentual", 41);
+function DashboardComponent_app_grafico_percentual_75_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-grafico-percentual", 38);
 } if (rf & 2) {
     var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("serie", ctx_r0.espacoLivreSeries)("titulo", ctx_r0.espacoLivreTitulo)("categorias", ctx_r0.espacoLivreCategorias)("descricaoEixoX", ctx_r0.espacoLivreDescricaoEixoX);
 } }
-function DashboardComponent_kendo_chart_79_kendo_chart_series_item_8_ng_template_2_Template(rf, ctx) { if (rf & 1) {
+function DashboardComponent_kendo_chart_76_kendo_chart_series_item_8_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](1, "number");
 } if (rf & 2) {
@@ -956,10 +952,10 @@ function DashboardComponent_kendo_chart_79_kendo_chart_series_item_8_ng_template
     var item_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"](" ", item_r11.nome, " | ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](1, 2, dataItem_r13.valor), " ");
 } }
-function DashboardComponent_kendo_chart_79_kendo_chart_series_item_8_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "kendo-chart-series-item", 44);
+function DashboardComponent_kendo_chart_76_kendo_chart_series_item_8_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "kendo-chart-series-item", 41);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "kendo-chart-series-item-tooltip");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, DashboardComponent_kendo_chart_79_kendo_chart_series_item_8_ng_template_2_Template, 2, 4, "ng-template");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, DashboardComponent_kendo_chart_76_kendo_chart_series_item_8_ng_template_2_Template, 2, 4, "ng-template");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -967,19 +963,19 @@ function DashboardComponent_kendo_chart_79_kendo_chart_series_item_8_Template(rf
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("data", item_r11.dados)("name", item_r11.nome)("color", item_r11.cor);
 } }
 var _c0 = function (a0) { return { text: a0 }; };
-function DashboardComponent_kendo_chart_79_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "kendo-chart", 37);
+function DashboardComponent_kendo_chart_76_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "kendo-chart", 34);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "kendo-chart-axis-defaults");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "kendo-chart-axis-defaults-labels", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "kendo-chart-axis-defaults-labels", 39);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "kendo-chart-value-axis");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "kendo-chart-value-axis-item", 43);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "kendo-chart-value-axis-item", 40);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "kendo-chart-category-axis");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "kendo-chart-category-axis-item", 39);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "kendo-chart-category-axis-item", 36);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "kendo-chart-series");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, DashboardComponent_kendo_chart_79_kendo_chart_series_item_8_Template, 3, 3, "kendo-chart-series-item", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, DashboardComponent_kendo_chart_76_kendo_chart_series_item_8_Template, 3, 3, "kendo-chart-series-item", 37);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -990,34 +986,34 @@ function DashboardComponent_kendo_chart_79_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r1.previsaoRecursosSeries);
 } }
-function DashboardComponent_button_81_Template(rf, ctx) { if (rf & 1) {
+function DashboardComponent_button_78_Template(rf, ctx) { if (rf & 1) {
     var _r16 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 45);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_button_81_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r16); var ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r15.alterarVisaoRecursos("historico"); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_button_78_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r16); var ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r15.alterarVisaoRecursos("historico"); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 43);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, " Hist\u00F3rico ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
-function DashboardComponent_button_82_Template(rf, ctx) { if (rf & 1) {
+function DashboardComponent_button_79_Template(rf, ctx) { if (rf & 1) {
     var _r18 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 45);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_button_82_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r18); var ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r17.alterarVisaoRecursos("previsao"); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_button_79_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r18); var ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r17.alterarVisaoRecursos("previsao"); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 43);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, " Previs\u00E3o ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
-function DashboardComponent_app_grafico_percentual_88_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-grafico-percentual", 47);
+function DashboardComponent_app_grafico_percentual_85_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-grafico-percentual", 44);
 } if (rf & 2) {
     var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("serie", ctx_r4.engajamentoPatologistasSeries)("titulo", ctx_r4.engajamentoPatologistasTitulo)("categorias", ctx_r4.engajamentoPatologistasCategorias)("descricaoEixoX", ctx_r4.engajamentoPatologistasDescricaoEixoX);
 } }
-function DashboardComponent_kendo_grid_89_ng_template_1_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 59);
+function DashboardComponent_kendo_grid_86_ng_template_1_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 56);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Exportar");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
-function DashboardComponent_kendo_grid_89_ng_template_4_Template(rf, ctx) { if (rf & 1) {
+function DashboardComponent_kendo_grid_86_ng_template_4_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "percent");
@@ -1027,19 +1023,19 @@ function DashboardComponent_kendo_grid_89_ng_template_4_Template(rf, ctx) { if (
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 1, dataItem_r21.visualizadasPerc));
 } }
-function DashboardComponent_kendo_grid_89_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "kendo-grid", 48);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, DashboardComponent_kendo_grid_89_ng_template_1_Template, 2, 0, "ng-template", 49);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "kendo-grid-column", 50);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "kendo-grid-column", 51);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, DashboardComponent_kendo_grid_89_ng_template_4_Template, 3, 3, "ng-template", 52);
+function DashboardComponent_kendo_grid_86_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "kendo-grid", 45);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, DashboardComponent_kendo_grid_86_ng_template_1_Template, 2, 0, "ng-template", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "kendo-grid-column", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "kendo-grid-column", 48);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, DashboardComponent_kendo_grid_86_ng_template_4_Template, 3, 3, "ng-template", 49);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "kendo-grid-excel", 53);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "kendo-excelexport-column", 54);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](7, "kendo-excelexport-column", 55);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "kendo-excelexport-column", 56);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "kendo-excelexport-column", 57);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "kendo-excelexport-column", 58);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "kendo-grid-excel", 50);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "kendo-excelexport-column", 51);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](7, "kendo-excelexport-column", 52);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "kendo-excelexport-column", 53);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "kendo-excelexport-column", 54);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "kendo-excelexport-column", 55);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -1050,23 +1046,23 @@ function DashboardComponent_kendo_grid_89_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("width", 80);
 } }
-function DashboardComponent_button_91_Template(rf, ctx) { if (rf & 1) {
+function DashboardComponent_button_88_Template(rf, ctx) { if (rf & 1) {
     var _r23 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 45);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_button_91_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r23); var ctx_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r22.alterarVisaoPatologistas("grafico"); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_button_88_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r23); var ctx_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r22.alterarVisaoPatologistas("grafico"); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 43);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, " Ver Gr\u00E1fico ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
-function DashboardComponent_button_92_Template(rf, ctx) { if (rf & 1) {
+function DashboardComponent_button_89_Template(rf, ctx) { if (rf & 1) {
     var _r25 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 45);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_button_92_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r25); var ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r24.alterarVisaoPatologistas("tabela"); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_button_89_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r25); var ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r24.alterarVisaoPatologistas("tabela"); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 43);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, " Ver Tabela ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
-function DashboardComponent_kendo_chart_series_item_103_ng_template_2_Template(rf, ctx) { if (rf & 1) {
+function DashboardComponent_kendo_chart_series_item_100_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](1, "number");
 } if (rf & 2) {
@@ -1074,17 +1070,17 @@ function DashboardComponent_kendo_chart_series_item_103_ng_template_2_Template(r
     var item_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"](" ", item_r26.nome, " | ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](1, 2, dataItem_r28.valor), " ");
 } }
-function DashboardComponent_kendo_chart_series_item_103_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "kendo-chart-series-item", 44);
+function DashboardComponent_kendo_chart_series_item_100_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "kendo-chart-series-item", 41);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "kendo-chart-series-item-tooltip");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, DashboardComponent_kendo_chart_series_item_103_ng_template_2_Template, 2, 4, "ng-template");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, DashboardComponent_kendo_chart_series_item_100_ng_template_2_Template, 2, 4, "ng-template");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     var item_r26 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("data", item_r26.dados)("name", item_r26.nome)("color", item_r26.cor);
 } }
-function DashboardComponent_kendo_chart_series_item_114_ng_template_2_Template(rf, ctx) { if (rf & 1) {
+function DashboardComponent_kendo_chart_series_item_111_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](1, "number");
 } if (rf & 2) {
@@ -1092,10 +1088,10 @@ function DashboardComponent_kendo_chart_series_item_114_ng_template_2_Template(r
     var item_r30 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"](" ", item_r30.nome, " | ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](1, 2, dataItem_r32.valor), " ");
 } }
-function DashboardComponent_kendo_chart_series_item_114_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "kendo-chart-series-item", 44);
+function DashboardComponent_kendo_chart_series_item_111_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "kendo-chart-series-item", 41);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "kendo-chart-series-item-tooltip");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, DashboardComponent_kendo_chart_series_item_114_ng_template_2_Template, 2, 4, "ng-template");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, DashboardComponent_kendo_chart_series_item_111_ng_template_2_Template, 2, 4, "ng-template");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -1254,202 +1250,198 @@ var DashboardComponent = /** @class */ (function () {
     DashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DashboardComponent, selectors: [["app-dashboard"]], hostVars: 3, hostBindings: function DashboardComponent_HostBindings(rf, ctx) { if (rf & 2) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵattribute"]("id", ctx.get_id);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx.get_class);
-        } }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([_servicos_dashboard_service__WEBPACK_IMPORTED_MODULE_1__["DashboardService"]])], decls: 115, vars: 72, consts: [[1, "imagens-topo"], ["src", "assets/logodk.png", 1, "logo"], ["src", "assets/logohp.png", 1, "logo"], ["id", "header", 1, "row", "justify-content-md-center"], [1, "col-sm", "text-sm-left", "p-0", "p-sm-3"], [1, "h1", 2, "color", "seagreen", "font-size", "25px"], [1, "h4"], [1, "col-sm", "text-sm-right", "p-0", "p-sm-3"], [1, "col-sm", "text-sm-right", "p-0", "p-sm-2"], [3, "selection"], ["kendoRippleContainer", "kendoRippleContainer", "kendoButton", "kendoButton", 3, "togglable", "click"], ["kendoRippleContainer", "kendoRippleContainer", "kendoButton", "kendoButton", 3, "togglable", "selected", "click"], [2, "width", "120px", 3, "popupSettings", "disabled", "data", "value", "valueChange"], [1, "k-card-deck", 2, "display", "flex", "flex-wrap", "wrap", "justify-content", "space-evenly"], [1, "k-card", 2, "color", "orangered", "min-height", "200px", "width", "300px"], [1, "k-card-body"], ["titulo", "Espa\u00E7o Livre", "subTitulo1", "Espa\u00E7o Total", "subTitulo2", "Espa\u00E7o Livre", 3, "valorPercentual", "texto1", "texto2"], [1, "k-card", 2, "color", "darkgreen", "min-height", "200px", "width", "300px"], ["titulo", "Integra\u00E7\u00E3o", "subTitulo1", "Digitalizadas", "subTitulo2", "Integradas", "subTitulo3", "Erros", 3, "valorPercentual", "valor1", "valor2", "valor3"], [1, "k-card", 2, "color", "saddlebrown", "min-height", "200px", "width", "300px"], ["titulo", "Visualiza\u00E7\u00E3o", "subTitulo1", "Distribu\u00EDdas", "subTitulo2", "Visualizadas", 3, "valorPercentual", "valor1", "valor2"], [1, "k-card", 2, "color", "midnightblue", "min-height", "200px", "width", "300px"], ["titulo", "L\u00E2minas/hora", "subTitulo", "Tempo de digitaliza\u00E7\u00E3o", "unidadeMedida", "segundos", "subTitulo2", "\u00C1rea de digitaliza\u00E7\u00E3o", "unidadeMedida2", "mm&sup2;", 3, "valorPrincipal", "valor", "valor2"], [1, "k-card", 2, "color", "gray", "min-height", "200px", "width", "300px"], [1, "comp-label"], [1, "issues-count", 2, "font-size", "80px"], [2, "font-size", "30px"], [1, "issues-label", 2, "font-size", "18px"], [1, "m-0", "medium", "text-muted"], [1, "k-card", 2, "width", "600px"], ["tipo", "column", 3, "serie", "titulo", "categorias", "descricaoEixoX", 4, "ngIf"], [3, "title", 4, "ngIf"], ["orientation", "horizontal", "layout", "end"], ["class", "k-button k-primary k-flat", 3, "click", 4, "ngIf"], [3, "serie", "titulo", "descricaoEixoY", "categorias", "descricaoEixoX"], ["tipo", "line", 3, "serie", "titulo", "categorias", "descricaoEixoX", 4, "ngIf"], ["style", "height: 400px;", 3, "scrollable", "data", 4, "ngIf"], [3, "title"], ["format", "N0"], [3, "categories", "title"], ["field", "valor", "categoryField", "categoria", "type", "line", 3, "data", "name", "color", 4, "ngFor", "ngForOf"], ["tipo", "column", 3, "serie", "titulo", "categorias", "descricaoEixoX"], ["format", "P0"], ["min", "0", "max", "1"], ["field", "valor", "categoryField", "categoria", "type", "line", 3, "data", "name", "color"], [1, "k-button", "k-primary", "k-flat", 3, "click"], [1, "k-icon"], ["tipo", "line", 3, "serie", "titulo", "categorias", "descricaoEixoX"], [2, "height", "400px", 3, "scrollable", "data"], ["kendoGridToolbarTemplate", "kendoGridToolbarTemplate"], ["field", "nomPatologista", "title", "Patologista", 1, "price-col", 3, "width"], ["field", "visualizadasPerc", "title", "%", 1, "price-col", 3, "width"], ["kendoGridCellTemplate", ""], ["fileName", "dashboard-engajamento-patologistas.xlsx"], ["field", "codPatologista", "title", "C\u00F3digo"], ["field", "nomPatologista", "title", "Nome"], ["field", "distribuidasQtde", "title", "Distribuidas"], ["field", "visualizadasQtde", "title", "Visualizadas"], ["field", "visualizadasPerc", "title", "Visualizadas %"], ["type", "button", "kendoGridExcelCommand", "kendoGridExcelCommand", "icon", "file-excel"]], template: function DashboardComponent_Template(rf, ctx) { if (rf & 1) {
+        } }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([_servicos_dashboard_service__WEBPACK_IMPORTED_MODULE_1__["DashboardService"]])], decls: 112, vars: 72, consts: [["id", "header", 1, "row", "justify-content-md-center"], [1, "col-sm", "text-sm-left", "p-0", "p-sm-3"], [1, "h1", 2, "color", "seagreen", "font-size", "25px"], [1, "h4"], [1, "col-sm", "text-sm-right", "p-0", "p-sm-3"], [1, "col-sm", "text-sm-right", "p-0", "p-sm-2"], [3, "selection"], ["kendoRippleContainer", "kendoRippleContainer", "kendoButton", "kendoButton", 3, "togglable", "click"], ["kendoRippleContainer", "kendoRippleContainer", "kendoButton", "kendoButton", 3, "togglable", "selected", "click"], [2, "width", "120px", 3, "popupSettings", "disabled", "data", "value", "valueChange"], [1, "k-card-deck", 2, "display", "flex", "flex-wrap", "wrap", "justify-content", "space-evenly"], [1, "k-card", 2, "color", "orangered", "min-height", "200px", "width", "300px"], [1, "k-card-body"], ["titulo", "Espa\u00E7o Livre", "subTitulo1", "Espa\u00E7o Total", "subTitulo2", "Espa\u00E7o Livre", 3, "valorPercentual", "texto1", "texto2"], [1, "k-card", 2, "color", "darkgreen", "min-height", "200px", "width", "300px"], ["titulo", "Integra\u00E7\u00E3o", "subTitulo1", "Digitalizadas", "subTitulo2", "Integradas", "subTitulo3", "Erros", 3, "valorPercentual", "valor1", "valor2", "valor3"], [1, "k-card", 2, "color", "saddlebrown", "min-height", "200px", "width", "300px"], ["titulo", "Visualiza\u00E7\u00E3o", "subTitulo1", "Distribu\u00EDdas", "subTitulo2", "Visualizadas", 3, "valorPercentual", "valor1", "valor2"], [1, "k-card", 2, "color", "midnightblue", "min-height", "200px", "width", "300px"], ["titulo", "L\u00E2minas/hora", "subTitulo", "Tempo de digitaliza\u00E7\u00E3o", "unidadeMedida", "segundos", "subTitulo2", "\u00C1rea de digitaliza\u00E7\u00E3o", "unidadeMedida2", "mm&sup2;", 3, "valorPrincipal", "valor", "valor2"], [1, "k-card", 2, "color", "gray", "min-height", "200px", "width", "300px"], [1, "comp-label"], [1, "issues-count", 2, "font-size", "80px"], [2, "font-size", "30px"], [1, "issues-label", 2, "font-size", "18px"], [1, "m-0", "medium", "text-muted"], [1, "k-card", 2, "width", "600px"], ["tipo", "column", 3, "serie", "titulo", "categorias", "descricaoEixoX", 4, "ngIf"], [3, "title", 4, "ngIf"], ["orientation", "horizontal", "layout", "end"], ["class", "k-button k-primary k-flat", 3, "click", 4, "ngIf"], [3, "serie", "titulo", "descricaoEixoY", "categorias", "descricaoEixoX"], ["tipo", "line", 3, "serie", "titulo", "categorias", "descricaoEixoX", 4, "ngIf"], ["style", "height: 400px;", 3, "scrollable", "data", 4, "ngIf"], [3, "title"], ["format", "N0"], [3, "categories", "title"], ["field", "valor", "categoryField", "categoria", "type", "line", 3, "data", "name", "color", 4, "ngFor", "ngForOf"], ["tipo", "column", 3, "serie", "titulo", "categorias", "descricaoEixoX"], ["format", "P0"], ["min", "0", "max", "1"], ["field", "valor", "categoryField", "categoria", "type", "line", 3, "data", "name", "color"], [1, "k-button", "k-primary", "k-flat", 3, "click"], [1, "k-icon"], ["tipo", "line", 3, "serie", "titulo", "categorias", "descricaoEixoX"], [2, "height", "400px", 3, "scrollable", "data"], ["kendoGridToolbarTemplate", "kendoGridToolbarTemplate"], ["field", "nomPatologista", "title", "Patologista", 1, "price-col", 3, "width"], ["field", "visualizadasPerc", "title", "%", 1, "price-col", 3, "width"], ["kendoGridCellTemplate", ""], ["fileName", "dashboard-engajamento-patologistas.xlsx"], ["field", "codPatologista", "title", "C\u00F3digo"], ["field", "nomPatologista", "title", "Nome"], ["field", "distribuidasQtde", "title", "Distribuidas"], ["field", "visualizadasQtde", "title", "Visualizadas"], ["field", "visualizadasPerc", "title", "Visualizadas %"], ["type", "button", "kendoGridExcelCommand", "kendoGridExcelCommand", "icon", "file-excel"]], template: function DashboardComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 1);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "img", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 4);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "p", 5);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "p", 6);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "p", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 7);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 8);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "p");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "kendo-buttongroup", 9);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "button", 10);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_14_listener() { return ctx.carregarDados(0, "MG"); });
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, " MG ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "kendo-buttongroup", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "button", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_11_listener() { return ctx.carregarDados(0, "MG"); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, " MG ");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "button", 10);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_16_listener() { return ctx.carregarDados(0, "SP"); });
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, " SP ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "button", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_13_listener() { return ctx.carregarDados(0, "SP"); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, " SP ");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "button", 11);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_18_listener() { return ctx.carregarDados(0, "geral"); });
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, " Geral ");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "span");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "kendo-buttongroup", 9);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "button", 11);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_23_listener() { return ctx.carregarDados(1, ""); });
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, " Dia ");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "button", 10);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_25_listener() { return ctx.carregarDados(2, ""); });
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, " Semana ");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "button", 10);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_27_listener() { return ctx.carregarDados(3, ""); });
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, " M\u00EAs ");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "button", 10);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_29_listener() { return ctx.carregarDados(4, ""); });
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, " Ano ");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "button", 10);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_31_listener() { return ctx.carregarDados(5, ""); });
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, " 12 meses ");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "button", 10);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_33_listener() { return ctx.carregarPorPeriodo(); });
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, " Per\u00EDodo ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "button", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_15_listener() { return ctx.carregarDados(0, "geral"); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, " Geral ");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "span");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, "\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "span");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "kendo-dropdownlist", 12);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("valueChange", function DashboardComponent_Template_kendo_dropdownlist_valueChange_37_listener($event) { return ctx.periodoAlterado($event); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "kendo-buttongroup", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "button", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_20_listener() { return ctx.carregarDados(1, ""); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, " Dia ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "button", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_22_listener() { return ctx.carregarDados(2, ""); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, " Semana ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "button", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_24_listener() { return ctx.carregarDados(3, ""); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, " M\u00EAs ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "button", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_26_listener() { return ctx.carregarDados(4, ""); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, " Ano ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "button", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_28_listener() { return ctx.carregarDados(5, ""); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, " 12 meses ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "button", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function DashboardComponent_Template_button_click_30_listener() { return ctx.carregarPorPeriodo(); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, " Per\u00EDodo ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "span");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "kendo-dropdownlist", 9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("valueChange", function DashboardComponent_Template_kendo_dropdownlist_valueChange_34_listener($event) { return ctx.periodoAlterado($event); });
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "div", 13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "div", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "div", 11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](38, "app-card-percentual-texto", 13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "div", 14);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "div", 15);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](41, "app-card-percentual-texto", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "div", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](41, "app-card-percentual-3linhas", 15);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "div", 17);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "div", 15);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](44, "app-card-percentual-3linhas", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "div", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "div", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](44, "app-card-percentual", 17);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "div", 19);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "div", 15);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](47, "app-card-percentual", 20);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "div", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "div", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](47, "app-card-numerico-basico", 19);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "div", 21);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "div", 15);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](50, "app-card-numerico-basico", 22);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "div", 20);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "div", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "span", 21);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "div", 22);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "label");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](53);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "div", 23);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "div", 15);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](53, "span", 24);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "div", 25);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "label");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](56);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "label", 26);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](58, "mm ");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "sup");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](60, "2");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "label", 23);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](55, "mm");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](56, "sup");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](57, "2");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](61, "div", 27);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](62, "\u00C1rea de digitaliza\u00E7\u00E3o");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](58, "div", 24);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](59, "\u00C1rea de digitaliza\u00E7\u00E3o");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](63, "p", 28);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](64);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](65, "label");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](66, "mm");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](67, "sup");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](68, "2");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "p", 25);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](61);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](62, "label");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](63, "mm");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](64, "sup");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](65, "2");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](69, "p", 28);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](70);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](71, "label");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](72, "mm");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](73, "sup");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](74, "2");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](66, "p", 25);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](67);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](68, "label");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](69, "mm");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](70, "sup");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](71, "2");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](75, "div", 13);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](76, "div", 29);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](77, "div", 15);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](78, DashboardComponent_app_grafico_percentual_78_Template, 1, 4, "app-grafico-percentual", 30);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](79, DashboardComponent_kendo_chart_79_Template, 9, 8, "kendo-chart", 31);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](72, "div", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](73, "div", 26);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](74, "div", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](75, DashboardComponent_app_grafico_percentual_75_Template, 1, 4, "app-grafico-percentual", 27);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](76, DashboardComponent_kendo_chart_76_Template, 9, 8, "kendo-chart", 28);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](80, "kendo-card-actions", 32);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](81, DashboardComponent_button_81_Template, 3, 0, "button", 33);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](82, DashboardComponent_button_82_Template, 3, 0, "button", 33);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](83, "div", 29);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](84, "div", 15);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](85, "app-grafico-area", 34);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](77, "kendo-card-actions", 29);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](78, DashboardComponent_button_78_Template, 3, 0, "button", 30);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](79, DashboardComponent_button_79_Template, 3, 0, "button", 30);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](86, "div", 29);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](87, "div", 15);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](88, DashboardComponent_app_grafico_percentual_88_Template, 1, 4, "app-grafico-percentual", 35);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](89, DashboardComponent_kendo_grid_89_Template, 11, 4, "kendo-grid", 36);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](90, "kendo-card-actions", 32);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](91, DashboardComponent_button_91_Template, 3, 0, "button", 33);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](92, DashboardComponent_button_92_Template, 3, 0, "button", 33);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](80, "div", 26);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](81, "div", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](82, "app-grafico-area", 31);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](93, "div", 29);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](94, "div", 15);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](95, "kendo-chart", 37);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](96, "kendo-chart-axis-defaults");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](97, "kendo-chart-axis-defaults-labels", 38);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](83, "div", 26);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](84, "div", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](85, DashboardComponent_app_grafico_percentual_85_Template, 1, 4, "app-grafico-percentual", 32);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](86, DashboardComponent_kendo_grid_86_Template, 11, 4, "kendo-grid", 33);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](98, "kendo-chart-value-axis");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](99, "kendo-chart-value-axis-item", 37);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](100, "kendo-chart-category-axis");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](101, "kendo-chart-category-axis-item", 39);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](102, "kendo-chart-series");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](103, DashboardComponent_kendo_chart_series_item_103_Template, 3, 3, "kendo-chart-series-item", 40);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](87, "kendo-card-actions", 29);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](88, DashboardComponent_button_88_Template, 3, 0, "button", 30);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](89, DashboardComponent_button_89_Template, 3, 0, "button", 30);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](90, "div", 26);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](91, "div", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](92, "kendo-chart", 34);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](93, "kendo-chart-axis-defaults");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](94, "kendo-chart-axis-defaults-labels", 35);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](95, "kendo-chart-value-axis");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](96, "kendo-chart-value-axis-item", 34);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](97, "kendo-chart-category-axis");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](98, "kendo-chart-category-axis-item", 36);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](99, "kendo-chart-series");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](100, DashboardComponent_kendo_chart_series_item_100_Template, 3, 3, "kendo-chart-series-item", 37);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](104, "div", 29);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](105, "div", 15);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](106, "kendo-chart", 37);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](107, "kendo-chart-axis-defaults");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](108, "kendo-chart-axis-defaults-labels", 38);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](109, "kendo-chart-value-axis");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](110, "kendo-chart-value-axis-item", 37);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](111, "kendo-chart-category-axis");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](112, "kendo-chart-category-axis-item", 39);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](101, "div", 26);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](102, "div", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](103, "kendo-chart", 34);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](104, "kendo-chart-axis-defaults");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](105, "kendo-chart-axis-defaults-labels", 35);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](113, "kendo-chart-series");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](114, DashboardComponent_kendo_chart_series_item_114_Template, 3, 3, "kendo-chart-series-item", 40);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](106, "kendo-chart-value-axis");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](107, "kendo-chart-value-axis-item", 34);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](108, "kendo-chart-category-axis");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](109, "kendo-chart-category-axis-item", 36);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](110, "kendo-chart-series");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](111, DashboardComponent_kendo_chart_series_item_111_Template, 3, 3, "kendo-chart-series-item", 37);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         } if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.titulo);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.subtitulo);
@@ -1583,23 +1575,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var baseUrl = 'http://dgkdiagsystem:5005/api/dashboard';
+// const baseUrl = 'http://dgkdiagsystem:5005/api/dashboard';
 //const baseUrl = 'http://localhost:5000/api/dashboard'; 
-//const baseUrl = 'https://demo5010569.mockable.io/api/dashboard';
-//const baseUrl = 'https://demo5010569.mockable.io/api/dashboard';
+var baseUrl = 'https://demo5010569.mockable.io/api/dashboard';
 var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({ 'Content-Type': "application/json" });
 var DashboardService = /** @class */ (function () {
     function DashboardService(http) {
         this.http = http;
     }
     DashboardService.prototype.obterDados = function (tipoConsulta, periodoReferencia) {
-        if (periodoReferencia != '') {
-            return this.http.get(baseUrl + "/?tipoConsulta=" + tipoConsulta + "&periodoReferencia=" + periodoReferencia, { headers: headers });
-        }
-        else {
-            return this.http.get(baseUrl + "/?tipoConsulta=" + tipoConsulta, { headers: headers });
-            //return this.http.get<DashboardRaiz>(`${baseUrl}`, { headers });
-        }
+        // if (periodoReferencia != '') {
+        //     return this.http.get<DashboardRaiz>(`${baseUrl}/?tipoConsulta=${tipoConsulta}&periodoReferencia=${periodoReferencia}`, { headers });
+        // } else {
+        //     return this.http.get<DashboardRaiz>(`${baseUrl}/?tipoConsulta=${tipoConsulta}`, { headers });            
+        // }
+        return this.http.get("" + baseUrl, { headers: headers });
     };
     DashboardService.ɵfac = function DashboardService_Factory(t) { return new (t || DashboardService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); };
     DashboardService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: DashboardService, factory: DashboardService.ɵfac });
@@ -1620,7 +1610,7 @@ var DashboardService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\jacques.zetune\source\repos\DashboardApi\src\WebApp\main.ts */"./main.ts");
+module.exports = __webpack_require__(/*! C:\Users\augus\source\repos\DashboardApi\src\WebApp\main.ts */"./main.ts");
 
 
 /***/ })
